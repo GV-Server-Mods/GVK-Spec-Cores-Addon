@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ModSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TLBlocks>
+    <BlockConfig>
+      <Matcher>Refinery/*</Matcher>
+      <PointType>0</PointType><!-- Id of point -->
+      <MinimalSecondsForActivation>1</MinimalSecondsForActivation><!-- How much points it drains when activated -->
+      <DrainAmount>1</DrainAmount><!-- How much it drains points per second -->
+      <CanBeBoosted>true</CanBeBoosted><!-- Can be boosted or not -->
+      <MinBoost>1</MinBoost><!-- Minimal boost-->
+      <MaxBoost>12</MaxBoost><!-- How much times it can work faster-->
+    </BlockConfig>
+    <!--<BlockConfig>
+      <Matcher>Assembler/*</Matcher>
+      <PointType>1</PointType>
+      <MinimalSecondsForActivation>1</MinimalSecondsForActivation>
+      <DrainAmount>0.25</DrainAmount>
+      <CanBeBoosted>true</CanBeBoosted>
+      <MinBoost>1</MinBoost>
+      <MaxBoost>12</MaxBoost>	
+    </BlockConfig>
+    <BlockConfig>
+      <Matcher>OxygenGenerator/*</Matcher>
+      <PointType>2</PointType>
+      <MinimalSecondsForActivation>1</MinimalSecondsForActivation>
+      <DrainAmount>0.125</DrainAmount>
+      <CanBeBoosted>false</CanBeBoosted>
+      <MinBoost>1</MinBoost>
+      <MaxBoost>12</MaxBoost>
+    </BlockConfig>-->
+  </TLBlocks>
+  <PointInfos>
+    <PointInfo Id="0" Name="Refinery" MaxValue="172800" DefaultValue="172800" AddPerSecondWhenOnline="1" AddPerSecondWhenOffline="1" />
+	<!-- 
+		Name of Point: points wont be added above this value
+		MaxValue: points wont be added above this value
+		DefaultValue: points for players that has just started play
+		AddPerSecondWhenOnline: points that would be added per second when player is Online
+		AddPerSecondWhenOffline: points that would be added per second when player is Offline
+	-->
+    <PointInfo Id="1" Name="Assembler" MaxValue="172800" DefaultValue="172800" AddPerSecondWhenOnline="1" AddPerSecondWhenOffline="1" />
+    <PointInfo Id="2" Name="H2/O2" MaxValue="172800" DefaultValue="172800" AddPerSecondWhenOnline="1" AddPerSecondWhenOffline="1" />
+  </PointInfos>
+  <GivePointsCommand>!GivePoints</GivePointsCommand>
+  <AdminAddPointsCommand>!GivePointsAdmin</AdminAddPointsCommand>
+  <UsableItems>
+	<!-- 
+		Per each 1 Ore/Uranium gives 1 point to Refinery
+	-->
+	<UsableItem Item="Ore/Uranium" GiveSeconds="1" PointType="0" />
+  </UsableItems>
+</ModSettings>

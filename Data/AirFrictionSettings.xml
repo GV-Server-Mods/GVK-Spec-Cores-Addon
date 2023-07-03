@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AirFrictionSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ConnectionType="Electrical">
+  <Planets>
+    <!-- <Planet GeneratorName="EarthLike" EntityId="0">
+      <Item>
+        <Altitude Alt="6000" SmallStart="60" SmallEnd="70" MixedStart="50" MixedEnd="60" LargeStart="50" LargeEnd="60" CharacterStart="60" CharacterEnd="70" />
+        <Altitude Alt="12000" SmallStart="70" SmallEnd="80" MixedStart="60" MixedEnd="70" LargeStart="60" LargeEnd="70" CharacterStart="70" CharacterEnd="80" />
+        <Altitude Alt="20000" SmallStart="80" SmallEnd="90" MixedStart="70" MixedEnd="80" LargeStart="70" LargeEnd="80" CharacterStart="80" CharacterEnd="90" />
+      </Item> 
+    </Planet>-->
+  </Planets>
+  <AnyPlanet>
+    <Item>
+      <Altitude Alt="10000" SmallStart="30" SmallEnd="50" MixedStart="30" MixedEnd="50" LargeStart="30" LargeEnd="50" CharacterStart="60" CharacterEnd="70" />
+    </Item>
+  </AnyPlanet>
+  <Space Alt="0" SmallStart="150" SmallEnd="250" MixedStart="100" MixedEnd="150" LargeStart="100" LargeEnd="150" CharacterStart="160" CharacterEnd="170" />
+   <SpecCore NoCoreExtraStart="-20" NoCoreExtraElevation="0" NoCoreExtraEnd="-20" CoreExtraStartId="-34" CoreExtraEndId="-35" CoreExtraElevationId="-36" /> 
+  <!-- <SpecCore NoCoreExtraStart="0" NoCoreExtraElevation="0" NoCoreExtraEnd="0" CoreExtraStartId="0" CoreExtraEndId="0" CoreExtraElevationId="0" /> -->
+  <FrictionPow>3</FrictionPow> 
+  <FrictionPowCharacter>3</FrictionPowCharacter>
+  <MaxAcceleration>1000</MaxAcceleration>
+  <MaxAccelerationCharacter>60</MaxAccelerationCharacter>
+  <MaxFriction>1000</MaxFriction>
+  <MaxFrictionCharacter>100000000</MaxFrictionCharacter>
+  <ApplyForceToCharacters>true</ApplyForceToCharacters>
+</AirFrictionSettings>

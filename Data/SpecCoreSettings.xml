@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SpecCoreSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- Infinity > 999999999 -->
+	<Timers CheckLimitsInterval="120" CheckBlocksOnSubGridsInterval="60"/>
+	<EnableLogs>false</EnableLogs>
+	<DebugMode>false</DebugMode>
+	<RandomPunishment>false</RandomPunishment>
+	<!-- 
+		You can set up just `All`, but this may slowdown your gui
+		Example of multioption: `Basic EnergyAndProduction RotorsAndPistons ShipControl Tools Weapons Other`
+		If you have limited block, but it is not included in `LimitedBlocksCanBe` then you won't be able to show GUI for that block. Same for SpecCores
+
+		Basic: IMyGasTank,IMyGyro,IMyUpgradeModule,IMyCargoContainer,IMyThrust,IMyAirVent,IMyConveyorSorter,IMyCollector
+		EnergyAndProduction: IMyBatteryBlock,IMySolarPanel,IMyReactor,IMyAssembler,IMyGasGenerator,IMyOxygenFarm,IMyRefinery,IMyProductionBlock
+		RotorsAndPistons: IMyExtendedPistonBase,IMyPistonBase,IMyMotorAdvancedStator,IMyMotorSuspension,IMyMotorBase
+		ShipControl: IMyProgrammableBlock,IMyRemoteControl,IMyCameraBlock,IMyLandingGear,IMyParachute,IMyShipMergeBlock,IMyCryoChamber,IMyCockpit,IMyShipController,IMyRadioAntenna,IMyBeacon,IMyLaserAntenna,IMyJumpDrive
+		Tools: IMyShipDrill,IMyShipGrinder,IMyShipWelder
+		Weapons: IMyLargeGatlingTurret,IMyLargeInteriorTurret,IMySmallGatlingGun,IMySmallMissileLauncherReload,IMySmallMissileLauncher,IMyDecoy,IMyWarhead,IMyLargeTurretBase,IMyTurretControlBlock,IMyUserControllableGun
+		Other: IMySafeZoneBlock,IMyMedicalRoom
+		GUIClasses.Strange: IMyGravityGenerator,IMyGravityGeneratorSphere,IMySpaceBall,IMyReflectorLight,IMyInteriorLight,IMySoundBlock,IMyTimerBlock,IMyButtonPanel,IMyControlPanel,IMyShipConnector,IMyAdvancedDoor,IMyAirtightHangarDoor,IMyAirtightSlideDoor,IMyStoreBlock,IMyTargetDummyBlock,IMyTextPanel,IMyLightingBlock,IMyOreDetector,IMySensorBlock,IMyDoor
+    -->
+	<LimitedBlocksCanBe>Basic EnergyAndProduction RotorsAndPistons Tools Weapons Other</LimitedBlocksCanBe>
+	<SpecBlocksCanBe>ShipControl</SpecBlocksCanBe>
+	<ConnectionType>Mechanical</ConnectionType>
+	<DefaultTier>1</DefaultTier>
+	<PointsFormats>
+		<!--
+		Id - id of PointFormat
+		OverlimitWarning - text that would be added if overlimiting some of point
+		OverlimitWarningAddLineAfter="true" - should add new line if overlimiting some of point
+		OverlimitWarningAddLineBefore="true" - should add new line if overlimiting some of point
+		Format="{0}/{1} ({2})" - format of text. {0} - current points, {1} - max / min points, {2} - on grid
+		NumberFormat="{0:G29}"  - format of number
+		WarningSign="!!!" - text that shows, when {2} more/less {1}
+		Visible="true" - show in detailed info
+		VisibleIfAllZero="false" - show if "0/0 (0)"
+		VisibleIfInfinity="true" - show if "?/Infinity (?)"
+		Color format is #AARRGGBB
+		  -->
+  
+	<PointFormat Id="DefaultLessOrEqual"
+		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]"  
+		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Max} OVER LIMIT[/Color]" 
+		FormatPossibleOverlimiting="[Color=#FFFF9100]{PointName}:{Total}/{Max} Over Limit[/Color]"
+		NumberFormat="{0:G29}" 
+		Visible="true"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="true"
+		/>
+		
+	<PointFormat Id="DefaultSumLessOrEqual" 
+		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]" 
+		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Max} OVER LIMIT[/Color]" 
+		FormatPossibleOverlimiting="[Color=#FFFF9100]{PointName}:{Total}/{Max} Over Limit[/Color]"
+		NumberFormat="{0:G29}" 
+		Visible="true"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="true" />	
+		
+	<PointFormat Id="DefaultMoreOrEqual" 
+		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]" 
+		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Min} UNDER LIMIT[/Color]" 
+		FormatPossibleOverlimiting="[Color=#FFFF9100]{PointName}:{Total}/{Max} Under Minimum[/Color]"
+		NumberFormat="{0:G29}" 
+		Visible="true"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="true" />	
+		
+	<PointFormat Id="DefaultProperty" 
+		Format="[Color=#FFCD57FF]{PointName}:{Max}[/Color]" 
+		FormatOverlimiting="" 
+		FormatPossibleOverlimiting="" 
+		NumberFormat="{0:G29}" 
+		Visible="true"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="false" />	
+		
+	<PointFormat Id="DefaultUpgradePoint" 
+		Format="[Color=#FF54AAFF]{PointName}:{Max}[/Color]" 
+		FormatOverlimiting="" 
+		FormatPossibleOverlimiting="" 
+		NumberFormat="{0:G29}" 
+		Visible="true"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="false" />
+	</PointsFormats>
+	<Points>
+		<!-- 
+		int Id;
+		string FormatId - id of PointsFormats. When it is npot found, used default.
+		string Name - translatable name of point
+		float DisplayOrder - order in DetailedInfo
+		string UnitName - translatable text that would be added after point info
+		
+		PointTypes:
+			Property - just a value. Not used in checks at all
+			SumLessOrEqual (default) - used in SpecBlock & Limited blocks. Values from all limited blocks are summed. Example: "PowerPoints"
+			LessOrEqual - used in SpecBlock & Limited blocks. Block value must be less than SpecCore value. Example: "MaxAllowedTier", less that 9000 PCU
+			MoreOrEqual - used in SpecBlock (Limited blocks doesn't support it). Block value must be more than SpecCore value. Example: "MaxAllowedTier", more that 2 grids		
+			
+			
+		DefaultSpecCoreValue - would be used for 
+		ActivationError - text that shows when that point overlimits
+		
+		
+		Restricted Point IDS:
+		
+		TYPE_MAX_SMALLGRIDS = -5
+        TYPE_MAX_LARGEGRIDS = -6
+        TYPE_MAX_GRIDS = -7
+        TYPE_MAX_PCU = -8
+        TYPE_MAX_BLOCKS = -9
+        
+        TYPE_MIN_SMALLGRIDS = -15
+        TYPE_MIN_LARGEGRIDS = -16
+        TYPE_MIN_GRIDS = -17
+        TYPE_MIN_PCU = -18
+        TYPE_MIN_BLOCKS = -19
+		Warhead
+	-->
+		<Point PointId="Priority" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-1" DisplayOrder="100" Behavior="Property" Name="Priority"/>
+		<Point PointId="Tier" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="1" NId="50" DisplayOrder="50" Behavior="LessOrEqual" Name="Tier"/>
+		<Point PointId="SmallGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="101" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorSmallGrids" Name="Small Grids"/>
+		<Point PointId="LargeGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorLargeGrids" Name="Large Grids"/>
+		<Point PointId="MaxPCU" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-8" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorPCU" Name="PCU"/>
+		<Point PointId="MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorMaxBlocks" Name="BLOCKS"/>
+		<Point PointId="Thrusters" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(All) Thrusters"/>
+		<Point PointId="Hovers" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="2" Behavior="SumLessOrEqual" Name="(All) Hovers"/>
+		<Point PointId="Suspension" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="7" DisplayOrder="3" Behavior="SumLessOrEqual" Name="(All) Suspension"/>
+		<Point PointId="Projectors_MnM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="15" DisplayOrder="15" Behavior="SumLessOrEqual" Name="(All) Mnm Projectors"/>
+		<Point PointId="SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="19" DisplayOrder="19" Behavior="SumLessOrEqual" Name="(All) Safezone Gen"/>
+		<Point PointId="WindSolar" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="2" NId="1" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(Civ) Wind/Solar"/>
+		<Point PointId="Drills" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="2" DisplayOrder="2" Behavior="SumLessOrEqual" Name="(Civ) Drills"/>
+		<Point PointId="Welders" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="3" DisplayOrder="3" Behavior="SumLessOrEqual" Name="(Civ) Welders"/>
+		<Point PointId="Grinders" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="4" Behavior="SumLessOrEqual" Name="(Civ) Grinders"/>
+		<Point PointId="Pistons" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="8" DisplayOrder="8" Behavior="SumLessOrEqual" Name="(Civ) Pistons"/>
+		<Point PointId="RotorsHinges" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="9" DisplayOrder="9" Behavior="SumLessOrEqual" Name="(Civ) Rotors/Hinges"/>
+		<Point PointId="LargeProduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="10" DisplayOrder="10" Behavior="SumLessOrEqual" Name="(Civ) Large Production"/>
+		<Point PointId="SmallProduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="11" DisplayOrder="11" Behavior="SumLessOrEqual" Name="(Civ) Small Production"/>
+		<Point PointId="DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="18" DisplayOrder="18" Behavior="SumLessOrEqual" Name="(Civ) Drill Blocker"/>
+		<Point PointId="DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="20" DisplayOrder="106" Behavior="Property" Name="(Civ) Drill Boost"/>
+		<Point PointId="GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="107" Behavior="Property" Name="(Civ) Generator Boost"/>
+		<Point PointId="ReactorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="107" Behavior="Property" Name="(Civ) Reactor Boost"/>
+		<Point PointId="Tech_SmallCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="30" Behavior="SumLessOrEqual" Name="(Mil) S.Cal Tech"/>
+		<Point PointId="Tech_LargeCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="31" DisplayOrder="31" Behavior="SumLessOrEqual" Name="(Mil) L.Cal Tech"/>
+		<Point PointId="Tech_Missiles" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="32" DisplayOrder="32" Behavior="SumLessOrEqual" Name="(Mil) Missile Tech"/>
+		<Point PointId="Tech_Laser" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="33" DisplayOrder="33" Behavior="SumLessOrEqual" Name="(Mil) Laser Tech"/>
+		<Point PointId="Tech_Relic" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="34" DisplayOrder="34" Behavior="SumLessOrEqual" Name="(Mil) Relic Weapons"/>
+		<Point PointId="Warheads" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="16" DisplayOrder="16" Behavior="SumLessOrEqual" Name="(Mil) Warheads"/>
+		<Point PointId="SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="17" DisplayOrder="17" Behavior="SumLessOrEqual" Name="(Mil) SRBM"/>
+		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="109" Behavior="Property" Name="(Mil) Thruster Boost"/>
+		<Point PointId="DamageReduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-33" DisplayOrder="107" Behavior="Property" Name="(Mil) Damage Reduction"/>
+		<Point PointId="AFExtraStart" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraStart"/>
+		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraEnd"/>
+		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraElevation"/>
+		<Point PointId="UpgradeGridType" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="100" DisplayOrder="-5" Behavior="UpgradePoint" Name="Grid Type"/>
+		<Point PointId="UpgradeGridTypeBase" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="101" DisplayOrder="-4" Behavior="UpgradePoint" Name="Grid Type"/>
+		<Point PointId="UpgradeGridService" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="102" DisplayOrder="-3" Behavior="UpgradePoint" Name="Grid Service"/>
+		<Point PointId="UpgradeMil" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="103" DisplayOrder="-2" Behavior="UpgradePoint" Name="Military Points"/>
+		<Point PointId="UpgradeCiv" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="104" DisplayOrder="-1" Behavior="UpgradePoint" Name="Civilian Points"/>
+		<!-- CORE Settings, can't be removed or used by LimitConsumers -->
+		<!-- Values from -1 to -100 are reserved! -->
+		<Point PointId="BroadcastRadius" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-32" DisplayOrder="106" Behavior="Property" Name="Broadcast Radius"/>
+	</Points>
+	<SpecBlocks>
+		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="100000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="MaxBlocks" Amount="1000"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades>Except,Upgrade_Medium_Military,Upgrade_Medium_Civilian,Upgrade_Heavy_Military,Upgrade_Heavy_Civilian,Upgrade_Base</PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_MediumCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="100000"/>
+				<Point PointId="MaxBlocks" Amount="3000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades>Except,Upgrade_Light_Military,Upgrade_Light_Civilian,Upgrade_Heavy_Military,Upgrade_Heavy_Civilian,Upgrade_Base</PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="200000"/>
+				<Point PointId="MaxBlocks" Amount="1000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="0"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+				<Point PointId="SmallProduction" Amount="20"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="200000"/>
+				<Point PointId="MaxBlocks" Amount="1000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="1"/>
+				<Point PointId="SmallProduction" Amount="20"/>
+			</DefaultStatic>
+			<PossibleUpgrades>Except,Upgrade_Medium_Military,Upgrade_Medium_Civilian,Upgrade_Heavy_Military,Upgrade_Heavy_Civilian</PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_MediumCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="SmallGrids" Amount="1"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="200000"/>
+				<Point PointId="MaxBlocks" Amount="3000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="0"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+				<Point PointId="SmallProduction" Amount="20"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="SmallGrids" Amount="1"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="200000"/>
+				<Point PointId="MaxBlocks" Amount="3000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="1"/>
+				<Point PointId="SmallProduction" Amount="20"/>
+			</DefaultStatic>
+			<PossibleUpgrades>Except,Upgrade_Light_Military,Upgrade_Light_Civilian,Upgrade_Heavy_Military,Upgrade_Heavy_Civilian</PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_HeavyCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="SmallGrids" Amount="1"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="200000"/>
+				<Point PointId="MaxBlocks" Amount="6000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="0"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+				<Point PointId="SmallProduction" Amount="20"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="SmallGrids" Amount="1"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="200000"/>
+				<Point PointId="MaxBlocks" Amount="6000"/>
+				<Point PointId="Projectors_MnM" Amount="1"/>
+				<Point PointId="UpgradeGridType" Amount="1"/>
+				<Point PointId="UpgradeGridService" Amount="0"/>
+				<Point PointId="UpgradeMil" Amount="0"/>
+				<Point PointId="UpgradeCiv" Amount="0"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="1"/>
+				<Point PointId="SmallProduction" Amount="20"/>
+			</DefaultStatic>
+			<PossibleUpgrades>Except,Upgrade_Light_Military,Upgrade_Light_Civilian,Upgrade_Medium_Military,Upgrade_Medium_Civilian</PossibleUpgrades>
+		</SpecBlockInfo>
+	</SpecBlocks>
+	<LimitedBlocks>
+		<!--
+	 
+		LimitedBlockInfo
+			ConsumesLimitIf can be: Placed, Functional, Enabled, Working
+			DisableBehavior can be: OnOff, DamageToFunctional, Destroy
+			CanWorkWithoutSpecCore - can work if there is no matching spec cores on grid group.
+			CanWorkOnSubGrids - won't work, if cockpit that gaining access to control grid is located on other grid. Also require attached pilot to that cockpit
+			CustomLogicId = "Drills" - creating new custom behavior. You must connect with Hooks via mod code! Ignores `ConsumesLimitIf`, `DisableBehavior`
+			
+			BlockIds: 
+				Mlt (float) (default=1) 
+				Mlt2 (float) (default=1) 
+				CustomValue (float) (default=1)
+				
+			UsedPoints:
+				Id (int) - Id of point. See: Points (top document)
+				Amount (float) - Id of point. See: Points (top document)
+				UseMlts (default:"true") - if true, then it would be multiplied by (Mlt*Mlt2)
+				UseCustomValue (default:"false") - if true, then value would be taken for each block from `CustomValue`, ignoring Amount, Mlt, Mlt2
+				RoundLimits (default:"true") - would round 0.5 into 1
+				MinValue  (default:"NaN") - final value can't be less than that value
+				
+			Tip: use Mlt for Volume of block, use Mlt2 for LargeGridToSmallGridMlt: (2.5m*2.5m*2.5m) / (0.5m*0.5m*0.5m) = 125;
+	
+	-->
+		<!--limited Suspension-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorSuspension/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Suspension" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Hovers-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/Hover*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Hovers" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Thrusters-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Thrusters" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited WindSolar-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="SolarPanel/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="WindTurbine/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="WindSolar" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Drills-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="Drill/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Drills" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Pistons-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="PistonBase/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Drills" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited RotorsHinges-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="RotorsHinges" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Welders-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="ShipWelder/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Welders" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Grinders-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="ShipGrinder/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Grinders" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited SmallProduction-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="Refinery/Blast*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Assembler/Basic*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="SmallProduction" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited LargeProduction-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="Refinery/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Assembler/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="LargeProduction" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited MnM-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="Projector/MnM*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Projectors_MnM" Amount="1" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Small Cal-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<!--Gatlings-->
+				<Id Mlt="1" Mlt2="5">LargeMissileTurret/ARYXVulcanTurret</Id>
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/SentinelTurret</Id>
+				<Id Mlt="1" Mlt2="2">LargeGatlingTurret/</Id>
+				<Id Mlt="1" Mlt2="1">LargeGatlingTurret/SmallGatlingTurret</Id>
+				<Id Mlt="1" Mlt2="0">SmallGatlingGun/</Id>
+				<Id Mlt="1" Mlt2="1">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
+				<Id Mlt="1" Mlt2="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
+				<!--Autocannons-->
+				<Id Mlt="1" Mlt2="7">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
+				<Id Mlt="1" Mlt2="3">LargeMissileTurret/KhopeshTurret</Id>
+				<Id Mlt="1" Mlt2="2">LargeGatlingTurret/LargeAutoCannonTurret</Id>
+				<Id Mlt="1" Mlt2="2">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/AutoCannonTurret</Id>
+				<Id Mlt="1" Mlt2="1">SmallGatlingGun/SmallBlockAutocannon</Id>
+				<!--Interior-->
+				<Id Mlt="1" Mlt2="0">InteriorTurret/LargeInteriorTurret</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Tech_SmallCal" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Large Cal-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<!--Flaks-->
+				<Id Mlt="1" Mlt2="3">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="1">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
+				<!--Cannons-->
+				<Id Mlt="1" Mlt2="4">LargeMissileTurret/LargeCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="2">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/OKI122mmVT</Id>
+				<Id Mlt="1" Mlt2="1">SmallMissileLauncher/OKI122mmSGfixed</Id>
+				<!--Heavy Cannons-->
+				<Id Mlt="1" Mlt2="7">LargeMissileTurret/ARYXHurricaneCannon</Id>
+				<!--Railguns-->
+				<Id Mlt="1" Mlt2="5">LargeMissileTurret/ARYXRailgunTurret</Id>
+				<Id Mlt="1" Mlt2="4">ConveyorSorter/ARYXRailgun</Id>
+				<Id Mlt="1" Mlt2="3">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="3">ConveyorSorter/SmallRailgun</Id>
+				<!--MAC-->
+				<Id Mlt="1" Mlt2="3">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="3">ConveyorSorter/LargeRailgun</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Tech_LargeCal" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Missiles-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<!--Rockets-->
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/</Id>
+				<Id Mlt="1" Mlt2="1">LargeMissileTurret/SmallMissileTurret</Id>
+				<Id Mlt="1" Mlt2="2">SmallMissileLauncher/LargeMissileLauncher</Id>
+				<Id Mlt="1" Mlt2="0">SmallMissileLauncher/</Id>
+				<Id Mlt="1" Mlt2="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
+				<!--Missiles-->
+				<Id Mlt="1" Mlt2="4">ConveyorSorter/MXA_ArcherPods</Id>
+				<Id Mlt="1" Mlt2="2">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
+				<!--Heavy Missiles-->
+				<Id Mlt="1" Mlt2="6">ConveyorSorter/missileBattery01</Id>
+				<!--Torpedoes-->
+				<Id Mlt="1" Mlt2="5">ConveyorSorter/Missile_Torpedo_Large</Id>
+				<Id Mlt="1" Mlt2="4">ConveyorSorter/Missile_Torpedo_Small</Id>
+				<!--SRBM-->
+				<Id Mlt="1" Mlt2="7">ConveyorSorter/ARYXMissileBattery</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Tech_Missiles" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Laser-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<!--Lasers-->
+				<Id Mlt="1" Mlt2="7">LargeMissileTurret/ARYXSpartanTurret</Id>
+				<Id Mlt="1" Mlt2="3">ConveyorSorter/MA_T2PDX</Id>
+				<Id Mlt="1" Mlt2="2">ConveyorSorter/MA_Fixed_T2</Id>
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/ReceptorTurret</Id>
+				<Id Mlt="1" Mlt2="1">ConveyorSorter/ReceptorCoilGun</Id>
+				<!--AMS-->
+				<Id Mlt="1" Mlt2="3">LargeMissileTurret/MA_PDT</Id>
+				<Id Mlt="1" Mlt2="2">LargeMissileTurret/MA_PDT_sm</Id>
+				<!--Plasma-->
+				<Id Mlt="1" Mlt2="7">LargeMissileTurret/lokiCannon1</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Tech_Laser" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Relic
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1">ConveyorSorter/ARYXGaussCannon</Id>
+				<Id Mlt="1" Mlt2="1">ConveyorSorter/ARYXLightRailgun</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Tech_Relic" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>-->
+		<!--limited SRBM-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1">ConveyorSorter/ARYXMissileBattery</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="SRBM" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Warheads
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1">Warhead/SmallWarhead</Id>
+				<Id Mlt="1" Mlt2="1">Warhead/LargeWarhead</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Warheads" Amount="1"/>
+			</UsedPoints>
+		</LimitedBlockInfo>-->
+	</LimitedBlocks>
+	<NoSpecCoreSettings>
+		<LargeStatic>
+			<Point PointId="WindSolar" Amount="2"/>
+		</LargeStatic>
+		<LargeDynamic>
+			<Point PointId="WindSolar" Amount="2"/>
+		</LargeDynamic>
+		<SmallStatic>
+			<Point PointId="WindSolar" Amount="2"/>
+		</SmallStatic>
+		<SmallDynamic>
+			<Point PointId="WindSolar" Amount="2"/>
+		</SmallDynamic>
+		<LargeAndSmallStatic>
+			<Point PointId="WindSolar" Amount="2"/>
+		</LargeAndSmallStatic>
+		<LargeAndSmallDynamic>
+			<Point PointId="WindSolar" Amount="2"/>
+		</LargeAndSmallDynamic>
+	</NoSpecCoreSettings>
+	<Upgrades>
+		<!-- Type Upgrades -->
+		<Upgrade NId="1" Name="Upgrade_Flyer" DisplayName="(Type) Flyer/Hover">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridType" Value="1"/>
+						<Cost PointId="UpgradeGridTypeBase" Value="1"/>
+						<Cost PointId="UpgradeGridService" Value="-1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridType" SumBefore="-1"/>
+						<Modificator PointId="UpgradeGridTypeBase" SumBefore="-1"/>
+						<Modificator PointId="UpgradeGridService" SumBefore="1"/>
+						<Modificator PointId="Thrusters" SumBefore="99999999999"/>
+						<Modificator PointId="Suspension" SumBefore="4"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="3" Name="Upgrade_Rover" DisplayName="(Type) Rover">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridType" Value="1"/>
+						<Cost PointId="UpgradeGridTypeBase" Value="1"/>
+						<Cost PointId="UpgradeGridService" Value="-1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridType" SumBefore="-1"/>
+						<Modificator PointId="UpgradeGridTypeBase" SumBefore="-1"/>
+						<Modificator PointId="UpgradeGridService" SumBefore="1"/>
+						<Modificator PointId="Suspension" SumBefore="20"/>
+						<Modificator PointId="Thrusters" SumBefore="20"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="4" Name="Upgrade_Base" DisplayName="(Type) Base">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridType" Value="1"/>
+						<Cost PointId="UpgradeGridTypeBase" Value="1"/>
+						<Cost PointId="UpgradeGridService" Value="-1"/>
+						<Cost PointId="UpgradeMil" Value="-4"/>
+						<Cost PointId="UpgradeCiv" Value="-4"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumStaticBefore="4"/>
+						<Modificator PointId="UpgradeCiv" SumStaticBefore="4"/>
+						<Modificator PointId="UpgradeGridType" SumStaticBefore="-1"/>
+						<Modificator PointId="UpgradeGridTypeBase" SumStaticBefore="-1"/>
+						<Modificator PointId="UpgradeGridService" SumStaticBefore="1"/>
+						<Modificator PointId="MaxBlocks" SumStaticBefore="2000"/>
+						<Modificator PointId="SRBM" SumStaticBefore="1"/>
+						<Modificator PointId="DrillBlocker" SumStaticBefore="1"/>
+						<Modificator PointId="SafezoneGen" SumStaticBefore="1"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>		
+		<!-- Light Service Upgrades -->
+		<Upgrade NId="5" Name="Upgrade_Light_Military" DisplayName="(Service) Light_Military">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridService" Value="1"/>
+						<Cost PointId="UpgradeMil" Value="-4"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridService" SumBefore="-1"/>
+						<Modificator PointId="UpgradeMil" SumBefore="4"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="6" Name="Upgrade_Light_Civilian" DisplayName="(Service) Light_Civilian">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridService" Value="1"/>
+						<Cost PointId="UpgradeCiv" Value="-4"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridService" SumBefore="-1"/>
+						<Modificator PointId="UpgradeCiv" SumBefore="4"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<!-- Medium Service Upgrades -->
+		<Upgrade NId="7" Name="Upgrade_Medium_Military" DisplayName="(Service) Medium Military">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridService" Value="1"/>
+						<Cost PointId="UpgradeMil" Value="-6"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridService" SumBefore="-1"/>
+						<Modificator PointId="UpgradeMil" SumBefore="6"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="8" Name="Upgrade_Medium_Civilian" DisplayName="(Service) Medium Civilian">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridService" Value="1"/>
+						<Cost PointId="UpgradeCiv" Value="-6"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridService" SumBefore="-1"/>
+						<Modificator PointId="UpgradeCiv" SumBefore="6"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<!-- Heavy Service Upgrades -->
+		<Upgrade NId="9" Name="Upgrade_Heavy_Military" DisplayName="(Service) Heavy Military">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridService" Value="1"/>
+						<Cost PointId="UpgradeMil" Value="-8"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridService" SumBefore="-1"/>
+						<Modificator PointId="UpgradeMil" SumBefore="8"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="10" Name="Upgrade_Heavy_Civilian" DisplayName="(Service) Heavy Civilian">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeGridService" Value="1"/>
+						<Cost PointId="UpgradeCiv" Value="-8"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeGridService" SumBefore="-1"/>
+						<Modificator PointId="UpgradeCiv" SumBefore="8"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<!-- Civ Upgrades -->
+		<Upgrade NId="11" Name="Upgrade_Drills" DisplayName="(Civ) Drills">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="Drills" SumBefore="3"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="Drills" SumBefore="6"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="Drills" SumBefore="10"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="12" Name="Upgrade_PassivePower" DisplayName="(Civ) Passive Power">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="WindSolar" SumBefore="6"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<!-- WEAPON SPEC-->
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="WindSolar" SumBefore="12"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<!-- WEAPON SPEC-->
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="WindSolar" SumBefore="20"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="13" Name="Upgrade_Pistons" DisplayName="(Civ) Pistons">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="Pistons" SumBefore="3"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="Pistons" SumBefore="6"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="Pistons" SumBefore="10"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="14" Name="Upgrade_Welders" DisplayName="(Civ) Welders">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="Welders" SumBefore="3"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="Welders" SumBefore="6"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="Welders" SumBefore="10"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="15" Name="Upgrade_Grinders" DisplayName="(Civ) Grinders">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="Grinders" SumBefore="3"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="Grinders" SumBefore="6"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="Grinders" SumBefore="10"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="16" Name="Upgrade_LargeProduction" DisplayName="(Civ) Large Production">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="LargeProduction" SumBefore="6"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="LargeProduction" SumBefore="12"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="LargeProduction" SumBefore="20"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<!--<Upgrade NId="17" Name="Upgrade_DrillBoost" DisplayName="(Civ) Drill Boost">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="DrillBoost" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="DrillBoost" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="DrillBoost" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="18" Name="Upgrade_GeneratorBoost" DisplayName="(Civ) Generator Boost">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="GeneratorBoost" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="GeneratorBoost" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="GeneratorBoost" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="19" Name="Upgrade_ReactorBoost" DisplayName="(Civ) Reactor Boost">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="ReactorBoost" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="ReactorBoost" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="ReactorBoost" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>-->
+		<Upgrade NId="20" Name="Upgrade_RotorsHinges" DisplayName="(Civ) Rotors/Hinges">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="RotorsHinges" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="RotorsHinges" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="RotorsHinges" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="21" Name="Upgrade_CivToMilConverter" DisplayName="(Civ) Convert Points">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="1" BlockedUpgrades="Upgrade_MilToCivConverter"/>
+						<Cost PointId="UpgradeMil" Value="-1" BlockedUpgrades="Upgrade_MilToCivConverter"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="UpgradeMil" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="2" BlockedUpgrades="Upgrade_MilToCivConverter"/>
+						<Cost PointId="UpgradeMil" Value="-2" BlockedUpgrades="Upgrade_MilToCivConverter"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="UpgradeMil" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeCiv" Value="3" BlockedUpgrades="Upgrade_MilToCivConverter"/>
+						<Cost PointId="UpgradeMil" Value="-3" BlockedUpgrades="Upgrade_MilToCivConverter"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
+						<Modificator PointId="UpgradeMil" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<!-- Mil Upgrades -->
+		<Upgrade NId="30" Name="Upgrade_Tech_SmallCal" DisplayName="(Mil) S.Cal Tech Slots">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="Tech_SmallCal" SumBefore="20"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="Tech_SmallCal" SumBefore="40"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="Tech_SmallCal" SumBefore="60"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="31" Name="Upgrade_Tech_LargeCal" DisplayName="(Mil) L.Cal Tech Slots">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="Tech_LargeCal" SumBefore="20"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="Tech_LargeCal" SumBefore="40"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="Tech_LargeCal" SumBefore="60"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="32" Name="Upgrade_Tech_Missiles" DisplayName="(Mil) Missile Tech Slots">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="Tech_Missiles" SumBefore="20"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="Tech_Missiles" SumBefore="40"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<!--<Locks LockGroups="Light_Weapons_T3" />-->
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="Tech_Missiles" SumBefore="60"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="33" Name="Upgrade_Tech_Laser" DisplayName="(Mil) Laser Tech Slots">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="Tech_Laser" SumBefore="20"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="Tech_Laser" SumBefore="40"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<!--<Locks LockGroups="Light_Weapons_T3" />-->
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="Tech_Laser" SumBefore="60"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="34" Name="Upgrade_MilToCivConverter" DisplayName="(Mil) Convert Points">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1" BlockedUpgrades="Upgrade_CivToMilConverter"/>
+						<Cost PointId="UpgradeCiv" Value="-1" BlockedUpgrades="Upgrade_CivToMilConverter"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="UpgradeCiv" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2" BlockedUpgrades="Upgrade_CivToMilConverter"/>
+						<Cost PointId="UpgradeCiv" Value="-2" BlockedUpgrades="Upgrade_CivToMilConverter"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="UpgradeCiv" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3" BlockedUpgrades="Upgrade_CivToMilConverter"/>
+						<Cost PointId="UpgradeCiv" Value="-3" BlockedUpgrades="Upgrade_CivToMilConverter"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="UpgradeCiv" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<!--<Upgrade NId="35" Name="Upgrade_AirFriction" DisplayName="(Mil) Speed Boost">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="AFExtraStart" SumBefore="10"/>
+						<Modificator PointId="AFExtraEnd" Sum="10"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="4"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="AFExtraStart" SumBefore="15"/>
+						<Modificator PointId="AFExtraEnd" Sum="15"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="6"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="AFExtraStart" SumBefore="20"/>
+						<Modificator PointId="AFExtraEnd" Sum="20"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="36" Name="Upgrade_DamageReduction" DisplayName="(Mil) Armor Boost">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="DamageReduction" SumBefore="1" />
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="DamageReduction" SumBefore="2" />
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="DamageReduction" SumBefore="3" />
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="37" Name="Upgrade_ThrusterBoost" DisplayName="(Mil) Thruster Boost">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="4"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="2"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="6"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="3"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>-->
+	</Upgrades>
+</SpecCoreSettings>
