@@ -163,6 +163,7 @@
 		<Point PointId="BroadcastRadius" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-32" DisplayOrder="106" Behavior="Property" Name="Broadcast Radius"/>
 	</Points>
 	<SpecBlocks>
+		<!-- Player Blocks -->		
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
@@ -207,6 +208,7 @@
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades>Except,Upgrade_Light_Military,Upgrade_Light_Civilian,Upgrade_Heavy_Military,Upgrade_Heavy_Civilian,Upgrade_Base</PossibleUpgrades>
 		</SpecBlockInfo>
+		<!-- No Heavy Cores for Small Grid -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
@@ -315,6 +317,175 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultStatic>
 			<PossibleUpgrades>Except,Upgrade_Light_Military,Upgrade_Light_Civilian,Upgrade_Medium_Military,Upgrade_Medium_Civilian</PossibleUpgrades>
+		</SpecBlockInfo>
+		<!-- NPC Blocks -->		
+		<SpecBlockInfo BlockIds="RemoteControl/RivalAIRemoteControlSmall">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="999999999"/>
+				<Point PointId="MaxBlocks" Amount="999999999"/>
+				<Point PointId="Projectors_MnM" Amount="999999999"/>
+				<Point PointId="UpgradeGridType" Amount="999999999"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
+				<Point PointId="UpgradeGridService" Amount="999999999"/>
+				<Point PointId="UpgradeMil" Amount="999999999"/>
+				<Point PointId="UpgradeCiv" Amount="999999999"/>
+				<Point PointId="Tech_SmallCal" Amount="999999999"/>
+				<Point PointId="Tech_LargeCal" Amount="999999999"/>
+				<Point PointId="Tech_Missiles" Amount="999999999"/>
+				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Relic" Amount="999999999"/>
+				<Point PointId="Warheads" Amount="999999999"/>
+				<Point PointId="SRBM" Amount="999999999"/>
+				<Point PointId="Thrusters" Amount="999999999"/>
+				<Point PointId="Hovers" Amount="999999999"/>
+				<Point PointId="Suspension" Amount="999999999"/>
+				<Point PointId="SafezoneGen" Amount="999999999"/>
+				<Point PointId="WindSolar" Amount="999999999"/>
+				<Point PointId="Drills" Amount="999999999"/>
+				<Point PointId="Welders" Amount="999999999"/>
+				<Point PointId="Grinders" Amount="999999999"/>
+				<Point PointId="Pistons" Amount="999999999"/>
+				<Point PointId="RotorsHinges" Amount="999999999"/>
+				<Point PointId="LargeProduction" Amount="999999999"/>
+				<Point PointId="SmallProduction" Amount="999999999"/>
+				<Point PointId="DrillBlocker" Amount="999999999"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="RemoteControl/RivalAIRemoteControlLarge">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="999999999"/>
+				<Point PointId="MaxBlocks" Amount="999999999"/>
+				<Point PointId="Projectors_MnM" Amount="999999999"/>
+				<Point PointId="UpgradeGridType" Amount="999999999"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
+				<Point PointId="UpgradeGridService" Amount="999999999"/>
+				<Point PointId="UpgradeMil" Amount="999999999"/>
+				<Point PointId="UpgradeCiv" Amount="999999999"/>
+				<Point PointId="Tech_SmallCal" Amount="999999999"/>
+				<Point PointId="Tech_LargeCal" Amount="999999999"/>
+				<Point PointId="Tech_Missiles" Amount="999999999"/>
+				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Relic" Amount="999999999"/>
+				<Point PointId="Warheads" Amount="999999999"/>
+				<Point PointId="SRBM" Amount="999999999"/>
+				<Point PointId="Thrusters" Amount="999999999"/>
+				<Point PointId="Hovers" Amount="999999999"/>
+				<Point PointId="Suspension" Amount="999999999"/>
+				<Point PointId="SafezoneGen" Amount="999999999"/>
+				<Point PointId="WindSolar" Amount="999999999"/>
+				<Point PointId="Drills" Amount="999999999"/>
+				<Point PointId="Welders" Amount="999999999"/>
+				<Point PointId="Grinders" Amount="999999999"/>
+				<Point PointId="Pistons" Amount="999999999"/>
+				<Point PointId="RotorsHinges" Amount="999999999"/>
+				<Point PointId="LargeProduction" Amount="999999999"/>
+				<Point PointId="SmallProduction" Amount="999999999"/>
+				<Point PointId="DrillBlocker" Amount="999999999"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_NPC">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="999999999"/>
+				<Point PointId="MaxBlocks" Amount="999999999"/>
+				<Point PointId="Projectors_MnM" Amount="999999999"/>
+				<Point PointId="UpgradeGridType" Amount="999999999"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
+				<Point PointId="UpgradeGridService" Amount="999999999"/>
+				<Point PointId="UpgradeMil" Amount="999999999"/>
+				<Point PointId="UpgradeCiv" Amount="999999999"/>
+				<Point PointId="Tech_SmallCal" Amount="999999999"/>
+				<Point PointId="Tech_LargeCal" Amount="999999999"/>
+				<Point PointId="Tech_Missiles" Amount="999999999"/>
+				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Relic" Amount="999999999"/>
+				<Point PointId="Warheads" Amount="999999999"/>
+				<Point PointId="SRBM" Amount="999999999"/>
+				<Point PointId="Thrusters" Amount="999999999"/>
+				<Point PointId="Hovers" Amount="999999999"/>
+				<Point PointId="Suspension" Amount="999999999"/>
+				<Point PointId="SafezoneGen" Amount="999999999"/>
+				<Point PointId="WindSolar" Amount="999999999"/>
+				<Point PointId="Drills" Amount="999999999"/>
+				<Point PointId="Welders" Amount="999999999"/>
+				<Point PointId="Grinders" Amount="999999999"/>
+				<Point PointId="Pistons" Amount="999999999"/>
+				<Point PointId="RotorsHinges" Amount="999999999"/>
+				<Point PointId="LargeProduction" Amount="999999999"/>
+				<Point PointId="SmallProduction" Amount="999999999"/>
+				<Point PointId="DrillBlocker" Amount="999999999"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_NPC">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Tier" Amount="1"/>
+				<Point PointId="Priority" Amount="12"/>
+				<Point PointId="SmallGrids" Amount="999999999"/>
+				<Point PointId="LargeGrids" Amount="999999999"/>
+				<Point PointId="MaxPCU" Amount="999999999"/>
+				<Point PointId="MaxBlocks" Amount="999999999"/>
+				<Point PointId="Projectors_MnM" Amount="999999999"/>
+				<Point PointId="UpgradeGridType" Amount="999999999"/>
+				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
+				<Point PointId="UpgradeGridService" Amount="999999999"/>
+				<Point PointId="UpgradeMil" Amount="999999999"/>
+				<Point PointId="UpgradeCiv" Amount="999999999"/>
+				<Point PointId="Tech_SmallCal" Amount="999999999"/>
+				<Point PointId="Tech_LargeCal" Amount="999999999"/>
+				<Point PointId="Tech_Missiles" Amount="999999999"/>
+				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Relic" Amount="999999999"/>
+				<Point PointId="Warheads" Amount="999999999"/>
+				<Point PointId="SRBM" Amount="999999999"/>
+				<Point PointId="Thrusters" Amount="999999999"/>
+				<Point PointId="Hovers" Amount="999999999"/>
+				<Point PointId="Suspension" Amount="999999999"/>
+				<Point PointId="SafezoneGen" Amount="999999999"/>
+				<Point PointId="WindSolar" Amount="999999999"/>
+				<Point PointId="Drills" Amount="999999999"/>
+				<Point PointId="Welders" Amount="999999999"/>
+				<Point PointId="Grinders" Amount="999999999"/>
+				<Point PointId="Pistons" Amount="999999999"/>
+				<Point PointId="RotorsHinges" Amount="999999999"/>
+				<Point PointId="LargeProduction" Amount="999999999"/>
+				<Point PointId="SmallProduction" Amount="999999999"/>
+				<Point PointId="DrillBlocker" Amount="999999999"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 	</SpecBlocks>
 	<LimitedBlocks>
@@ -598,6 +769,7 @@
 				<Id Mlt="1" Mlt2="4">ConveyorSorter/Missile_Torpedo_Small</Id>
 				<!--SRBM-->
 				<Id Mlt="1" Mlt2="7">ConveyorSorter/ARYXMissileBattery</Id>
+				<Id Mlt="1" Mlt2="6">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Tech_Missiles" Amount="1"/>
