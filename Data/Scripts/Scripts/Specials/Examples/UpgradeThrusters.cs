@@ -37,7 +37,7 @@ namespace ServerMod
 						if(((IMyTerminalBlock)(block.FatBlock)).DefinitionDisplayNameText.Contains("Thruster"))
 						{
 							(block.FatBlock as IMyThrust).ThrustMultiplier = stats[23];
-							//Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyThrust).ThrustMultiplier}");
+							Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyThrust).ThrustMultiplier}");
 						}						
 					}
 										

@@ -162,7 +162,7 @@
 		<Point PointId="Tech_Relic" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="34" DisplayOrder="34" Behavior="SumLessOrEqual" Name="(Mil) Relic Weapons"/>
 		<Point PointId="Warheads" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="16" DisplayOrder="16" Behavior="SumLessOrEqual" Name="(Mil) Warheads"/>
 		<Point PointId="SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="17" DisplayOrder="17" Behavior="SumLessOrEqual" Name="(Mil) SRBM"/>
-		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="109" Behavior="Property" Name="(Mil) Thruster Boost" PointFormat="Hidden"/>
+		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="109" Behavior="Property" Name="(Mil) Thruster Boost"/>
 		<Point PointId="DamageReduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-33" DisplayOrder="107" Behavior="Property" Name="(Mil) Damage Reduction"/>
 		<Point PointId="AFExtraStart" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraStart"/>
 		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraEnd"/>
@@ -1564,7 +1564,7 @@
 					</Modificators>
 				</Level>
 			</Levels>
-		</Upgrade>
+		</Upgrade>-->
 		<Upgrade NId="36" Name="Upgrade_DamageReduction" DisplayName="(Mil) Armor Boost">
 			<Levels>
 				<Level>
@@ -1573,7 +1573,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="DamageReduction" SumBefore="1" />
+						<Modificator PointId="DamageReduction" SumBefore="1.125" />
 					</Modificators>
 				</Level>
 				<Level>
@@ -1582,7 +1582,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="DamageReduction" SumBefore="2" />
+						<Modificator PointId="DamageReduction" SumBefore="1.25" />
 					</Modificators>
 				</Level>
 				<Level>
@@ -1591,11 +1591,11 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="DamageReduction" SumBefore="3" />
+						<Modificator PointId="DamageReduction" SumBefore="1.5" />
 					</Modificators>
 				</Level>
 			</Levels>
-		</Upgrade>-->
+		</Upgrade>
 		<Upgrade NId="37" Name="Upgrade_ThrusterBoost" DisplayName="(Mil) Thruster Boost">
 			<Levels>
 				<Level>

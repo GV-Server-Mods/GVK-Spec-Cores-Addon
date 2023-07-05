@@ -257,9 +257,9 @@ namespace Scripts.Specials.ShipClass
 					var core = SpecBlockHooks.GetMainSpecCore(slimBlock.CubeGrid);
 					var stats = new Dictionary<int, float>();
 					SpecBlockHooks.GetSpecCoreLimits(core, stats, SpecBlockHooks.GetSpecCoreLimitsEnum.CurrentStaticOrDynamic);
-					if(stats.ContainsKey(55))
+					if(stats.ContainsKey(-33) && stats[-33]!=0)
 					{
-						damage.Amount *= stats [55]; 
+						damage.Amount /= stats [-33]; 
 					}
 				}
 			}
