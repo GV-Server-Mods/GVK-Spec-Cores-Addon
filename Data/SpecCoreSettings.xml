@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
 <SpecCoreSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!-- Infinity > 999999999 -->
-	<Timers CheckLimitsInterval="120" CheckBlocksOnSubGridsInterval="60"/>
+	<Timers CheckLimitsInterval="60" CheckBlocksOnSubGridsInterval="60"/>
 	<EnableLogs>false</EnableLogs>
 	<DebugMode>false</DebugMode>
 	<RandomPunishment>false</RandomPunishment>
+	<HudNoSpecCoreText>No Spec. Core</HudNoSpecCoreText>
+	<HudSpecCoreOverlimitText>Blocks overlimit</HudSpecCoreOverlimitText>
+	<HudSpecCoreActiveText>Active Core {0}</HudSpecCoreActiveText>
 	<!-- 
 		You can set up just `All`, but this may slowdown your gui
 		Example of multioption: `Basic EnergyAndProduction RotorsAndPistons ShipControl Tools Weapons Other`
@@ -45,9 +48,7 @@
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
-		VisibleIfInfinity="true"
-		/>
-		
+		VisibleIfInfinity="true"  />
 	<PointFormat Id="DefaultSumLessOrEqual" 
 		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]" 
 		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Max} OVER LIMIT[/Color]" 
@@ -56,7 +57,6 @@
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="true" />	
-		
 	<PointFormat Id="DefaultMoreOrEqual" 
 		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]" 
 		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Min} UNDER LIMIT[/Color]" 
@@ -65,7 +65,6 @@
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="true" />	
-		
 	<PointFormat Id="DefaultProperty" 
 		Format="[Color=#FFCD57FF]{PointName}:{Max}[/Color]" 
 		FormatOverlimiting="" 
@@ -74,9 +73,24 @@
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
-		
 	<PointFormat Id="DefaultUpgradePoint" 
 		Format="[Color=#FF54AAFF]{PointName}:{Max}[/Color]" 
+		FormatOverlimiting="" 
+		FormatPossibleOverlimiting="" 
+		NumberFormat="{0:G29}" 
+		Visible="true"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="false" />
+	<PointFormat Id="Hidden" 
+		Format="[Color=#FF00A0A0]{PointName}:{Max} {UnitName}[/Color]" 
+		FormatOverlimiting="" 
+		FormatPossibleOverlimiting="" 
+		NumberFormat="{0:G29}" 
+		Visible="false"
+		VisibleIfAllZero="false"
+		VisibleIfInfinity="false" />
+	<PointFormat Id="HiddenUntilError" 
+		Format="[Color=#FF00A0A0]{PointName}:{Max} {UnitName}[/Color]" 
 		FormatOverlimiting="" 
 		FormatPossibleOverlimiting="" 
 		NumberFormat="{0:G29}" 
@@ -148,7 +162,7 @@
 		<Point PointId="Tech_Relic" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="34" DisplayOrder="34" Behavior="SumLessOrEqual" Name="(Mil) Relic Weapons"/>
 		<Point PointId="Warheads" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="16" DisplayOrder="16" Behavior="SumLessOrEqual" Name="(Mil) Warheads"/>
 		<Point PointId="SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="17" DisplayOrder="17" Behavior="SumLessOrEqual" Name="(Mil) SRBM"/>
-		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="109" Behavior="Property" Name="(Mil) Thruster Boost"/>
+		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="109" Behavior="Property" Name="(Mil) Thruster Boost" PointFormat="Hidden"/>
 		<Point PointId="DamageReduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-33" DisplayOrder="107" Behavior="Property" Name="(Mil) Damage Reduction"/>
 		<Point PointId="AFExtraStart" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraStart"/>
 		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraEnd"/>
@@ -867,7 +881,7 @@
 				<Level>
 					<Costs>
 						<Cost PointId="UpgradeGridType" Value="1"/>
-						<Cost PointId="UpgradeGridTypeBase" Value="1"/>
+						<!--<Cost PointId="UpgradeGridTypeBase" Value="1"/>-->
 						<Cost PointId="UpgradeGridService" Value="-1"/>
 					</Costs>
 					<Modificators>
@@ -885,7 +899,7 @@
 				<Level>
 					<Costs>
 						<Cost PointId="UpgradeGridType" Value="1"/>
-						<Cost PointId="UpgradeGridTypeBase" Value="1"/>
+						<!--<Cost PointId="UpgradeGridTypeBase" Value="1"/>-->
 						<Cost PointId="UpgradeGridService" Value="-1"/>
 					</Costs>
 					<Modificators>
@@ -1581,37 +1595,37 @@
 					</Modificators>
 				</Level>
 			</Levels>
-		</Upgrade>
+		</Upgrade>-->
 		<Upgrade NId="37" Name="Upgrade_ThrusterBoost" DisplayName="(Mil) Thruster Boost">
 			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1.125"/>
+					</Modificators>
+				</Level>
 				<Level>
 					<Costs>
 						<Cost PointId="UpgradeMil" Value="2"/>
 					</Costs>
 					<Modificators>
-						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="ThrusterBoost" SumBefore="1"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeMil" Value="4"/>
-					</Costs>
-					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="ThrusterBoost" SumBefore="2"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1.25"/>
 					</Modificators>
 				</Level>
 				<Level>
 					<Costs>
-						<Cost PointId="UpgradeMil" Value="6"/>
+						<Cost PointId="UpgradeMil" Value="3"/>
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="ThrusterBoost" SumBefore="3"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1.5"/>
 					</Modificators>
 				</Level>
 			</Levels>
-		</Upgrade>-->
+		</Upgrade>
 	</Upgrades>
 </SpecCoreSettings>
