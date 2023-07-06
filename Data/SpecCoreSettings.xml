@@ -1212,7 +1212,7 @@
 				</Level>
 			</Levels>
 		</Upgrade>
-		<!--<Upgrade NId="17" Name="Upgrade_DrillBoost" DisplayName="(Civ) Drill Boost">
+		<Upgrade NId="17" Name="Upgrade_DrillBoost" DisplayName="(Civ) Drill Boost">
 			<Levels>
 				<Level>
 					<Costs>
@@ -1220,7 +1220,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="DrillBoost" SumBefore="1"/>
+						<Modificator PointId="DrillBoost" SumBefore="1.5"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1243,6 +1243,7 @@
 				</Level>
 			</Levels>
 		</Upgrade>
+		<!-- This is the rate of ice consumption, NOT the rate of O2/H2 output -->
 		<Upgrade NId="18" Name="Upgrade_GeneratorBoost" DisplayName="(Civ) Generator Boost">
 			<Levels>
 				<Level>
@@ -1251,7 +1252,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="GeneratorBoost" SumBefore="1"/>
+						<Modificator PointId="GeneratorBoost" SumBefore="0.75"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1260,7 +1261,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
-						<Modificator PointId="GeneratorBoost" SumBefore="2"/>
+						<Modificator PointId="GeneratorBoost" SumBefore="0.5"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1269,7 +1270,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
-						<Modificator PointId="GeneratorBoost" SumBefore="3"/>
+						<Modificator PointId="GeneratorBoost" SumBefore="0.25"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1282,7 +1283,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="ReactorBoost" SumBefore="1"/>
+						<Modificator PointId="ReactorBoost" SumBefore="1.5"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1304,7 +1305,7 @@
 					</Modificators>
 				</Level>
 			</Levels>
-		</Upgrade>-->
+		</Upgrade>
 		<Upgrade NId="20" Name="Upgrade_RotorsHinges" DisplayName="(Civ) Rotors/Hinges">
 			<Levels>
 				<Level>
