@@ -140,7 +140,7 @@
 		<Point PointId="MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorMaxBlocks" Name="BLOCKS"/>
 		<Point PointId="Thrusters" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(All) Thrusters"/>
 		<Point PointId="Hovers" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="2" Behavior="SumLessOrEqual" Name="(All) Hovers"/>
-		<Point PointId="Suspension" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="7" DisplayOrder="3" Behavior="SumLessOrEqual" Name="(All) Suspension"/>
+		<Point PointId="Suspension" DefaultSpecCoreValue="4" DefaultNoSpecCoreValue="4" NId="7" DisplayOrder="3" Behavior="SumLessOrEqual" Name="(All) Suspension"/>
 		<Point PointId="Projectors_MnM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="15" DisplayOrder="15" Behavior="SumLessOrEqual" Name="(All) Mnm Projectors"/>
 		<Point PointId="SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="19" DisplayOrder="19" Behavior="SumLessOrEqual" Name="(All) Safezone Gen"/>
 		<Point PointId="WindSolar" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="2" NId="1" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(Civ) Wind/Solar"/>
@@ -889,7 +889,6 @@
 						<Modificator PointId="UpgradeGridTypeBase" SumBefore="-1"/>
 						<Modificator PointId="UpgradeGridService" SumBefore="1"/>
 						<Modificator PointId="Thrusters" SumBefore="99999999999"/>
-						<Modificator PointId="Suspension" SumBefore="4"/>
 					</Modificators>
 				</Level>
 			</Levels>
