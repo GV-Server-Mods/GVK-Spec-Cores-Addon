@@ -137,7 +137,7 @@
 ==============
 Upgrades:</value></data>        
       
-<data name="SpecCores_BlockInfo_UpgradesRow" xml:space="preserve"><value>{0}: {1} ({2})</value></data>        
+<data name="SpecCores_BlockInfo_UpgradesRow" xml:space="preserve"><value>{0}: {1}</value></data>        
 <data name="SpecCores_BlockInfo_StaticOnly" xml:space="preserve"><value>Static:</value></data>        
 <data name="SpecCores_BlockInfo_DynamicOnly" xml:space="preserve"><value>Dynamic:</value></data>        
 <data name="SpecCores_BlockInfo_StaticOrDynamic" xml:space="preserve"><value>Static/Dynamic:</value></data>        
@@ -170,6 +170,15 @@ Total:{3}
 </value></data>    
 <data name="SpecCores_UpgradesList_UpgradeTextNotEnoughPoints" xml:space="preserve"><value>Not enough upgrade points {1} / {5}
 
+</value></data>
+ 
+<data name="SpecCores_UpgradesList_UpgradeTooltipStatic/Dynamic" xml:space="preserve"><value>Static/Dynamic grid unlocks:
+</value></data>
+
+<data name="SpecCores_UpgradesList_UpgradeTooltipStatic" xml:space="preserve"><value>Static grid unlocks:
+</value></data>
+
+<data name="SpecCores_UpgradesList_UpgradeTooltipDynamic" xml:space="preserve"><value>Dynamic grid points:
 </value></data>
 
 <data name="SpecCores_UpgradesList_UpgradeTextMaxUpgrades" xml:space="preserve"><value>Max Upgrades {7} / {9}
