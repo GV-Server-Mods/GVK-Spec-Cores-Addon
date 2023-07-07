@@ -132,10 +132,10 @@
         TYPE_MIN_BLOCKS = -19
 		Warhead
 	-->
-		<Point PointId="Priority" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-1" DisplayOrder="100" Behavior="Property" Name="Priority"/>
-		<Point PointId="Tier" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="1" NId="50" DisplayOrder="50" Behavior="LessOrEqual" Name="Tier"/>
-		<Point PointId="SmallGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="101" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorSmallGrids" Name="Small Grids"/>
-		<Point PointId="LargeGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorLargeGrids" Name="Large Grids"/>
+		<Point PointId="Priority" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-1" DisplayOrder="100" Behavior="Property" Name="Priority" Visible="false" PointFormat="Hidden"/>
+		<Point PointId="Tier" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="1" NId="50" DisplayOrder="50" Behavior="LessOrEqual" Name="Tier" Visible="false" PointFormat="Hidden"/>
+		<Point PointId="SmallGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="101" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorSmallGrids" Name="Small Grids" Visible="false" PointFormat="Hidden"/>
+		<Point PointId="LargeGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorLargeGrids" Name="Large Grids" Visible="false" PointFormat="Hidden"/>
 		<Point PointId="MaxPCU" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-8" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorPCU" Name="PCU"/>
 		<Point PointId="MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorMaxBlocks" Name="BLOCKS"/>
 		<Point PointId="Thrusters" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(All) Thrusters"/>
@@ -153,7 +153,7 @@
 		<Point PointId="SmallProduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="11" DisplayOrder="11" Behavior="SumLessOrEqual" Name="(Civ) Small Production"/>
 		<Point PointId="DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="18" DisplayOrder="18" Behavior="SumLessOrEqual" Name="(Civ) Drill Blocker"/>
 		<Point PointId="DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="20" DisplayOrder="106" Behavior="Property" Name="(Civ) Drill Boost"/>
-		<Point PointId="GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="107" Behavior="Property" Name="(Civ) Generator Boost"/>
+		<Point PointId="GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="107" Behavior="Property" Name="(Civ) Generator Boost" />
 		<Point PointId="ReactorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="107" Behavior="Property" Name="(Civ) Reactor Boost"/>
 		<Point PointId="Tech_SmallCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="30" Behavior="SumLessOrEqual" Name="(Mil) S.Cal Tech"/>
 		<Point PointId="Tech_LargeCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="31" DisplayOrder="31" Behavior="SumLessOrEqual" Name="(Mil) L.Cal Tech"/>
@@ -164,9 +164,9 @@
 		<Point PointId="SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="17" DisplayOrder="17" Behavior="SumLessOrEqual" Name="(Mil) SRBM"/>
 		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="109" Behavior="Property" Name="(Mil) Thruster Boost"/>
 		<Point PointId="DamageReduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-33" DisplayOrder="107" Behavior="Property" Name="(Mil) Damage Reduction"/>
-		<Point PointId="AFExtraStart" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraStart"/>
+		<!--<Point PointId="AFExtraStart" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraStart"/>
 		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraEnd"/>
-		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraElevation"/>
+		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="(Mil) AirFrictionExtraElevation"/>-->
 		<Point PointId="UpgradeGridType" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="100" DisplayOrder="-5" Behavior="UpgradePoint" Name="Grid Type"/>
 		<Point PointId="UpgradeGridTypeBase" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="101" DisplayOrder="-4" Behavior="UpgradePoint" Name="Grid Type"/>
 		<Point PointId="UpgradeGridService" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="102" DisplayOrder="-3" Behavior="UpgradePoint" Name="Grid Service"/>
@@ -174,7 +174,7 @@
 		<Point PointId="UpgradeCiv" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="104" DisplayOrder="-1" Behavior="UpgradePoint" Name="Civilian Points"/>
 		<!-- CORE Settings, can't be removed or used by LimitConsumers -->
 		<!-- Values from -1 to -100 are reserved! -->
-		<Point PointId="BroadcastRadius" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-32" DisplayOrder="106" Behavior="Property" Name="Broadcast Radius"/>
+		<Point PointId="BroadcastRadius" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-32" DisplayOrder="106" Behavior="Property" Name="Broadcast Radius" Visible="false" PointFormat="Hidden"/>
 	</Points>
 	<SpecBlocks>
 		<!-- Player Blocks -->		
