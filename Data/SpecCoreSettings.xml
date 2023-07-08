@@ -136,7 +136,7 @@
 		<Point PointId="Tier" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="1" NId="50" DisplayOrder="50" Behavior="LessOrEqual" Name="Tier" Visible="false" PointFormat="Hidden"/>
 		<Point PointId="SmallGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="101" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorSmallGrids" Name="Small Grids" Visible="false" PointFormat="Hidden"/>
 		<Point PointId="LargeGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorLargeGrids" Name="Large Grids" Visible="false" PointFormat="Hidden"/>
-		<Point PointId="MaxPCU" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-8" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorPCU" Name="PCU"/>
+		<Point PointId="MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorPCU" Name="PCU"/>
 		<Point PointId="MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorMaxBlocks" Name="BLOCKS"/>
 		<Point PointId="Thrusters" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(All) Thrusters"/>
 		<Point PointId="Hovers" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="2" Behavior="SumLessOrEqual" Name="(All) Hovers"/>
@@ -186,11 +186,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="100000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="MaxBlocks" Amount="1000"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -208,11 +203,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="100000"/>
 				<Point PointId="MaxBlocks" Amount="3000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -231,11 +221,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="200000"/>
 				<Point PointId="MaxBlocks" Amount="1000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -246,11 +231,6 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultDynamic>
 			<DefaultStatic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="200000"/>
 				<Point PointId="MaxBlocks" Amount="1000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -270,9 +250,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultDynamic>
-				<Point PointId="SmallGrids" Amount="1"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="200000"/>
 				<Point PointId="MaxBlocks" Amount="3000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -283,9 +260,6 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultDynamic>
 			<DefaultStatic>
-				<Point PointId="SmallGrids" Amount="1"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="200000"/>
 				<Point PointId="MaxBlocks" Amount="3000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -305,9 +279,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultDynamic>
-				<Point PointId="SmallGrids" Amount="1"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="200000"/>
 				<Point PointId="MaxBlocks" Amount="6000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -318,9 +289,6 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultDynamic>
 			<DefaultStatic>
-				<Point PointId="SmallGrids" Amount="1"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="200000"/>
 				<Point PointId="MaxBlocks" Amount="6000"/>
 				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
@@ -341,11 +309,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="999999999"/>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
 				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
@@ -382,11 +345,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="999999999"/>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
 				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
@@ -425,11 +383,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="999999999"/>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
 				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
@@ -466,11 +419,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Tier" Amount="1"/>
-				<Point PointId="Priority" Amount="12"/>
-				<Point PointId="SmallGrids" Amount="999999999"/>
-				<Point PointId="LargeGrids" Amount="999999999"/>
-				<Point PointId="MaxPCU" Amount="999999999"/>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
 				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
@@ -905,7 +853,7 @@
 						<Modificator PointId="UpgradeGridType" SumBefore="-1"/>
 						<Modificator PointId="UpgradeGridTypeBase" SumBefore="-1"/>
 						<Modificator PointId="UpgradeGridService" SumBefore="1"/>
-						<Modificator PointId="Suspension" SumBefore="20"/>
+						<Modificator PointId="Suspension" SumBefore="16"/>
 						<Modificator PointId="Thrusters" SumBefore="20"/>
 					</Modificators>
 				</Level>
