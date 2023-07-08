@@ -48,7 +48,7 @@
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
-		VisibleIfInfinity="true"  />
+		VisibleIfInfinity="false"  />
 	<PointFormat Id="DefaultSumLessOrEqual" 
 		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]" 
 		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Max} OVER LIMIT[/Color]" 
@@ -56,7 +56,7 @@
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
-		VisibleIfInfinity="true" />	
+		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultMoreOrEqual" 
 		Format="[Color=#FF6FFF72]{PointName}:{Total}/{Max}[/Color]" 
 		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Total}/{Min} UNDER LIMIT[/Color]" 
@@ -64,7 +64,7 @@
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
-		VisibleIfInfinity="true" />	
+		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultProperty" 
 		Format="[Color=#FFCD57FF]{PointName}:{Max}[/Color]" 
 		FormatOverlimiting="" 
@@ -133,9 +133,9 @@
 		Warhead
 	-->
 		<Point PointId="Priority" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-1" DisplayOrder="100" Behavior="Property" Name="Priority" Visible="false" PointFormat="Hidden"/>
-		<Point PointId="Tier" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="1" NId="50" DisplayOrder="50" Behavior="LessOrEqual" Name="Tier" Visible="false" PointFormat="Hidden"/>
-		<Point PointId="SmallGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="101" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorSmallGrids" Name="Small Grids" Visible="false" PointFormat="Hidden"/>
-		<Point PointId="LargeGrids" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorLargeGrids" Name="Large Grids" Visible="false" PointFormat="Hidden"/>
+		<Point PointId="Tier" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="50" Behavior="LessOrEqual" Name="Tier" Visible="false" PointFormat="Hidden"/>
+		<Point PointId="SmallGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="101" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorSmallGrids" Name="Small Grids" Visible="false" PointFormat="Hidden"/>
+		<Point PointId="LargeGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorLargeGrids" Name="Large Grids" Visible="false" PointFormat="Hidden"/>
 		<Point PointId="MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorPCU" Name="PCU"/>
 		<Point PointId="MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorMaxBlocks" Name="BLOCKS"/>
 		<Point PointId="Thrusters" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(All) Thrusters"/>
@@ -569,8 +569,14 @@
 				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/*"/>
-				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/LargeStator"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/SmallStator"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/LargeAdvancedStator"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallAdvancedStator"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallAdvancedStatorSmall"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/LargeHinge"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/MediumHinge"/>
+				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallHinge"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="RotorsHinges" Amount="1" UseCustomValue="false"/>
@@ -836,7 +842,7 @@
 						<Modificator PointId="UpgradeGridType" SumBefore="-1"/>
 						<Modificator PointId="UpgradeGridTypeBase" SumBefore="-1"/>
 						<Modificator PointId="UpgradeGridService" SumBefore="1"/>
-						<Modificator PointId="Thrusters" SumBefore="99999999999"/>
+						<Modificator PointId="Thrusters" SumBefore="1000"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -854,7 +860,7 @@
 						<Modificator PointId="UpgradeGridTypeBase" SumBefore="-1"/>
 						<Modificator PointId="UpgradeGridService" SumBefore="1"/>
 						<Modificator PointId="Suspension" SumBefore="16"/>
-						<Modificator PointId="Thrusters" SumBefore="20"/>
+						<Modificator PointId="Thrusters" SumBefore="6"/>
 					</Modificators>
 				</Level>
 			</Levels>
