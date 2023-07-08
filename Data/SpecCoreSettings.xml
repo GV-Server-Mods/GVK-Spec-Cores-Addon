@@ -561,12 +561,11 @@
 				<Point PointId="Drills" Amount="1" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited RotorsHinges-->
+		<!--limited Rotors-->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/LargeStator"/>
@@ -574,6 +573,18 @@
 				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/LargeAdvancedStator"/>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallAdvancedStator"/>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallAdvancedStatorSmall"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="RotorsHinges" Amount="2" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!--limited Hinges-->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/LargeHinge"/>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/MediumHinge"/>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallHinge"/>
@@ -828,6 +839,7 @@
 			<Point PointId="WindSolar" Amount="2"/>
 		</LargeAndSmallDynamic>
 	</NoSpecCoreSettings>
+	<!-- WARNING Upgrade NIds cannot be changed without causing errors for pre-existing spec cores -->
 	<Upgrades>
 		<!-- Type Upgrades -->
 		<Upgrade NId="1" Name="Upgrade_Flyer" DisplayName="(Type) Flyer/Hover">
@@ -1228,14 +1240,14 @@
 				</Level>
 			</Levels>
 		</Upgrade>
-		<Upgrade NId="19" Name="Upgrade_ReactorBoost" DisplayName="(Civ) Reactor Boost">
+		<Upgrade NId="19" Name="Upgrade_ReactorBoost" DisplayName="(Mil) Reactor Boost">
 			<Levels>
 				<Level>
 					<Costs>
-						<Cost PointId="UpgradeCiv" Value="1"/>
+						<Cost PointId="UpgradeMil" Value="1"/>
 					</Costs>
 					<Modificators>
-						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
+						<Modificator PointId="UpgradeMIl" SumAfter="-1"/>
 						<Modificator PointId="ReactorBoost" SumBefore="1.5"/>
 					</Modificators>
 				</Level>
@@ -1244,7 +1256,7 @@
 						<Cost PointId="UpgradeCiv" Value="2"/>
 					</Costs>
 					<Modificators>
-						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
+						<Modificator PointId="UpgradeMil" SumAfter="-2"/>
 						<Modificator PointId="ReactorBoost" SumBefore="2"/>
 					</Modificators>
 				</Level>
@@ -1253,8 +1265,8 @@
 						<Cost PointId="UpgradeCiv" Value="3"/>
 					</Costs>
 					<Modificators>
-						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
-						<Modificator PointId="ReactorBoost" SumBefore="3"/>
+						<Modificator PointId="UpgradeMil" SumAfter="-3"/>
+						<Modificator PointId="ReactorBoost" SumBefore="2.5"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1267,7 +1279,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="RotorsHinges" SumBefore="1"/>
+						<Modificator PointId="RotorsHinges" SumBefore="4"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1276,7 +1288,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
-						<Modificator PointId="RotorsHinges" SumBefore="2"/>
+						<Modificator PointId="RotorsHinges" SumBefore="6"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1285,7 +1297,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
-						<Modificator PointId="RotorsHinges" SumBefore="3"/>
+						<Modificator PointId="RotorsHinges" SumBefore="8"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1408,7 +1420,6 @@
 					</Modificators>
 				</Level>
 				<Level>
-					<!--<Locks LockGroups="Light_Weapons_T3" />-->
 					<Costs>
 						<Cost PointId="UpgradeMil" Value="3"/>
 					</Costs>
@@ -1440,7 +1451,6 @@
 					</Modificators>
 				</Level>
 				<Level>
-					<!--<Locks LockGroups="Light_Weapons_T3" />-->
 					<Costs>
 						<Cost PointId="UpgradeMil" Value="3"/>
 					</Costs>
@@ -1485,40 +1495,6 @@
 				</Level>
 			</Levels>
 		</Upgrade>
-		<!--<Upgrade NId="35" Name="Upgrade_AirFriction" DisplayName="(Mil) Speed Boost">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeMil" Value="2"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="AFExtraStart" SumBefore="10"/>
-						<Modificator PointId="AFExtraEnd" Sum="10"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeMil" Value="4"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="AFExtraStart" SumBefore="15"/>
-						<Modificator PointId="AFExtraEnd" Sum="15"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeMil" Value="6"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="AFExtraStart" SumBefore="20"/>
-						<Modificator PointId="AFExtraEnd" Sum="20"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>-->
 		<Upgrade NId="36" Name="Upgrade_DamageReduction" DisplayName="(Mil) Armor Boost">
 			<Levels>
 				<Level>
@@ -1527,7 +1503,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="DamageReduction" SumBefore="1.125" />
+						<Modificator PointId="DamageReduction" SumBefore="1.1" />
 					</Modificators>
 				</Level>
 				<Level>
@@ -1536,7 +1512,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="DamageReduction" SumBefore="1.25" />
+						<Modificator PointId="DamageReduction" SumBefore="1.2" />
 					</Modificators>
 				</Level>
 				<Level>
@@ -1545,7 +1521,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="DamageReduction" SumBefore="1.5" />
+						<Modificator PointId="DamageReduction" SumBefore="1.3" />
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1558,7 +1534,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="ThrusterBoost" SumBefore="1.125"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1.25"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1567,7 +1543,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="ThrusterBoost" SumBefore="1.25"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1.5"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1576,7 +1552,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="ThrusterBoost" SumBefore="1.5"/>
+						<Modificator PointId="ThrusterBoost" SumBefore="1.75"/>
 					</Modificators>
 				</Level>
 			</Levels>
