@@ -141,19 +141,18 @@
 		<Point PointId="Thrusters" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(All) Thrusters"/>
 		<Point PointId="Hovers" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="2" Behavior="SumLessOrEqual" Name="(All) Hovers"/>
 		<Point PointId="Suspension" DefaultSpecCoreValue="4" DefaultNoSpecCoreValue="4" NId="7" DisplayOrder="3" Behavior="SumLessOrEqual" Name="(All) Suspension"/>
-		<Point PointId="Projectors_MnM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="15" DisplayOrder="15" Behavior="SumLessOrEqual" Name="(All) Mnm Projectors"/>
 		<Point PointId="SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="19" DisplayOrder="19" Behavior="SumLessOrEqual" Name="(All) Safezone Gen"/>
 		<Point PointId="WindSolar" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="2" NId="1" DisplayOrder="1" Behavior="SumLessOrEqual" Name="(Civ) Wind/Solar"/>
 		<Point PointId="Drills" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="2" DisplayOrder="2" Behavior="SumLessOrEqual" Name="(Civ) Drills"/>
 		<Point PointId="Welders" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="3" DisplayOrder="3" Behavior="SumLessOrEqual" Name="(Civ) Welders"/>
 		<Point PointId="Grinders" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="4" Behavior="SumLessOrEqual" Name="(Civ) Grinders"/>
 		<Point PointId="Pistons" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="8" DisplayOrder="8" Behavior="SumLessOrEqual" Name="(Civ) Pistons"/>
-		<Point PointId="RotorsHinges" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="9" DisplayOrder="9" Behavior="SumLessOrEqual" Name="(Civ) Rotors/Hinges"/>
+		<Point PointId="RotorsHinges" DefaultSpecCoreValue="4" DefaultNoSpecCoreValue="0" NId="9" DisplayOrder="9" Behavior="SumLessOrEqual" Name="(Civ) Rotors/Hinges"/>
 		<Point PointId="LargeProduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="10" DisplayOrder="10" Behavior="SumLessOrEqual" Name="(Civ) Large Production"/>
-		<Point PointId="SmallProduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="11" DisplayOrder="11" Behavior="SumLessOrEqual" Name="(Civ) Small Production"/>
+		<Point PointId="SmallProduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="11" DisplayOrder="11" Behavior="SumLessOrEqual" Name="(Civ) Total Production"/>
 		<Point PointId="DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="18" DisplayOrder="18" Behavior="SumLessOrEqual" Name="(Civ) Drill Blocker"/>
-		<Point PointId="DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="20" DisplayOrder="106" Behavior="Property" Name="(Civ) Drill Boost"/>
-		<Point PointId="GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="107" Behavior="Property" Name="(Civ) Generator Boost" />
+		<Point PointId="DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="20" DisplayOrder="106" Behavior="Property" Name="(Civ) Drill Yield Boost"/>
+		<Point PointId="GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="107" Behavior="Property" Name="(Civ) H2/O2 Gen Ice reduction" />
 		<Point PointId="ReactorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="107" Behavior="Property" Name="(Civ) Reactor Boost"/>
 		<Point PointId="Tech_SmallCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="30" Behavior="SumLessOrEqual" Name="(Mil) S.Cal Tech"/>
 		<Point PointId="Tech_LargeCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="31" DisplayOrder="31" Behavior="SumLessOrEqual" Name="(Mil) L.Cal Tech"/>
@@ -186,7 +185,6 @@
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="MaxBlocks" Amount="1000"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
@@ -204,7 +202,6 @@
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="MaxBlocks" Amount="3000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -222,7 +219,6 @@
 			</Behaviors>
 			<DefaultDynamic>
 				<Point PointId="MaxBlocks" Amount="1000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="0"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
@@ -232,7 +228,6 @@
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="MaxBlocks" Amount="1000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -251,7 +246,6 @@
 			</Behaviors>
 			<DefaultDynamic>
 				<Point PointId="MaxBlocks" Amount="3000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="0"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
@@ -261,7 +255,6 @@
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="MaxBlocks" Amount="3000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -280,7 +273,6 @@
 			</Behaviors>
 			<DefaultDynamic>
 				<Point PointId="MaxBlocks" Amount="6000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="0"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
@@ -290,7 +282,6 @@
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="MaxBlocks" Amount="6000"/>
-				<Point PointId="Projectors_MnM" Amount="1"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -310,7 +301,6 @@
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
-				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
@@ -346,7 +336,6 @@
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
-				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
@@ -384,7 +373,6 @@
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
-				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
@@ -420,7 +408,6 @@
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="MaxBlocks" Amount="999999999"/>
-				<Point PointId="Projectors_MnM" Amount="999999999"/>
 				<Point PointId="UpgradeGridType" Amount="999999999"/>
 				<Point PointId="UpgradeGridTypeBase" Amount="999999999"/>
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
@@ -555,10 +542,11 @@
 				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="PistonBase/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/LargePistonBase"/>
+				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/SmallPistonBase"/>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Drills" Amount="1" UseCustomValue="false"/>
+				<Point PointId="Pistons" Amount="1" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!--limited Rotors-->
@@ -630,7 +618,7 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="Refinery/Blast*"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Assembler/Basic*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Assembler/BasicAssembler"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="SmallProduction" Amount="1" UseCustomValue="false"/>
@@ -644,25 +632,12 @@
 				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="Refinery/*"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Assembler/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Refinery/LargeRefinery*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Assembler/LargeAssembler*"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="LargeProduction" Amount="1" UseCustomValue="false"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited MnM-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
-			</Behaviors>
-			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="Projector/MnM*"/>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Projectors_MnM" Amount="1" UseCustomValue="false"/>
+				<Point PointId="SmallProduction" Amount="1" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!--limited Small Cal-->
@@ -1028,27 +1003,16 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="WindSolar" SumBefore="6"/>
+						<Modificator PointId="WindSolar" SumBefore="8"/>
 					</Modificators>
 				</Level>
 				<Level>
 					<Costs>
 						<Cost PointId="UpgradeCiv" Value="2"/>
 					</Costs>
-					<!-- WEAPON SPEC-->
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
-						<Modificator PointId="WindSolar" SumBefore="12"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeCiv" Value="3"/>
-					</Costs>
-					<!-- WEAPON SPEC-->
-					<Modificators>
-						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
-						<Modificator PointId="WindSolar" SumBefore="20"/>
+						<Modificator PointId="WindSolar" SumBefore="18"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1123,7 +1087,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="Grinders" SumBefore="3"/>
+						<Modificator PointId="Grinders" SumBefore="5"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1132,15 +1096,6 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
-						<Modificator PointId="Grinders" SumBefore="6"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeCiv" Value="3"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
 						<Modificator PointId="Grinders" SumBefore="10"/>
 					</Modificators>
 				</Level>
@@ -1177,7 +1132,7 @@
 				</Level>
 			</Levels>
 		</Upgrade>
-		<Upgrade NId="17" Name="Upgrade_DrillBoost" DisplayName="(Civ) Drill Boost">
+		<Upgrade NId="17" Name="Upgrade_DrillBoost" DisplayName="(Civ) Drill Yield Boost">
 			<Levels>
 				<Level>
 					<Costs>
@@ -1209,7 +1164,7 @@
 			</Levels>
 		</Upgrade>
 		<!-- This is the rate of ice consumption, NOT the rate of O2/H2 output -->
-		<Upgrade NId="18" Name="Upgrade_GeneratorBoost" DisplayName="(Civ) Generator Boost">
+		<Upgrade NId="18" Name="Upgrade_GeneratorBoost" DisplayName="(Civ) H2/O2 Gen Ice Reduction">
 			<Levels>
 				<Level>
 					<Costs>
@@ -1240,14 +1195,14 @@
 				</Level>
 			</Levels>
 		</Upgrade>
-		<Upgrade NId="19" Name="Upgrade_ReactorBoost" DisplayName="(Mil) Reactor Boost">
+		<Upgrade NId="19" Name="Upgrade_ReactorBoost" DisplayName="(Mil) Reactor Power Boost">
 			<Levels>
 				<Level>
 					<Costs>
 						<Cost PointId="UpgradeMil" Value="1"/>
 					</Costs>
 					<Modificators>
-						<Modificator PointId="UpgradeMIl" SumAfter="-1"/>
+						<Modificator PointId="UpgradeMil" SumAfter="-1"/>
 						<Modificator PointId="ReactorBoost" SumBefore="1.5"/>
 					</Modificators>
 				</Level>
@@ -1279,7 +1234,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-1"/>
-						<Modificator PointId="RotorsHinges" SumBefore="4"/>
+						<Modificator PointId="RotorsHinges" SumBefore="8"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1288,16 +1243,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeCiv" SumAfter="-2"/>
-						<Modificator PointId="RotorsHinges" SumBefore="6"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="UpgradeCiv" Value="3"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="UpgradeCiv" SumAfter="-3"/>
-						<Modificator PointId="RotorsHinges" SumBefore="8"/>
+						<Modificator PointId="RotorsHinges" SumBefore="16"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1345,7 +1291,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="Tech_SmallCal" SumBefore="20"/>
+						<Modificator PointId="Tech_SmallCal" SumBefore="15"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1354,7 +1300,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="Tech_SmallCal" SumBefore="40"/>
+						<Modificator PointId="Tech_SmallCal" SumBefore="30"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1363,7 +1309,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="Tech_SmallCal" SumBefore="60"/>
+						<Modificator PointId="Tech_SmallCal" SumBefore="45"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1376,7 +1322,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="Tech_LargeCal" SumBefore="20"/>
+						<Modificator PointId="Tech_LargeCal" SumBefore="15"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1385,7 +1331,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="Tech_LargeCal" SumBefore="40"/>
+						<Modificator PointId="Tech_LargeCal" SumBefore="30"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1394,7 +1340,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="Tech_LargeCal" SumBefore="60"/>
+						<Modificator PointId="Tech_LargeCal" SumBefore="45"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1407,7 +1353,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="Tech_Missiles" SumBefore="20"/>
+						<Modificator PointId="Tech_Missiles" SumBefore="15"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1416,7 +1362,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="Tech_Missiles" SumBefore="40"/>
+						<Modificator PointId="Tech_Missiles" SumBefore="30"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1425,7 +1371,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="Tech_Missiles" SumBefore="60"/>
+						<Modificator PointId="Tech_Missiles" SumBefore="45"/>
 					</Modificators>
 				</Level>
 			</Levels>
@@ -1438,7 +1384,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="Tech_Laser" SumBefore="20"/>
+						<Modificator PointId="Tech_Laser" SumBefore="15"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1447,7 +1393,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="Tech_Laser" SumBefore="40"/>
+						<Modificator PointId="Tech_Laser" SumBefore="30"/>
 					</Modificators>
 				</Level>
 				<Level>
@@ -1456,7 +1402,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="Tech_Laser" SumBefore="60"/>
+						<Modificator PointId="Tech_Laser" SumBefore="45"/>
 					</Modificators>
 				</Level>
 			</Levels>
