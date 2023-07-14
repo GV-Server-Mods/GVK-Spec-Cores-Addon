@@ -35,55 +35,63 @@ namespace ServerMod
 				grid.GetBlocks(blocks, x=>x.FatBlock is IMyTerminalBlock);
 				foreach(var block in blocks)
 				{
-					if(((IMyTerminalBlock)(block.FatBlock)).DefinitionDisplayNameText.Contains("Thruster"))
+					var thrustBlock = block.FatBlock as IMyThrust;
+					var reactorBlock = block.FatBlock as IMyReactor;
+					var generatorBlock = block.FatBlock as IMyGasGenerator;
+					var drillBlock = block.FatBlock as IMyShipDrill;
+
+					if(thrustBlock != null)
 					{
-						if(stats.ContainsKey(23) && stats[23]!=0)
+						if(stats.ContainsKey(23) && stats[23] != 0)
 						{
-							(block.FatBlock as IMyThrust).ThrustMultiplier = stats[23];
+							thrustBlock.ThrustMultiplier = stats[23];
 						}
 						else
 						{	
-							(block.FatBlock as IMyThrust).ThrustMultiplier = 1.0f;
+							thrustBlock.ThrustMultiplier = 1.0f;
 						}
-						//Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyThrust).ThrustMultiplier}");
+						//Log.ChatError($"SetMultiplier to: {thrustBlock.ThrustMultiplier}");
 					}
-					if(((IMyTerminalBlock)(block.FatBlock)).DefinitionDisplayNameText.Contains("Reactor"))
+					
+					if(reactorBlock != null)
 					{
-						if(stats.ContainsKey(22) && stats[22]!=0)
+						if(stats.ContainsKey(22) && stats[22] != 0)
 						{
-							(block.FatBlock as IMyReactor).PowerOutputMultiplier = stats[22];
+							reactorBlock.PowerOutputMultiplier = stats[22];
 						}
 						else
 						{	
-							(block.FatBlock as IMyReactor).PowerOutputMultiplier = 1.0f;
+							reactorBlock.PowerOutputMultiplier = 1.0f;
 						}
-						//Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyReactor).PowerOutputMultiplier}");
+						//Log.ChatError($"SetMultiplier to: {reactorBlock.PowerOutputMultiplier}");
 					}
-					if(((IMyTerminalBlock)(block.FatBlock)).DefinitionDisplayNameText.Contains("Generator"))
+					
+					if(generatorBlock != null)
 					{
-						if(stats.ContainsKey(21) && stats[21]!=0)
+						if(stats.ContainsKey(21) && stats[21] != 0)
 						{
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
-							(block.FatBlock as IMyGasGenerator).ProductionCapacityMultiplier = stats[21];
+							generatorBlock.ProductionCapacityMultiplier = stats[21];
 						}
 						else
 						{	
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
-							(block.FatBlock as IMyGasGenerator).ProductionCapacityMultiplier = 1.0f;
+							generatorBlock.ProductionCapacityMultiplier = 1.0f;
 						}
-						//Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyGasGenerator).ProductionCapacityMultiplier}");
+						//Log.ChatError($"SetMultiplier to: {generatorBlock.ProductionCapacityMultiplier}");
 					}
-					if(((IMyTerminalBlock)(block.FatBlock)).DefinitionDisplayNameText.Contains("Drill"))
+					
+					if(drillBlock != null)
 					{
-						if(stats.ContainsKey(20) && stats[20]!=0)
+						if(stats.ContainsKey(20) && stats[20] != 0)
 						{
-							(block.FatBlock as IMyShipDrill).DrillHarvestMultiplier = stats[20];
+							drillBlock.DrillHarvestMultiplier = stats[20];
 						}
 						else
 						{	
-							(block.FatBlock as IMyShipDrill).DrillHarvestMultiplier = 1.0f;
+							drillBlock.DrillHarvestMultiplier = 1.0f;
 						}
-						//Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyShipDrill).DrillHarvestMultiplier}");
+						//Log.ChatError($"SetMultiplier to: {drillBlock.DrillHarvestMultiplier}");
 					}
 				}
             }
