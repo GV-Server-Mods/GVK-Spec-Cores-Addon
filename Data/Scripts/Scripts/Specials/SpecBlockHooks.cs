@@ -259,7 +259,7 @@ namespace Scripts.Specials.ShipClass
 					SpecBlockHooks.GetSpecCoreLimits(core, stats, SpecBlockHooks.GetSpecCoreLimitsEnum.CurrentStaticOrDynamic);
 					if(stats.ContainsKey(-33) && stats[-33]!=0)
 					{
-						damage.Amount /= stats [-33]; 
+						damage.Amount *= stats [-33]; 
 					}
 				}
 			}
