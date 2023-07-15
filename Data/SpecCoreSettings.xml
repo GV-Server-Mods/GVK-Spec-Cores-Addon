@@ -69,7 +69,7 @@
 		Format="[Color=#FFCD57FF]{PointName}:{Max}[/Color]" 
 		FormatOverlimiting="" 
 		FormatPossibleOverlimiting="" 
-		NumberFormat="{0:G29}" 
+		NumberFormat="{0:G3}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
@@ -81,22 +81,6 @@
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />
-<!--	<PointFormat Id="Hidden" 
-		Format="[Color=#FF00A0A0]{PointName}:{Max} {UnitName}[/Color]" 
-		FormatOverlimiting="" 
-		FormatPossibleOverlimiting="" 
-		NumberFormat="{0:G29}" 
-		Visible="false"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false" />
-	<PointFormat Id="HiddenUntilError" 
-		Format="[Color=#FF00A0A0]{PointName}:{Max} {UnitName}[/Color]" 
-		FormatOverlimiting="" 
-		FormatPossibleOverlimiting="" 
-		NumberFormat="{0:G29}" 
-		Visible="true"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false" />-->
 	</PointsFormats>
 	<Points>
 		<!-- 
@@ -156,10 +140,7 @@
 		<Point PointId="DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="27" DisplayOrder="27" Behavior="Property" Name="(Civ) Drill Yield Boost"/>
 		<Point PointId="ReactorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="28" DisplayOrder="28" Behavior="Property" Name="(Civ) Reactor Boost"/>
 		<Point PointId="GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="29" DisplayOrder="29" Behavior="Property" Name="(Civ) H2/O2 Gen Ice reduction" />
-		<Point PointId="Tech_SmallCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="40" Behavior="SumLessOrEqual" Name="(Mil) S.Cal Techs"/>
-		<Point PointId="Tech_LargeCal" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="41" DisplayOrder="41" Behavior="SumLessOrEqual" Name="(Mil) L.Cal Techs"/>
-		<Point PointId="Tech_Missiles" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="42" DisplayOrder="42" Behavior="SumLessOrEqual" Name="(Mil) Missile Techs"/>
-		<Point PointId="Tech_Laser" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="43" DisplayOrder="43" Behavior="SumLessOrEqual" Name="(Mil) Laser Techs"/>
+		<Point PointId="Tech_Weapons" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="40" Behavior="SumLessOrEqual" Name="(Mil) Weapon Techs"/>
 		<Point PointId="Tech_Relic" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="44" DisplayOrder="44" Behavior="SumLessOrEqual" Name="(Mil) Relic Weapons"/>
 		<Point PointId="Warheads" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="45" DisplayOrder="45" Behavior="SumLessOrEqual" Name="(Mil) Warheads"/>
 		<Point PointId="ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="46" Behavior="Property" Name="(Mil) Thruster Boost"/>
@@ -223,7 +204,7 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultDynamic>
 			<DefaultStatic>
-				<Point PointId="MaxBlocks" Amount="1000"/>
+				<Point PointId="MaxBlocks" Amount="500"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -250,7 +231,7 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultDynamic>
 			<DefaultStatic>
-				<Point PointId="MaxBlocks" Amount="3000"/>
+				<Point PointId="MaxBlocks" Amount="2000"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -277,7 +258,7 @@
 				<Point PointId="SmallProduction" Amount="20"/>
 			</DefaultDynamic>
 			<DefaultStatic>
-				<Point PointId="MaxBlocks" Amount="6000"/>
+				<Point PointId="MaxBlocks" Amount="4000"/>
 				<Point PointId="UpgradeGridType" Amount="1"/>
 				<Point PointId="UpgradeGridService" Amount="0"/>
 				<Point PointId="UpgradeMil" Amount="0"/>
@@ -302,10 +283,7 @@
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
 				<Point PointId="UpgradeMil" Amount="999999999"/>
 				<Point PointId="UpgradeCiv" Amount="999999999"/>
-				<Point PointId="Tech_SmallCal" Amount="999999999"/>
-				<Point PointId="Tech_LargeCal" Amount="999999999"/>
-				<Point PointId="Tech_Missiles" Amount="999999999"/>
-				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Weapons" Amount="999999999"/>
 				<Point PointId="Tech_Relic" Amount="999999999"/>
 				<Point PointId="Warheads" Amount="999999999"/>
 				<Point PointId="SRBM" Amount="999999999"/>
@@ -335,10 +313,7 @@
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
 				<Point PointId="UpgradeMil" Amount="999999999"/>
 				<Point PointId="UpgradeCiv" Amount="999999999"/>
-				<Point PointId="Tech_SmallCal" Amount="999999999"/>
-				<Point PointId="Tech_LargeCal" Amount="999999999"/>
-				<Point PointId="Tech_Missiles" Amount="999999999"/>
-				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Weapons" Amount="999999999"/>
 				<Point PointId="Tech_Relic" Amount="999999999"/>
 				<Point PointId="Warheads" Amount="999999999"/>
 				<Point PointId="SRBM" Amount="999999999"/>
@@ -370,10 +345,7 @@
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
 				<Point PointId="UpgradeMil" Amount="999999999"/>
 				<Point PointId="UpgradeCiv" Amount="999999999"/>
-				<Point PointId="Tech_SmallCal" Amount="999999999"/>
-				<Point PointId="Tech_LargeCal" Amount="999999999"/>
-				<Point PointId="Tech_Missiles" Amount="999999999"/>
-				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Weapons" Amount="999999999"/>
 				<Point PointId="Tech_Relic" Amount="999999999"/>
 				<Point PointId="Warheads" Amount="999999999"/>
 				<Point PointId="SRBM" Amount="999999999"/>
@@ -403,10 +375,7 @@
 				<Point PointId="UpgradeGridService" Amount="999999999"/>
 				<Point PointId="UpgradeMil" Amount="999999999"/>
 				<Point PointId="UpgradeCiv" Amount="999999999"/>
-				<Point PointId="Tech_SmallCal" Amount="999999999"/>
-				<Point PointId="Tech_LargeCal" Amount="999999999"/>
-				<Point PointId="Tech_Missiles" Amount="999999999"/>
-				<Point PointId="Tech_Laser" Amount="999999999"/>
+				<Point PointId="Tech_Weapons" Amount="999999999"/>
 				<Point PointId="Tech_Relic" Amount="999999999"/>
 				<Point PointId="Warheads" Amount="999999999"/>
 				<Point PointId="SRBM" Amount="999999999"/>
@@ -615,7 +584,7 @@
 				<Point PointId="SmallProduction" Amount="1" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Small Cal-->
+		<!--limited Weapons Tech-->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -623,135 +592,87 @@
 			</Behaviors>
 			<BlockIds>
 				<!--Gatlings-->
-				<Id Mlt="1" Mlt2="5">LargeMissileTurret/ARYXVulcanTurret</Id>
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/SentinelTurret</Id>
-				<Id Mlt="1" Mlt2="2">LargeGatlingTurret/</Id>
-				<Id Mlt="1" Mlt2="1">LargeGatlingTurret/SmallGatlingTurret</Id>
-				<Id Mlt="1" Mlt2="1">SmallGatlingGun/</Id>
-				<Id Mlt="1" Mlt2="1">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
-				<Id Mlt="1" Mlt2="1">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
+				<Id Mlt="1" Mlt2="5" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
 				<!--Autocannons-->
-				<Id Mlt="1" Mlt2="7">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
-				<Id Mlt="1" Mlt2="3">LargeMissileTurret/KhopeshTurret</Id>
-				<Id Mlt="1" Mlt2="2">LargeGatlingTurret/LargeAutoCannonTurret</Id>
-				<Id Mlt="1" Mlt2="2">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/AutoCannonTurret</Id>
-				<Id Mlt="1" Mlt2="1">SmallGatlingGun/SmallBlockAutocannon</Id>
+				<Id Mlt="1" Mlt2="7" CustomValue="0">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/KhopeshTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/LargeAutoCannonTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/AutoCannonTurret</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallBlockAutocannon</Id>
 				<!--Interior-->
-				<Id Mlt="1" Mlt2="1">InteriorTurret/LargeInteriorTurret</Id>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Tech_SmallCal" Amount="1"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited Large Cal-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
 				<!--Flaks-->
-				<Id Mlt="1" Mlt2="3">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
-				<Id Mlt="1" Mlt2="1">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
 				<!--Cannons-->
-				<Id Mlt="1" Mlt2="4">LargeMissileTurret/LargeCalibreTurret</Id>
-				<Id Mlt="1" Mlt2="2">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/OKI122mmVT</Id>
-				<Id Mlt="1" Mlt2="1">SmallMissileLauncher/OKI122mmSGfixed</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/LargeCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/OKI122mmVT</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/OKI122mmSGfixed</Id>
 				<!--Heavy Cannons-->
-				<Id Mlt="1" Mlt2="7">LargeMissileTurret/ARYXHurricaneCannon</Id>
+				<Id Mlt="1" Mlt2="7" CustomValue="1">LargeMissileTurret/ARYXHurricaneCannon</Id>
 				<!--Railguns-->
-				<Id Mlt="1" Mlt2="5">LargeMissileTurret/ARYXRailgunTurret</Id>
-				<Id Mlt="1" Mlt2="4">ConveyorSorter/ARYXRailgun</Id>
-				<Id Mlt="1" Mlt2="3">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="3">ConveyorSorter/SmallRailgun</Id>
+				<Id Mlt="1" Mlt2="5" CustomValue="0">LargeMissileTurret/ARYXRailgunTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/ARYXRailgun</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="3" CustomValue="0">ConveyorSorter/SmallRailgun</Id>
 				<!--MAC-->
-				<Id Mlt="1" Mlt2="3">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="3">ConveyorSorter/LargeRailgun</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="1">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/LargeRailgun</Id>
+				<!--Rockets-->
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
+				<!--Missiles-->
+				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
+				<!--Heavy Missiles-->
+				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/missileBattery01</Id>
+				<!--Torpedoes-->
+				<Id Mlt="1" Mlt2="5" CustomValue="1">ConveyorSorter/Missile_Torpedo_Large</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="1">ConveyorSorter/Missile_Torpedo_Small</Id>
+				<!--Drones-->
+				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
+				<!--Lasers-->
+				<Id Mlt="1" Mlt2="7" CustomValue="0">LargeMissileTurret/ARYXSpartanTurret</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">ConveyorSorter/MA_T2PDX</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">ConveyorSorter/MA_Fixed_T2</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/ReceptorTurret</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">ConveyorSorter/ReceptorCoilGun</Id>
+				<!--AMS-->
+				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/MA_PDT</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/MA_PDT_sm</Id>
+				<!--Plasma-->
+				<Id Mlt="1" Mlt2="7" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Tech_LargeCal" Amount="1"/>
+				<Point PointId="Tech_Weapons" Amount="1" UseMlts="true"/>
+				<Point PointId="Tech_Relic" Amount="1" UseCustomValue="true"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Missiles-->
+		<!--limited SRBM -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<!--Rockets-->
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/</Id>
-				<Id Mlt="1" Mlt2="1">LargeMissileTurret/SmallMissileTurret</Id>
-				<Id Mlt="1" Mlt2="2">SmallMissileLauncher/LargeMissileLauncher</Id>
-				<Id Mlt="1" Mlt2="1">SmallMissileLauncher/</Id>
-				<Id Mlt="1" Mlt2="1">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
-				<!--Missiles-->
-				<Id Mlt="1" Mlt2="4">ConveyorSorter/MXA_ArcherPods</Id>
-				<Id Mlt="1" Mlt2="2">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
-				<!--Heavy Missiles-->
-				<Id Mlt="1" Mlt2="6">ConveyorSorter/missileBattery01</Id>
-				<!--Torpedoes-->
-				<Id Mlt="1" Mlt2="5">ConveyorSorter/Missile_Torpedo_Large</Id>
-				<Id Mlt="1" Mlt2="4">ConveyorSorter/Missile_Torpedo_Small</Id>
-				<!--SRBM-->
-				<Id Mlt="1" Mlt2="7">ConveyorSorter/ARYXMissileBattery</Id>
-				<Id Mlt="1" Mlt2="6">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
+				<Id Mlt="1" Mlt2="7" CustomValue="1">ConveyorSorter/ARYXMissileBattery</Id>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Tech_Missiles" Amount="1"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited Laser-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
-				<!--Lasers-->
-				<Id Mlt="1" Mlt2="7">LargeMissileTurret/ARYXSpartanTurret</Id>
-				<Id Mlt="1" Mlt2="3">ConveyorSorter/MA_T2PDX</Id>
-				<Id Mlt="1" Mlt2="2">ConveyorSorter/MA_Fixed_T2</Id>
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/ReceptorTurret</Id>
-				<Id Mlt="1" Mlt2="1">ConveyorSorter/ReceptorCoilGun</Id>
-				<!--AMS-->
-				<Id Mlt="1" Mlt2="3">LargeMissileTurret/MA_PDT</Id>
-				<Id Mlt="1" Mlt2="2">LargeMissileTurret/MA_PDT_sm</Id>
-				<!--Plasma-->
-				<Id Mlt="1" Mlt2="7">LargeMissileTurret/lokiCannon1</Id>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Tech_Laser" Amount="1"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited Relic
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
-				<Id Mlt="1" Mlt2="1">ConveyorSorter/ARYXGaussCannon</Id>
-				<Id Mlt="1" Mlt2="1">ConveyorSorter/ARYXLightRailgun</Id>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Tech_Relic" Amount="1"/>
-			</UsedPoints>
-		</LimitedBlockInfo>-->
-		<!--limited SRBM-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
-				<Id Mlt="1" Mlt2="1">ConveyorSorter/ARYXMissileBattery</Id>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="SRBM" Amount="1"/>
+				<Point PointId="Tech_Weapons" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Tech_Relic" Amount="1" UseMlts="false" UseCustomValue="true"/>
+				<Point PointId="SRBM" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!--limited Warheads
@@ -1213,7 +1134,123 @@
 			</Levels>
 		</Upgrade>
 		<!-- Mil Upgrades 40-59 -->
-		<Upgrade NId="40" Name="Upgrade_Tech_SmallCal" DisplayName="(Mil) S.Cal Tech Tier">
+		<Upgrade NId="40" Name="Upgrade_Tech_Weapons" DisplayName="(Mil) Weapon Tech Tier">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="5"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="10"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="3"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="15"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="4"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-4"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="20"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="5"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-5"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="25"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="6"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-6"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="30"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="7"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-7"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="35"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="8"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-8"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="40"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="9"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-9"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="45"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="10"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-10"/>
+						<Modificator PointId="Tech_Weapons" SumBefore="50"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>
+		<Upgrade NId="41" Name="Upgrade_Relic_Slots" DisplayName="(Mil) Relic Slots">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="1"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
+						<Modificator PointId="Tech_Relic" SumBefore="1"/>
+					</Modificators>
+				</Level>
+				<Level>
+					<Costs>
+						<Cost PointId="UpgradeMil" Value="2"/>
+					</Costs>
+					<Modificators>
+						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
+						<Modificator PointId="Tech_Relic" SumBefore="2"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade>		
+		<!--<Upgrade NId="40" Name="Upgrade_Tech_SmallCal" DisplayName="(Mil) S.Cal Tech Tier">
 			<Levels>
 				<Level>
 					<Costs>
@@ -1336,7 +1373,7 @@
 					</Modificators>
 				</Level>
 			</Levels>
-		</Upgrade>
+		</Upgrade>-->
 		<Upgrade NId="45" Name="Upgrade_DamageReduction" DisplayName="(Mil) Armor Boost">
 			<Levels>
 				<Level>
@@ -1345,7 +1382,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-1"/>
-						<Modificator PointId="DamageReduction" SumBefore="1.1" />
+						<Modificator PointId="DamageReduction" SumBefore="0.90" />
 					</Modificators>
 				</Level>
 				<Level>
@@ -1354,7 +1391,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-2"/>
-						<Modificator PointId="DamageReduction" SumBefore="1.2" />
+						<Modificator PointId="DamageReduction" SumBefore="0.80" />
 					</Modificators>
 				</Level>
 				<Level>
@@ -1363,7 +1400,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumBefore="-3"/>
-						<Modificator PointId="DamageReduction" SumBefore="1.3" />
+						<Modificator PointId="DamageReduction" SumBefore="0.70" />
 					</Modificators>
 				</Level>
 			</Levels>
