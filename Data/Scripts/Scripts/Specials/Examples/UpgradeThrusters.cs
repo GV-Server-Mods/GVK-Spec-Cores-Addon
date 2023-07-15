@@ -42,9 +42,9 @@ namespace ServerMod
 
 					if(thrustBlock != null)
 					{
-						if(stats.ContainsKey(23) && stats[23] != 0)
+						if(stats.ContainsKey(46) && stats[46] != 0)
 						{
-							thrustBlock.ThrustMultiplier = stats[23];
+							thrustBlock.ThrustMultiplier = stats[46];
 						}
 						else
 						{	
@@ -55,9 +55,9 @@ namespace ServerMod
 					
 					if(reactorBlock != null)
 					{
-						if(stats.ContainsKey(22) && stats[22] != 0)
+						if(stats.ContainsKey(28) && stats[28] != 0)
 						{
-							reactorBlock.PowerOutputMultiplier = stats[22];
+							reactorBlock.PowerOutputMultiplier = stats[28];
 						}
 						else
 						{	
@@ -68,10 +68,10 @@ namespace ServerMod
 					
 					if(generatorBlock != null)
 					{
-						if(stats.ContainsKey(21) && stats[21] != 0)
+						if(stats.ContainsKey(29) && stats[29] != 0)
 						{
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
-							generatorBlock.ProductionCapacityMultiplier = stats[21];
+							generatorBlock.ProductionCapacityMultiplier = stats[2129];
 						}
 						else
 						{	
@@ -83,9 +83,9 @@ namespace ServerMod
 					
 					if(drillBlock != null)
 					{
-						if(stats.ContainsKey(20) && stats[20] != 0)
+						if(stats.ContainsKey(27) && stats[27] != 0)
 						{
-							drillBlock.DrillHarvestMultiplier = stats[20];
+							drillBlock.DrillHarvestMultiplier = stats[27];
 						}
 						else
 						{	
