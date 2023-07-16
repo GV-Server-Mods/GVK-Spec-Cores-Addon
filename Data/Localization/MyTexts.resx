@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 
-<data name="SpecCores_BlockActivationError_NONE" xml:space="preserve"><value>NONE</value></data>        
-<data name="SpecCores_BlockActivationError_NOT_ENABLED" xml:space="preserve"><value>NOT_ENABLED</value></data>        
-<data name="SpecCores_BlockActivationError_HAS_LARGE_BLOCKS" xml:space="preserve"><value>HAS_LARGE_BLOCKS</value></data>        
-<data name="SpecCores_BlockActivationError_HAS_SMALL_BLOCKS" xml:space="preserve"><value>HAS_SMALL_BLOCKS</value></data>        
-<data name="SpecCores_BlockActivationError_HAS_PCU_LIMIT" xml:space="preserve"><value>HAS_PCU_LIMIT</value></data>        
-<data name="SpecCores_BlockActivationError_HAS_BLOCKS_LIMIT" xml:space="preserve"><value>HAS_BLOCKS_LIMIT</value></data>        
-<data name="SpecCores_BlockActivationError_HAS_OVERLIMITED_GRIDS" xml:space="preserve"><value>HAS_OVERLIMITED_GRIDS</value></data>        
-<data name="SpecCores_BlockActivationError_ANOTHER_CORE" xml:space="preserve"><value>ANOTHER_CORE</value></data>     
+<data name="SpecCores_BlockActivationError_NONE" xml:space="preserve"><value>Nominal</value></data>        
+<data name="SpecCores_BlockActivationError_NOT_ENABLED" xml:space="preserve"><value>SpecCore not enabled!</value></data>        
+<data name="SpecCores_BlockActivationError_HAS_LARGE_BLOCKS" xml:space="preserve"><value>Too many large blocks!</value></data>        
+<data name="SpecCores_BlockActivationError_HAS_SMALL_BLOCKS" xml:space="preserve"><value>Too many small blocks!</value></data>        
+<data name="SpecCores_BlockActivationError_HAS_PCU_LIMIT" xml:space="preserve"><value>At max PCU!</value></data>        
+<data name="SpecCores_BlockActivationError_HAS_BLOCKS_LIMIT" xml:space="preserve"><value>Too many blocks!</value></data>        
+<data name="SpecCores_BlockActivationError_HAS_OVERLIMITED_GRIDS" xml:space="preserve"><value>Too many grids!</value></data>        
+<data name="SpecCores_BlockActivationError_ANOTHER_CORE" xml:space="preserve"><value>Another SpecCore is active!</value></data>     
 
 <data name="SpecCores_BlockInfo_StatusRow" xml:space="preserve"><value>STATUS: {0}
 ==============
@@ -144,7 +144,7 @@ Upgrades:</value></data>
 <data name="SpecCores_BlockInfo_CantWorkOnSubGrids" xml:space="preserve"><value>   Can't work on sub grids!</value></data>        
 <data name="SpecCores_BlockInfo_Header" xml:space="preserve"><value>&gt;&gt;&gt; Limits: &lt;&lt;&lt;</value></data>   
      
-<data name="SpecCores_UpgradesList_RowText" xml:space="preserve"><value>{0} {1}/{2}</value></data>  
+<data name="SpecCores_UpgradesList_RowText" xml:space="preserve"><value>{0} {1}/{3}</value></data>  
 
 <!-- 
 For next Translations:
