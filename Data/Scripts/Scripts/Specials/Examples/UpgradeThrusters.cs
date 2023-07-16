@@ -39,6 +39,7 @@ namespace ServerMod
 					var reactorBlock = block.FatBlock as IMyReactor;
 					var generatorBlock = block.FatBlock as IMyGasGenerator;
 					var drillBlock = block.FatBlock as IMyShipDrill;
+					var gyroBlock = block.FatBlock as IMyGyro;
 
 					if(thrustBlock != null)
 					{
@@ -51,6 +52,15 @@ namespace ServerMod
 							thrustBlock.ThrustMultiplier = 1.0f;
 						}
 						//Log.ChatError($"SetMultiplier to: {thrustBlock.ThrustMultiplier}");
+						if(stats.ContainsKey(28) && stats[28] != 0)
+						{
+							thrustBlock.PowerConsumptionMultiplier = 1 / stats[28];
+						}
+						else
+						{	
+							thrustBlock.PowerConsumptionMultiplier = 1.0f;
+						}
+						//Log.ChatError($"SetMultiplier to: {thrustBlock.PowerConsumptionMultiplier}");
 					}
 					
 					if(reactorBlock != null)
@@ -65,18 +75,34 @@ namespace ServerMod
 						}
 						//Log.ChatError($"SetMultiplier to: {reactorBlock.PowerOutputMultiplier}");
 					}
+
+					if(gyroBlock != null)
+					{
+						if(stats.ContainsKey(28) && stats[28] != 0)
+						{
+							gyroBlock.PowerConsumptionMultiplier = 1 / stats[28];
+						}
+						else
+						{	
+							gyroBlock.PowerConsumptionMultiplier = 1.0f;
+						}
+						//Log.ChatError($"SetMultiplier to: {gyroBlock.PowerConsumptionMultiplier}");
+					}
+
 					
 					if(generatorBlock != null)
 					{
 						if(stats.ContainsKey(29) && stats[29] != 0)
 						{
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
-							generatorBlock.ProductionCapacityMultiplier = stats[2129];
+							generatorBlock.ProductionCapacityMultiplier = stats[29];
+							generatorBlock.PowerConsumptionMultiplier = stats[29];
 						}
 						else
 						{	
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
 							generatorBlock.ProductionCapacityMultiplier = 1.0f;
+							generatorBlock.PowerConsumptionMultiplier = 1.0f;
 						}
 						//Log.ChatError($"SetMultiplier to: {generatorBlock.ProductionCapacityMultiplier}");
 					}
@@ -86,10 +112,12 @@ namespace ServerMod
 						if(stats.ContainsKey(27) && stats[27] != 0)
 						{
 							drillBlock.DrillHarvestMultiplier = stats[27];
+							drillBlock.PowerConsumptionMultiplier = 1 / stats[27];
 						}
 						else
 						{	
 							drillBlock.DrillHarvestMultiplier = 1.0f;
+							drillBlock.PowerConsumptionMultiplier = 1.0f;
 						}
 						//Log.ChatError($"SetMultiplier to: {drillBlock.DrillHarvestMultiplier}");
 					}
