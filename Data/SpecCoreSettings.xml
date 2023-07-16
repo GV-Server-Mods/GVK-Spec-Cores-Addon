@@ -1378,7 +1378,7 @@
 				</Level>
 				<Level>
 					<Costs>
-						<Cost PointId="UpgradeCiv" Value="2"/>
+						<Cost PointId="UpgradeMil" Value="2"/>
 					</Costs>
 					<Modificators>
 						<Modificator PointId="UpgradeMil" SumAfter="-2"/>
