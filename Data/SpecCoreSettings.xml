@@ -778,7 +778,6 @@
 				<Level>
 					<Costs>
 						<Cost PointId="Points_Upgrade" Value="10" />
-						<Cost PointId="Points_Fortress" Value="1"/>
 					</Costs>
 					<Modificators>
 						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
@@ -790,7 +789,6 @@
 				<Level>
 					<Costs>
 						<Cost PointId="Points_Upgrade" Value="20"/>
-						<Cost PointId="Points_Fortress" Value="1"/>
 					</Costs>
 					<Modificators>
 						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
