@@ -116,7 +116,7 @@
         TYPE_MIN_BLOCKS = -19
 		Warhead
 	-->
-		<Point PointId="Internal_MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="-3" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_MaxBlocks" Name="(All) Blocks"/>
+		<Point PointId="Internal_MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="-3" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_MaxBlocks" Name="Max Blocks"/>
 		<Point PointId="Points_Mobility" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="103" DisplayOrder="-2" Behavior="SumLessOrEqual" Name="Mobility Points"/>
 		<Point PointId="Points_Utility" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="104" DisplayOrder="-1" Behavior="SumLessOrEqual" Name="Utility Points"/>
 		<Point PointId="Points_Upgrade" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="105" DisplayOrder="-1" Behavior="UpgradePoint" Name="Upgrade Points"/>
@@ -138,6 +138,7 @@
 		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Warheads"/>
 
 		<Point PointId="Points_Fortress" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="101" DisplayOrder="30" Behavior="UpgradePoint" Name="Fortress"/>
+		<Point PointId="Points_FortressOrThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="106" DisplayOrder="30" Behavior="UpgradePoint" Name="Fortress/Thruster Boost Lock"/>
 		<Point PointId="Property_DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="27" DisplayOrder="31" Behavior="Property" Name="Drill Boost"/>
 		<Point PointId="Property_GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="29" DisplayOrder="32" Behavior="Property" Name="H2/O2 Gen Boost" />
 		<Point PointId="Property_ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="33" Behavior="Property" Name="Thruster Boost"/>
@@ -196,6 +197,7 @@
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Points_Upgrade" Amount="40"/> <!-- must equal the same value as Points_Utility -->
+				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
 			<DefaultStatic>
 				<Point PointId="Points_Fortress" Amount="1"/>
@@ -214,6 +216,7 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Points_Upgrade" Amount="60"/> <!-- must equal the same value as Points_Utility -->
+				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
 			<DefaultStatic>
 				<Point PointId="Points_Fortress" Amount="1"/>
@@ -232,6 +235,7 @@
 				<Point PointId="Points_Mobility" Amount="200"/>
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Points_Upgrade" Amount="80"/> <!-- must equal the same value as Points_Utility -->
+				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
 			<DefaultStatic>
 				<Point PointId="Points_Fortress" Amount="1"/>
@@ -672,12 +676,14 @@
 			<Levels>
 				<Level>
 					<Costs>
-						<Cost PointId="Points_Fortress" Value="1"/>
+						<Cost PointId="Points_Fortress" Value="1"/> 
+						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
 					</Costs>
 					<Modificators>
 						<Modificator PointId="Points_Mobility" Mlt="0"/>
 						<Modificator PointId="Points_Utility" SumStaticBefore="40"/>
-						<Modificator PointId="Points_Fortress" SumStaticBefore="-1"/>
+						<Modificator PointId="Points_Fortress" Mlt="0"/>
+						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
 						<Modificator PointId="Internal_MaxBlocks" SumStaticBefore="2000"/>
 						<Modificator PointId="Block_SRBM" SumStaticBefore="1"/>
 						<Modificator PointId="Block_DrillBlocker" SumStaticBefore="1"/>
@@ -778,10 +784,12 @@
 				<Level>
 					<Costs>
 						<Cost PointId="Points_Upgrade" Value="10" />
+						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
 					</Costs>
 					<Modificators>
 						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
 						<Modificator PointId="Points_Utility" SumBefore="-10"/>
+						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
 						<Modificator PointId="Property_ThrusterBoost" SumBefore="1.5"/>
 						<Modificator PointId="Points_Fortress" SumBefore="-1"/>
 					</Modificators>
@@ -789,10 +797,12 @@
 				<Level>
 					<Costs>
 						<Cost PointId="Points_Upgrade" Value="20"/>
+						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
 					</Costs>
 					<Modificators>
 						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
 						<Modificator PointId="Points_Utility" SumBefore="-20"/>
+						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
 						<Modificator PointId="Property_ThrusterBoost" SumBefore="2"/>
 						<Modificator PointId="Points_Fortress" SumBefore="-1"/>
 					</Modificators>
