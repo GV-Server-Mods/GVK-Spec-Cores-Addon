@@ -564,10 +564,10 @@
 				<!--Heavy Cannons-->
 				<Id Mlt="1" Mlt2="7" CustomValue="1">LargeMissileTurret/ARYXHurricaneCannon</Id>
 				<!--Railguns-->
-				<Id Mlt="1" Mlt2="5" CustomValue="0">LargeMissileTurret/ARYXRailgunTurret</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/ARYXRailgun</Id>
-				<Id Mlt="1" Mlt2="3" CustomValue="0">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="3" CustomValue="0">ConveyorSorter/SmallRailgun</Id>
+				<Id Mlt="1" Mlt2="5" CustomValue="1">LargeMissileTurret/ARYXRailgunTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="1">ConveyorSorter/ARYXRailgun</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="1">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="3" CustomValue="1">ConveyorSorter/SmallRailgun</Id>
 				<!--MAC-->
 				<Id Mlt="1" Mlt2="6" CustomValue="1">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
 				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/LargeRailgun</Id>
