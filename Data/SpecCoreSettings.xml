@@ -166,6 +166,7 @@
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="30"/>
 				<Point PointId="Points_Upgrade" Amount="30"/> <!-- must equal the same value as Points_Utility -->
+				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
 		</SpecBlockInfo>
@@ -181,6 +182,7 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Points_Upgrade" Amount="40"/> <!-- must equal the same value as Points_Utility -->
+				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
 		</SpecBlockInfo>
