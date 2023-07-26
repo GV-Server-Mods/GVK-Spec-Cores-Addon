@@ -11,6 +11,7 @@ namespace ServerMod
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class UpgradeThrusters : MySessionComponentBase
     {
+
         static UpgradeThrusters()
         {
             SpecBlockHooks.OnReady += HooksOnOnReady;
@@ -28,6 +29,21 @@ namespace ServerMod
         {
             foreach (var grid in grids)
             {				
+
+				//npc checking stuff borrowed from Digi
+				if(grid.BigOwners == null || grid.BigOwners.Count == 0)
+				{
+					continue;
+				}
+
+				long owner = grid.BigOwners[0]; // only check the first one, too edge case to check others 
+				var faction = MyAPIGateway.Session.Factions.TryGetPlayerFaction(owner);
+
+				if(faction == null || faction.IsEveryoneNpc())
+				{
+					continue;
+				}
+
 				List<IMySlimBlock> blocks = new List<IMySlimBlock>();
 				var core = SpecBlockHooks.GetMainSpecCore(grid);
 				var stats = new Dictionary<int, float>();
@@ -146,23 +162,5 @@ namespace ServerMod
 			}
 		}
 		
-		//This isnt working because OnSpecBlockDestroyed returns the block and not the grid
-        /*private static void OnSpecBlockDestroyed(object limitedBlock)
-        {
-            List<IMySlimBlock> blocks = new List<IMySlimBlock>();
-			foreach (var grid in grids)
-            {                
-				blocks.Clear();
-                grid.GetBlocks(blocks, x=>x.FatBlock is IMyTerminalBlock);
-				foreach(var block in blocks)
-				{
-					if(((IMyTerminalBlock)(block.FatBlock)).DefinitionDisplayNameText.Contains("Thruster"))
-					{
-						(block.FatBlock as IMyThrust).ThrustMultiplier = 1.0f;
-						Log.ChatError($"SetMultiplier to: {(block.FatBlock as IMyThrust).ThrustMultiplier}");
-					}                        
-				}
-            }
-        }*/
-    }
+	}
 }
