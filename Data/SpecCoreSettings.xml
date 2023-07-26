@@ -22,7 +22,7 @@
 		Other: IMySafeZoneBlock,IMyMedicalRoom
 		GUIClasses.Strange: IMyGravityGenerator,IMyGravityGeneratorSphere,IMySpaceBall,IMyReflectorLight,IMyInteriorLight,IMySoundBlock,IMyTimerBlock,IMyButtonPanel,IMyControlPanel,IMyShipConnector,IMyAdvancedDoor,IMyAirtightHangarDoor,IMyAirtightSlideDoor,IMyStoreBlock,IMyTargetDummyBlock,IMyTextPanel,IMyLightingBlock,IMyOreDetector,IMySensorBlock,IMyDoor
     -->
-	<LimitedBlocksCanBe>EnergyAndProduction RotorsAndPistons Tools Weapons Other</LimitedBlocksCanBe> <!-- Removed Basic for now -->
+	<LimitedBlocksCanBe></LimitedBlocksCanBe> <!-- Removed Basic EnergyAndProduction RotorsAndPistons Tools Weapons Other for now -->
 	<SpecBlocksCanBe>ShipControl</SpecBlocksCanBe>
 	<ConnectionType>Mechanical</ConnectionType>
 	<DefaultTier>1</DefaultTier>
