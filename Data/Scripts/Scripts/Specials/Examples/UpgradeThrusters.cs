@@ -68,9 +68,9 @@ namespace ServerMod
 							thrustBlock.ThrustMultiplier = 1.0f;
 						}
 						//Log.ChatError($"SetMultiplier to: {thrustBlock.ThrustMultiplier}");
-						if(stats.ContainsKey(28) && stats[28] != 0)
+						if(stats.ContainsKey(46) && stats[46] != 0)
 						{
-							thrustBlock.PowerConsumptionMultiplier = 1 / stats[28];
+							thrustBlock.PowerConsumptionMultiplier = 1 / stats[46];
 						}
 						else
 						{	
@@ -97,10 +97,12 @@ namespace ServerMod
 						if(stats.ContainsKey(28) && stats[28] != 0)
 						{
 							gyroBlock.PowerConsumptionMultiplier = 1 / stats[28];
+							//gyroBlock.GyroStrengthMultiplier = stats[28];
 						}
 						else
 						{	
 							gyroBlock.PowerConsumptionMultiplier = 1.0f;
+							//gyroBlock.GyroStrengthMultiplier = 1.0f;
 						}
 						//Log.ChatError($"SetMultiplier to: {gyroBlock.PowerConsumptionMultiplier}");
 					}
