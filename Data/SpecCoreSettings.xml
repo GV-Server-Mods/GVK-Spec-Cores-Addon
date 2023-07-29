@@ -22,7 +22,7 @@
 		Other: IMySafeZoneBlock,IMyMedicalRoom
 		GUIClasses.Strange: IMyGravityGenerator,IMyGravityGeneratorSphere,IMySpaceBall,IMyReflectorLight,IMyInteriorLight,IMySoundBlock,IMyTimerBlock,IMyButtonPanel,IMyControlPanel,IMyShipConnector,IMyAdvancedDoor,IMyAirtightHangarDoor,IMyAirtightSlideDoor,IMyStoreBlock,IMyTargetDummyBlock,IMyTextPanel,IMyLightingBlock,IMyOreDetector,IMySensorBlock,IMyDoor
     -->
-	<LimitedBlocksCanBe></LimitedBlocksCanBe> <!-- Removed Basic EnergyAndProduction RotorsAndPistons Tools Weapons Other for now -->
+	<LimitedBlocksCanBe>Basic EnergyAndProduction RotorsAndPistons Tools Weapons Other</LimitedBlocksCanBe> <!-- Removed  for now -->
 	<SpecBlocksCanBe>ShipControl</SpecBlocksCanBe>
 	<ConnectionType>Mechanical</ConnectionType>
 	<DefaultTier>1</DefaultTier>
@@ -130,7 +130,7 @@
 		<Point PointId="Block_Pistons" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="7" Behavior="SumLessOrEqual" Name="Pistons"/>
 		<Point PointId="Block_RotorsHinges" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="24" DisplayOrder="8" Behavior="SumLessOrEqual" Name="Rotors/Hinges"/>
 		<Point PointId="Block_Production" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="25" DisplayOrder="9" Behavior="SumLessOrEqual" Name="Production"/>
-		<Point PointId="Block_WeaponTech" DefaultSpecCoreValue="50" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Weapon Tech"/>
+		<Point PointId="Block_WeaponTech" DefaultSpecCoreValue="100" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Weapon Tech"/>
 		<Point PointId="Block_RelicSlots" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="44" DisplayOrder="11" Behavior="SumLessOrEqual" Name="Relic Slots"/>
 		<Point PointId="Block_SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="12" Behavior="SumLessOrEqual" Name="Safezone Gen"/>
 		<Point PointId="Block_SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="13" Behavior="SumLessOrEqual" Name="SRBM"/>
@@ -538,73 +538,73 @@
 			</Behaviors>
 			<BlockIds>
 				<!--Gatlings-->
-				<Id Mlt="1" Mlt2="5" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
+				<Id Mlt="1" Mlt2="10" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
+				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
+				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
 				<!--Autocannons-->
-				<Id Mlt="1" Mlt2="7" CustomValue="0">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
-				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/KhopeshTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/LargeAutoCannonTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/AutoCannonTurret</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallBlockAutocannon</Id>
+				<Id Mlt="1" Mlt2="14" CustomValue="0">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/KhopeshTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/LargeAutoCannonTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/AutoCannonTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallGatlingGun/SmallBlockAutocannon</Id>
 				<!--Interior-->
-				<Id Mlt="1" Mlt2="1" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
 				<!--Flaks-->
-				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
 				<!--Cannons-->
-				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/LargeCalibreTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/OKI122mmVT</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/OKI122mmSGfixed</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/LargeCalibreTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/OKI122mmVT</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/OKI122mmSGfixed</Id>
 				<!--Heavy Cannons-->
-				<Id Mlt="1" Mlt2="7" CustomValue="1">LargeMissileTurret/ARYXHurricaneCannon</Id>
+				<Id Mlt="1" Mlt2="14" CustomValue="1">LargeMissileTurret/ARYXHurricaneCannon</Id>
 				<!--Railguns-->
-				<Id Mlt="1" Mlt2="5" CustomValue="1">LargeMissileTurret/ARYXRailgunTurret</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="1">ConveyorSorter/ARYXRailgun</Id>
-				<Id Mlt="1" Mlt2="3" CustomValue="1">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="3" CustomValue="1">ConveyorSorter/SmallRailgun</Id>
+				<Id Mlt="1" Mlt2="10" CustomValue="1">LargeMissileTurret/ARYXRailgunTurret</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/ARYXRailgun</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="1">SmallMissileLauncherReload/SmallRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/SmallRailgun</Id>
 				<!--MAC-->
-				<Id Mlt="1" Mlt2="6" CustomValue="1">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
-				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/LargeRailgun</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="1">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
+				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/LargeRailgun</Id>
 				<!--Rockets-->
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
+				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
+				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
 				<!--Missiles-->
-				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
 				<!--Heavy Missiles-->
-				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/missileBattery01</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/missileBattery01</Id>
 				<!--Torpedoes-->
-				<Id Mlt="1" Mlt2="5" CustomValue="1">ConveyorSorter/Missile_Torpedo_Large</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="1">ConveyorSorter/Missile_Torpedo_Small</Id>
+				<Id Mlt="1" Mlt2="10" CustomValue="1">ConveyorSorter/Missile_Torpedo_Large</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/Missile_Torpedo_Small</Id>
 				<!--Drones-->
-				<Id Mlt="1" Mlt2="6" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
 				<!--Lasers-->
-				<Id Mlt="1" Mlt2="7" CustomValue="0">LargeMissileTurret/ARYXSpartanTurret</Id>
-				<Id Mlt="1" Mlt2="3" CustomValue="0">ConveyorSorter/MA_T2PDX</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">ConveyorSorter/MA_Fixed_T2</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/ReceptorTurret</Id>
-				<Id Mlt="1" Mlt2="1" CustomValue="0">ConveyorSorter/ReceptorCoilGun</Id>
+				<Id Mlt="1" Mlt2="14" CustomValue="0">LargeMissileTurret/ARYXSpartanTurret</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/MA_T2PDX</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/MA_Fixed_T2</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/ReceptorTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">ConveyorSorter/ReceptorCoilGun</Id>
 				<!--AMS-->
-				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/MA_PDT</Id>
-				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/MA_PDT_sm</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/MA_PDT</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/MA_PDT_sm</Id>
 				<!--Plasma-->
-				<Id Mlt="1" Mlt2="7" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
+				<Id Mlt="1" Mlt2="14" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_WeaponTech" Amount="1" UseMlts="true"/>
+				<Point PointId="Block_WeaponTech" Amount="1" UseMlts="true"/> <!-- this counts towards weapons limit -->
 				<Point PointId="Block_RelicSlots" Amount="1" UseCustomValue="true"/>
-				<Point PointId="Points_Utility" Amount="2" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!--limited SRBM -->
@@ -614,13 +614,13 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="7" CustomValue="1">ConveyorSorter/ARYXMissileBattery</Id>
+				<Id Mlt="1" Mlt2="14" CustomValue="1">ConveyorSorter/ARYXMissileBattery</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_WeaponTech" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Block_SRBM" Amount="1" UseMlts="false" UseCustomValue="true"/>
-				<Point PointId="Points_Utility" Amount="2" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!--limited Warheads-->
@@ -683,7 +683,7 @@
 					</Costs>
 					<Modificators>
 						<Modificator PointId="Points_Mobility" Mlt="0"/>
-						<Modificator PointId="Points_Utility" SumStaticBefore="40"/>
+						<Modificator PointId="Points_Utility" SumStaticBefore="80"/>
 						<Modificator PointId="Points_Fortress" Mlt="0"/>
 						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
 						<Modificator PointId="Internal_MaxBlocks" SumStaticBefore="2000"/>
