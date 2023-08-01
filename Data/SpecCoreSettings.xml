@@ -126,7 +126,7 @@
 		<Point PointId="Block_WindSolar" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="20" DisplayOrder="3" Behavior="SumLessOrEqual" Name="Wind/Solar"/>
 		<Point PointId="Block_Drills" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="4" Behavior="SumLessOrEqual" Name="Drills"/>
 		<Point PointId="Block_Welders" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="5" Behavior="SumLessOrEqual" Name="Welders"/>
-		<Point PointId="Block_Grinders" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="6" Behavior="SumLessOrEqual" Name="Grinders"/>
+		<Point PointId="Block_Grinders" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="6" Behavior="SumLessOrEqual" Name="Grinders"/>
 		<Point PointId="Block_Pistons" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="7" Behavior="SumLessOrEqual" Name="Pistons"/>
 		<Point PointId="Block_RotorsHinges" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="24" DisplayOrder="8" Behavior="SumLessOrEqual" Name="Rotors/Hinges"/>
 		<Point PointId="Block_Production" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="25" DisplayOrder="9" Behavior="SumLessOrEqual" Name="Production"/>
