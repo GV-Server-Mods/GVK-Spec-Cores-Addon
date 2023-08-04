@@ -500,9 +500,9 @@
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/LargeStator"/>
 				<Id Mlt="1" Mlt2="1" Matcher="MotorStator/SmallStator"/>
-				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/LargeAdvancedStator"/>
-				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallAdvancedStator"/>
-				<Id Mlt="1" Mlt2="1" Matcher="MotorAdvancedStator/SmallAdvancedStatorSmall"/>
+				<Id Mlt="1" Mlt2="0.5" Matcher="MotorAdvancedStator/LargeAdvancedStator"/>
+				<Id Mlt="1" Mlt2="0.5" Matcher="MotorAdvancedStator/SmallAdvancedStator"/>
+				<Id Mlt="1" Mlt2="0.5" Matcher="MotorAdvancedStator/SmallAdvancedStatorSmall"/>
 				<Id Mlt="1" Mlt2="0.5" Matcher="MotorAdvancedStator/LargeHinge"/>
 				<Id Mlt="1" Mlt2="0.5" Matcher="MotorAdvancedStator/MediumHinge"/>
 				<Id Mlt="1" Mlt2="0.5" Matcher="MotorAdvancedStator/SmallHinge"/>
