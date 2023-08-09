@@ -168,7 +168,7 @@
 				<Point PointId="Points_Upgrade" Amount="30"/> <!-- must equal the same value as Points_Utility -->
 				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
-			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
+			<PossibleUpgrades>Except,Upgrade_Fortress,Upgrade_Capital</PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_MediumCore">
 			<Behaviors>
@@ -184,7 +184,7 @@
 				<Point PointId="Points_Upgrade" Amount="40"/> <!-- must equal the same value as Points_Utility -->
 				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
-			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
+			<PossibleUpgrades>Except,Upgrade_Fortress,Upgrade_Capital</PossibleUpgrades>
 		</SpecBlockInfo>
 		<!-- No Heavy Cores for Small Grid -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
@@ -537,6 +537,7 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
+				<!-- Mult=Balance Mult2=Tech CustomValue=Relic -->
 				<!--Gatlings-->
 				<Id Mlt="1" Mlt2="10" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
@@ -576,14 +577,14 @@
 				<!--Rockets-->
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
 				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
 				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
 				<!--Missiles-->
 				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
 				<!--Heavy Missiles-->
-				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/missileBattery01</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="0">ConveyorSorter/missileBattery01</Id>
 				<!--Torpedoes-->
 				<Id Mlt="1" Mlt2="10" CustomValue="1">ConveyorSorter/Missile_Torpedo_Large</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/Missile_Torpedo_Small</Id>
@@ -743,7 +744,6 @@
 				</Level>
 			</Levels>
 		</Upgrade>
-		<!-- need to find a way to prevent adding welders if this is purchased -->
 		<Upgrade NId="4" Name="Upgrade_DamageReduction" DisplayName="Damage Reduction">
 			<Levels>
 				<Level>
@@ -835,5 +835,20 @@
 				</Level>
 			</Levels>
 		</Upgrade>
+		<!-- <Upgrade NId="7" Name="Upgrade_Capital" DisplayName="Capital">
+			<Levels>
+				<Level>
+					<Costs>
+						<Cost PointId="Points_Fortress" Value="1"/> 
+					</Costs>
+					<Modificators>
+						<Modificator PointId="Points_Utility" SumBefore="40"/>
+						<Modificator PointId="Points_Fortress" Mlt="0"/>
+						<Modificator PointId="Block_WeaponTech" Mlt="0.5"/>
+						<Modificator PointId="Internal_MaxBlocks" SumBefore="1000"/>
+					</Modificators>
+				</Level>
+			</Levels>
+		</Upgrade> -->
 	</Upgrades>
 </SpecCoreSettings>

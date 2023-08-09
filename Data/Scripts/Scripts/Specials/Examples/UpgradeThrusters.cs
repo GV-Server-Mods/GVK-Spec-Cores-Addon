@@ -114,7 +114,7 @@ namespace ServerMod
 						{
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
 							generatorBlock.ProductionCapacityMultiplier = stats[29];
-							generatorBlock.PowerConsumptionMultiplier = stats[29];
+							generatorBlock.PowerConsumptionMultiplier = stats[29] / stats[28];
 						}
 						else
 						{	
