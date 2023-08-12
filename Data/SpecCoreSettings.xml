@@ -130,7 +130,7 @@
 		<Point PointId="Block_Pistons" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="7" Behavior="SumLessOrEqual" Name="Pistons"/>
 		<Point PointId="Block_RotorsHinges" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="24" DisplayOrder="8" Behavior="SumLessOrEqual" Name="Rotors/Hinges"/>
 		<Point PointId="Block_Production" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="25" DisplayOrder="9" Behavior="SumLessOrEqual" Name="Production"/>
-		<Point PointId="Block_WeaponTech" DefaultSpecCoreValue="100" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Weapon Tech"/>
+		<Point PointId="Block_WeaponSlots" DefaultSpecCoreValue="50" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Weapon Slots"/>
 		<Point PointId="Block_RelicSlots" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="44" DisplayOrder="11" Behavior="SumLessOrEqual" Name="Relic Slots"/>
 		<Point PointId="Block_SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="12" Behavior="SumLessOrEqual" Name="Safezone Gen"/>
 		<Point PointId="Block_SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="13" Behavior="SumLessOrEqual" Name="SRBM"/>
@@ -168,7 +168,7 @@
 				<Point PointId="Points_Upgrade" Amount="30"/> <!-- must equal the same value as Points_Utility -->
 				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
-			<PossibleUpgrades>Except,Upgrade_Fortress,Upgrade_Capital</PossibleUpgrades>
+			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_MediumCore">
 			<Behaviors>
@@ -184,7 +184,7 @@
 				<Point PointId="Points_Upgrade" Amount="40"/> <!-- must equal the same value as Points_Utility -->
 				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
 			</DefaultStaticAndDynamic>
-			<PossibleUpgrades>Except,Upgrade_Fortress,Upgrade_Capital</PossibleUpgrades>
+			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
 		</SpecBlockInfo>
 		<!-- No Heavy Cores for Small Grid -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
@@ -264,7 +264,7 @@
 				<Point PointId="Block_Pistons" Amount="999999999"/>
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
-				<Point PointId="Block_WeaponTech" Amount="999999999"/>
+				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
@@ -292,7 +292,7 @@
 				<Point PointId="Block_Pistons" Amount="999999999"/>
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
-				<Point PointId="Block_WeaponTech" Amount="999999999"/>
+				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
@@ -320,7 +320,7 @@
 				<Point PointId="Block_Pistons" Amount="999999999"/>
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
-				<Point PointId="Block_WeaponTech" Amount="999999999"/>
+				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
@@ -348,7 +348,7 @@
 				<Point PointId="Block_Pistons" Amount="999999999"/>
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
-				<Point PointId="Block_WeaponTech" Amount="999999999"/>
+				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
@@ -543,9 +543,9 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
-				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
-				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
 				<!--Autocannons-->
 				<Id Mlt="1" Mlt2="14" CustomValue="0">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
 				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/KhopeshTurret</Id>
@@ -578,8 +578,8 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
 				<Id Mlt="1" Mlt2="3" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
-				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
-				<Id Mlt="2" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
 				<!--Missiles-->
 				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
@@ -603,7 +603,7 @@
 				<Id Mlt="1" Mlt2="14" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_WeaponTech" Amount="1" UseMlts="true"/> <!-- this counts towards weapons limit -->
+				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false"/> <!-- this counts towards weapons limit -->
 				<Point PointId="Block_RelicSlots" Amount="1" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
 			</UsedPoints>
@@ -618,7 +618,7 @@
 				<Id Mlt="1" Mlt2="14" CustomValue="1">ConveyorSorter/ARYXMissileBattery</Id>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_WeaponTech" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false" UseCustomValue="false"/>
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Block_SRBM" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
@@ -844,7 +844,7 @@
 					<Modificators>
 						<Modificator PointId="Points_Utility" SumBefore="40"/>
 						<Modificator PointId="Points_Fortress" Mlt="0"/>
-						<Modificator PointId="Block_WeaponTech" Mlt="0.5"/>
+						<Modificator PointId="Block_WeaponSlots" Mlt="0.5"/>
 						<Modificator PointId="Internal_MaxBlocks" SumBefore="1000"/>
 					</Modificators>
 				</Level>
