@@ -96,7 +96,7 @@ namespace ServerMod
 					{
 						if(stats.ContainsKey(28) && stats[28] != 0)
 						{
-							gyroBlock.PowerConsumptionMultiplier = 1 / stats[28];
+							gyroBlock.PowerConsumptionMultiplier = 1 / Math.Max(1, stats[28]);
 							//gyroBlock.GyroStrengthMultiplier = stats[28];
 						}
 						else
@@ -114,7 +114,7 @@ namespace ServerMod
 						{
 							//This is the rate of ice consumption, NOT the rate of O2/H2 output
 							generatorBlock.ProductionCapacityMultiplier = stats[29];
-							generatorBlock.PowerConsumptionMultiplier = stats[29] / stats[28];
+							generatorBlock.PowerConsumptionMultiplier = stats[29] / Math.Max(1, stats[28]);
 						}
 						else
 						{	
