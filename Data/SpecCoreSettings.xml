@@ -117,12 +117,12 @@
 		Warhead
 	-->
 		<Point PointId="Internal_MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="-3" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_MaxBlocks" Name="Max Blocks"/>
-		<Point PointId="Points_Mobility" DefaultSpecCoreValue="40" DefaultNoSpecCoreValue="40" NId="103" DisplayOrder="-2" Behavior="SumLessOrEqual" Name="Mobility Points"/>
+		<Point PointId="Points_Mobility" DefaultSpecCoreValue="40" DefaultNoSpecCoreValue="2" NId="103" DisplayOrder="-2" Behavior="SumLessOrEqual" Name="Mobility Points"/>
 		<Point PointId="Points_Utility" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="104" DisplayOrder="-1" Behavior="SumLessOrEqual" Name="Utility Points"/>
 		<Point PointId="Points_Upgrade" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="105" DisplayOrder="-1" Behavior="UpgradePoint" Name="Upgrade Points"/>
 
-		<Point PointId="Block_Suspension" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="4" NId="1" DisplayOrder="1" Behavior="SumLessOrEqual" Name="Suspension"/>
-		<Point PointId="Block_ThrustersHovers" DefaultSpecCoreValue="200" DefaultNoSpecCoreValue="0" NId="2" DisplayOrder="2" Behavior="SumLessOrEqual" Name="Thrusters/Hovers"/>
+		<Point PointId="Block_Suspension" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="1" DisplayOrder="1" Behavior="SumLessOrEqual" Name="Suspension"/>
+		<Point PointId="Block_ThrustersHovers" DefaultSpecCoreValue="200" DefaultNoSpecCoreValue="2" NId="2" DisplayOrder="2" Behavior="SumLessOrEqual" Name="Thrusters/Hovers"/>
 		<Point PointId="Block_WindSolar" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="20" DisplayOrder="3" Behavior="SumLessOrEqual" Name="Wind/Solar"/>
 		<Point PointId="Block_Drills" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="4" Behavior="SumLessOrEqual" Name="Drills"/>
 		<Point PointId="Block_Welders" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="5" Behavior="SumLessOrEqual" Name="Welders"/>
