@@ -683,7 +683,7 @@
 						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
 					</Costs>
 					<Modificators>
-						<Modificator PointId="Points_Mobility" Mlt="0"/>
+						<Modificator PointId="Points_Mobility" Mlt="0" SumStaticAfter="12"/>
 						<Modificator PointId="Points_Utility" SumStaticBefore="80"/>
 						<Modificator PointId="Points_Fortress" Mlt="0"/>
 						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
