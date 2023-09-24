@@ -2,8 +2,8 @@
 <SpecCoreSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!-- Infinity > 999999999 -->
 	<Timers CheckLimitsInterval="60" CheckBlocksOnSubGridsInterval="60"/>
-	<EnableLogs>false</EnableLogs>
-	<DebugMode>false</DebugMode>
+	<EnableLogs>true</EnableLogs>
+	<DebugMode>true</DebugMode>
 	<RandomPunishment>false</RandomPunishment>
 	<HudNoSpecCoreText>No Spec. Core</HudNoSpecCoreText>
 	<HudSpecCoreOverlimitText>Blocks overlimit</HudSpecCoreOverlimitText>
