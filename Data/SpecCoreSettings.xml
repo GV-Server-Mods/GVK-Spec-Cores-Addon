@@ -639,7 +639,7 @@
 			<BlockIds>
 				<!-- Mult=Balance Mult2=Tech CustomValue=Relic -->
 				<!--Gatlings-->
-				<Id Mlt="1" Mlt2="10" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
@@ -647,14 +647,14 @@
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
 				<!--Autocannons-->
-				<Id Mlt="1" Mlt2="14" CustomValue="0">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="0">LargeMissileTurret/ARYXHeavyFlakTurret</Id>
 				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/KhopeshTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/LargeAutoCannonTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/AutoCannonTurret</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallGatlingGun/SmallBlockAutocannon</Id>
 				<!--Interior-->
-				<Id Mlt="1" Mlt2="2" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
+				<Id Mlt="1" Mlt2="1" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
 				<!--Flaks-->
 				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
@@ -665,7 +665,7 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/OKI122mmVT</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/OKI122mmSGfixed</Id>
 				<!--Heavy Cannons-->
-				<Id Mlt="1" Mlt2="14" CustomValue="1">LargeMissileTurret/ARYXHurricaneCannon</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="1">LargeMissileTurret/ARYXHurricaneCannon</Id>
 				<!--Railguns-->
 				<Id Mlt="1" Mlt2="10" CustomValue="1">LargeMissileTurret/ARYXRailgunTurret</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/ARYXRailgun</Id>
@@ -684,23 +684,24 @@
 				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
 				<!--Heavy Missiles-->
-				<Id Mlt="1" Mlt2="12" CustomValue="0">ConveyorSorter/missileBattery01</Id>
+				<Id Mlt="1" Mlt2="10" CustomValue="0">ConveyorSorter/missileBattery01</Id>
 				<!--Torpedoes-->
 				<Id Mlt="1" Mlt2="10" CustomValue="1">ConveyorSorter/Missile_Torpedo_Large</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/Missile_Torpedo_Small</Id>
 				<!--Drones-->
-				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
+				<Id Mlt="1" Mlt2="10" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
 				<!--Lasers-->
-				<Id Mlt="1" Mlt2="14" CustomValue="0">LargeMissileTurret/ARYXSpartanTurret</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="0">LargeMissileTurret/ARYXSpartanTurret</Id>
 				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/MA_T2PDX</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/MA_Fixed_T2</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/MA_PDX</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/ReceptorTurret</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">ConveyorSorter/ReceptorCoilGun</Id>
 				<!--AMS-->
 				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/MA_PDT</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/MA_PDT_sm</Id>
 				<!--Plasma-->
-				<Id Mlt="1" Mlt2="14" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
+				<Id Mlt="1" Mlt2="12" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false"/> <!-- this counts towards weapons limit -->
