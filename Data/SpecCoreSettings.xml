@@ -117,34 +117,26 @@
 		Warhead
 	-->
 		<Point PointId="Internal_MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="-3" Behavior="LessOrEqual" ActivationError="Over Maximum Blocks Limit!" Name="Max Blocks"/>
-		<Point PointId="Points_Mobility" DefaultSpecCoreValue="40" DefaultNoSpecCoreValue="2" NId="103" DisplayOrder="-2" Behavior="SumLessOrEqual" Name="Mobility Points"/>
+		<Point PointId="Points_Mobility" DefaultSpecCoreValue="40" DefaultNoSpecCoreValue="10" NId="103" DisplayOrder="-2" Behavior="SumLessOrEqual" Name="Mobility Points"/>
 		<Point PointId="Points_Utility" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="104" DisplayOrder="-1" Behavior="SumLessOrEqual" Name="Utility Points"/>
-		<Point PointId="Points_Upgrade" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="105" DisplayOrder="-1" Behavior="UpgradePoint" Name="Upgrade Points"/>
 
-		<Point PointId="Block_Suspension" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="1" DisplayOrder="1" Behavior="SumLessOrEqual" Name="Suspension"/>
-		<Point PointId="Block_ThrustersHovers" DefaultSpecCoreValue="200" DefaultNoSpecCoreValue="2" NId="2" DisplayOrder="2" Behavior="SumLessOrEqual" Name="Thrusters/Hovers"/>
-		<Point PointId="Block_WindSolar" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="20" DisplayOrder="3" Behavior="SumLessOrEqual" Name="Wind/Solar"/>
-		<Point PointId="Block_Drills" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="4" Behavior="SumLessOrEqual" Name="Drills"/>
-		<Point PointId="Block_Welders" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="5" Behavior="SumLessOrEqual" Name="Welders"/>
-		<Point PointId="Block_Grinders" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="6" Behavior="SumLessOrEqual" Name="Grinders"/>
-		<Point PointId="Block_Pistons" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="7" Behavior="SumLessOrEqual" Name="Pistons"/>
-		<Point PointId="Block_RotorsHinges" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="24" DisplayOrder="8" Behavior="SumLessOrEqual" Name="Rotors/Hinges"/>
-		<Point PointId="Block_Production" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="25" DisplayOrder="9" Behavior="SumLessOrEqual" Name="Production"/>
-		<Point PointId="Block_WeaponSlots" DefaultSpecCoreValue="50" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Weapon Slots"/>
-		<Point PointId="Block_RelicSlots" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="44" DisplayOrder="11" Behavior="SumLessOrEqual" Name="Relic Slots"/>
-		<Point PointId="Block_SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="12" Behavior="SumLessOrEqual" Name="Safezone Gen"/>
-		<Point PointId="Block_SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="13" Behavior="SumLessOrEqual" Name="SRBM"/>
-		<Point PointId="Block_DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="14" Behavior="SumLessOrEqual" Name="Drill Blocker"/>
-		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Warheads"/>
-		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="47" DisplayOrder="16" Behavior="SumLessOrEqual" Name="Limited"/>
-
-		<Point PointId="Points_Fortress" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="101" DisplayOrder="30" Behavior="UpgradePoint" Name="Fortress"/>
-		<Point PointId="Points_FortressOrThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="106" DisplayOrder="30" Behavior="UpgradePoint" Name="Fortress/Thruster Boost Lock"/>
-		<Point PointId="Property_DrillBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="27" DisplayOrder="31" Behavior="Property" Name="Drill Boost"/>
-		<Point PointId="Property_GeneratorBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="29" DisplayOrder="32" Behavior="Property" Name="H2/O2 Gen Boost" />
-		<Point PointId="Property_ThrusterBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="33" Behavior="Property" Name="Thruster Boost"/>
-		<Point PointId="Property_PowerBoost" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="28" DisplayOrder="34" Behavior="Property" Name="Power Boost"/>
-		<Point PointId="Property_DamageReduction" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-33" DisplayOrder="35" Behavior="Property" Name="Damage Reduction"/>
+		<Point PointId="Block_WindSolar" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="20" DisplayOrder="1" Behavior="SumLessOrEqual" Name="Wind/Solar"/>
+		<Point PointId="Block_Drills" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="21" DisplayOrder="2" Behavior="SumLessOrEqual" Name="Drills"/>
+		<Point PointId="Block_Welders" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="30" DisplayOrder="3" Behavior="SumLessOrEqual" Name="Welders"/>
+		<Point PointId="Block_Grinders" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="22" DisplayOrder="4" Behavior="SumLessOrEqual" Name="Grinders"/>
+		<Point PointId="Block_Pistons" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="23" DisplayOrder="5" Behavior="SumLessOrEqual" Name="Pistons"/>
+		<Point PointId="Block_RotorsHinges" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="0" NId="24" DisplayOrder="6" Behavior="SumLessOrEqual" Name="Rotors/Hinges"/>
+		<Point PointId="Block_Production" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="0" NId="25" DisplayOrder="7" Behavior="SumLessOrEqual" Name="Production"/>
+		<Point PointId="Block_WeaponSlots" DefaultSpecCoreValue="50" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="8" Behavior="SumLessOrEqual" Name="Weapon Slots"/>
+		<Point PointId="Block_RelicSlots" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="44" DisplayOrder="9" Behavior="SumLessOrEqual" Name="Relic Slots"/>
+		<Point PointId="Block_SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Safezone Gen"/>
+		<Point PointId="Block_SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="11" Behavior="SumLessOrEqual" Name="SRBM"/>
+		<Point PointId="Block_DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="12" Behavior="SumLessOrEqual" Name="Drill Blocker"/>
+		<Point PointId="Block_Terminal" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="7" DisplayOrder="13" Behavior="SumLessOrEqual" Name="Control Panels"/>
+		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="14" Behavior="SumLessOrEqual" Name="Warheads"/>
+		<Point PointId="Block_InteriorTurret" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Interior Turrets"/>
+		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="16" Behavior="SumLessOrEqual" Name="Upgrades"/>
+		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Limited Block"/>
 
 		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" Visible="false"/>
@@ -166,11 +158,10 @@
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="30"/>
-				<Point PointId="Points_Upgrade" Amount="30"/> <!-- must equal the same value as Points_Utility -->
-				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="750"/>
 			</DefaultStaticAndDynamic>
-			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
+			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_MediumCore">
 			<Behaviors>
@@ -183,11 +174,10 @@
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="40"/>
-				<Point PointId="Points_Upgrade" Amount="40"/> <!-- must equal the same value as Points_Utility -->
-				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
 			</DefaultStaticAndDynamic>
-			<PossibleUpgrades>Except,Upgrade_Fortress</PossibleUpgrades>
+			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<!-- No Heavy Cores for Small Grid -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
@@ -201,14 +191,10 @@
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="40"/>
-				<Point PointId="Points_Upgrade" Amount="40"/> <!-- must equal the same value as Points_Utility -->
-				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
+				<Point PointId="Block_InteriorTurret" Amount="2"/>
 				<Point PointId="Block_Limited" Amount="750"/>
 			</DefaultStaticAndDynamic>
-			<DefaultStatic>
-				<Point PointId="Points_Fortress" Amount="1"/>
-			</DefaultStatic>
-			<PossibleUpgrades>Except,</PossibleUpgrades>
+			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_MediumCore">
 			<Behaviors>
@@ -221,14 +207,10 @@
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="60"/>
-				<Point PointId="Points_Upgrade" Amount="60"/> <!-- must equal the same value as Points_Utility -->
-				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
+				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
 			</DefaultStaticAndDynamic>
-			<DefaultStatic>
-				<Point PointId="Points_Fortress" Amount="1"/>
-			</DefaultStatic>
-			<PossibleUpgrades>Except,</PossibleUpgrades>
+			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_HeavyCore">
 			<Behaviors>
@@ -241,14 +223,31 @@
 				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
 				<Point PointId="Points_Mobility" Amount="200"/>
 				<Point PointId="Points_Utility" Amount="80"/>
-				<Point PointId="Points_Upgrade" Amount="80"/> <!-- must equal the same value as Points_Utility -->
-				<Point PointId="Points_FortressOrThrusterBoost" Amount="1"/>
+				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="Block_Limited" Amount="4000"/>
 			</DefaultStaticAndDynamic>
-			<DefaultStatic>
-				<Point PointId="Points_Fortress" Amount="1"/>
-			</DefaultStatic>
-			<PossibleUpgrades>Except,</PossibleUpgrades>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<!-- Fortress Beacon -->
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_Fortress">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="6000"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="120"/>
+				<Point PointId="Block_InteriorTurret" Amount="8"/>
+				<Point PointId="Block_Limited" Amount="6000"/>
+				<Point PointId="Block_SRBM" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" SumStaticBefore="1"/>
+				<Point PointId="Block_SafezoneGen" SumStaticBefore="1"/>
+				<Point PointId="Block_ShipUpgrade" Amount="2"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<!-- Pipeline Hub -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_Pipeline">
@@ -260,9 +259,6 @@
 				<Point PointId="Internal_MaxBlocks" Amount="50"/>
 				<Point PointId="Points_Mobility" Amount="0"/>
 				<Point PointId="Points_Utility" Amount="10"/>
-				<Point PointId="Points_Upgrade" Amount="0"/>
-				<Point PointId="Block_Suspension" Amount="0"/>
-				<Point PointId="Block_ThrustersHovers" Amount="0"/>
 				<Point PointId="Block_Drills" Amount="2"/>
 				<Point PointId="Block_Welders" Amount="0"/>
 				<Point PointId="Block_Grinders" Amount="0"/>
@@ -270,12 +266,14 @@
 				<Point PointId="Block_RotorsHinges" Amount="4"/>
 				<Point PointId="Block_Production" Amount="0"/>
 				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="1"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
 				<Point PointId="Block_SafezoneGen" Amount="0"/>
 				<Point PointId="Block_SRBM" Amount="0"/>
-				<Point PointId="Block_DrillBlocker" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="50"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>		
@@ -288,10 +286,7 @@
 			<DefaultStaticAndDynamic>
 				<Point PointId="Points_Mobility" Amount="999999999"/>
 				<Point PointId="Points_Utility" Amount="999999999"/>
-				<Point PointId="Points_Upgrade" Amount="999999999"/>
 				<Point PointId="Internal_MaxBlocks" Amount="999999999"/>
-				<Point PointId="Block_Suspension" Amount="999999999"/>
-				<Point PointId="Block_ThrustersHovers" Amount="999999999"/>
 				<Point PointId="Block_WindSolar" Amount="999999999"/>
 				<Point PointId="Block_Drills" Amount="999999999"/>
 				<Point PointId="Block_Welders" Amount="999999999"/>
@@ -300,12 +295,14 @@
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
 				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
+				<Point PointId="Block_InteriorTurret" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
+				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -317,10 +314,7 @@
 			<DefaultStaticAndDynamic>
 				<Point PointId="Points_Mobility" Amount="999999999"/>
 				<Point PointId="Points_Utility" Amount="999999999"/>
-				<Point PointId="Points_Upgrade" Amount="999999999"/>
 				<Point PointId="Internal_MaxBlocks" Amount="999999999"/>
-				<Point PointId="Block_Suspension" Amount="999999999"/>
-				<Point PointId="Block_ThrustersHovers" Amount="999999999"/>
 				<Point PointId="Block_WindSolar" Amount="999999999"/>
 				<Point PointId="Block_Drills" Amount="999999999"/>
 				<Point PointId="Block_Welders" Amount="999999999"/>
@@ -329,12 +323,14 @@
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
 				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
+				<Point PointId="Block_InteriorTurret" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
+				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -346,10 +342,7 @@
 			<DefaultStaticAndDynamic>
 				<Point PointId="Points_Mobility" Amount="999999999"/>
 				<Point PointId="Points_Utility" Amount="999999999"/>
-				<Point PointId="Points_Upgrade" Amount="999999999"/>
 				<Point PointId="Internal_MaxBlocks" Amount="999999999"/>
-				<Point PointId="Block_Suspension" Amount="999999999"/>
-				<Point PointId="Block_ThrustersHovers" Amount="999999999"/>
 				<Point PointId="Block_WindSolar" Amount="999999999"/>
 				<Point PointId="Block_Drills" Amount="999999999"/>
 				<Point PointId="Block_Welders" Amount="999999999"/>
@@ -358,12 +351,14 @@
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
 				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
+				<Point PointId="Block_InteriorTurret" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
+				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -375,10 +370,7 @@
 			<DefaultStaticAndDynamic>
 				<Point PointId="Points_Mobility" Amount="999999999"/>
 				<Point PointId="Points_Utility" Amount="999999999"/>
-				<Point PointId="Points_Upgrade" Amount="999999999"/>
 				<Point PointId="Internal_MaxBlocks" Amount="999999999"/>
-				<Point PointId="Block_Suspension" Amount="999999999"/>
-				<Point PointId="Block_ThrustersHovers" Amount="999999999"/>
 				<Point PointId="Block_WindSolar" Amount="999999999"/>
 				<Point PointId="Block_Drills" Amount="999999999"/>
 				<Point PointId="Block_Welders" Amount="999999999"/>
@@ -387,12 +379,14 @@
 				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
 				<Point PointId="Block_Production" Amount="999999999"/>
 				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
+				<Point PointId="Block_InteriorTurret" Amount="999999999"/>
 				<Point PointId="Block_RelicSlots" Amount="999999999"/>
 				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
+				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -422,8 +416,8 @@
 				
 			Tip: use Mlt for Volume of block, use Mlt2 for LargeGridToSmallGridMlt: (2.5m*2.5m*2.5m) / (0.5m*0.5m*0.5m) = 125;
 	
-	-->
-		<!--limited Suspension-->
+		-->
+		<!-- limited Mobility -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -431,36 +425,63 @@
 				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="MotorSuspension/*"/>
+				<Id Mlt="10" Mlt2="1" Matcher="MotorSuspension/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallThrust"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeThrust"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallThrust"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeThrust"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallThrustSciFi"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeThrustSciFi"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallThrustSciFi"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeThrustSciFi"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallModularThruster"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeModularThruster"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallModularThruster"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeModularThruster"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeHydrogenThrust"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallHydrogenThrust"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeHydrogenThrust"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallHydrogenThrust"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeHydrogenThrustIndustrial"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallHydrogenThrustIndustrial"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeHydrogenThrustIndustrial"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallHydrogenThrustIndustrial"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeFlatAtmosphericThrust"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeBlockLargeFlatAtmosphericThrustDShape"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallFlatAtmosphericThrust"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeBlockSmallFlatAtmosphericThrustDShape"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrust"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrustDShape"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallFlatAtmosphericThrust"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallFlatAtmosphericThrustDShape"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_SmallBlock"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_SmallBlock"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_LargeBlock"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_LargeBlock"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_SmallBlock_Armored_Full"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_SmallBlock_Armored_Full"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_LargeBlock_Armored_Full"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_LargeBlock_Armored_Full"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_SmallBlockV2"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_SmallBlockV2"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_LargeBlockV2"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_LargeBlockV2"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_SmallBlockV2_Armored_Half"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_SmallBlockV2_Armored_Half"/>
+				<Id Mlt="5" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_LargeBlockV2_Armored_Half"/>
+				<Id Mlt="10" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_LargeBlockV2_Armored_Half"/>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_Suspension" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Points_Mobility" Amount="10" UseCustomValue="false"/>
+				<!--<Point PointId="Block_ThrustersHovers" Amount="1" UseCustomValue="false"/>-->
+				<Point PointId="Points_Mobility" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Thrusters & Hovers-->
+		<!-- limited WindSolar -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
-			</Behaviors>
-			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/*"/>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Block_ThrustersHovers" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Points_Mobility" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited WindSolar-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="SolarPanel/*"/>
@@ -472,7 +493,7 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Batteries-->
+		<!-- Nonspecific limited blocks for power off punishment -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="SetEnabled" Reverse="true"/>
@@ -480,56 +501,19 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="BatteryBlock/*"/>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited Reactors-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="SetEnabled" Reverse="true"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="Reactor/*"/>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited Gyros-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="SetEnabled" Reverse="true"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="Gyro/*"/>
-			</BlockIds>
-			<UsedPoints>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
-			</UsedPoints>
-		</LimitedBlockInfo>
-		<!--limited 02/h2 Generator-->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
-			<Behaviors>
-				<Behavior DisableBehavior="SetEnabled" Reverse="true"/>
-				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-			</Behaviors>
-			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="OxygenGenerator/*"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Drills-->
+		<!-- limited Drills -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="Drill/*"/>
@@ -540,28 +524,27 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Welders-->
+		<!-- limited Welders -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="ShipWelder/*"/>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_Welders" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Points_Utility" Amount="2" UseCustomValue="false"/> 
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
+				<Point PointId="Block_Welders" Amount="1"/>
+				<Point PointId="Points_Utility" Amount="2"/> 
+				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
+				<Point PointId="Block_ShipUpgrade" Amount="1"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Grinders-->
+		<!-- limited Grinders -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="ShipGrinder/*"/>
@@ -572,12 +555,11 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Pistons-->
+		<!-- limited Pistons -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/LargePistonBase"/>
@@ -589,7 +571,7 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Rotors/Hinges-->
+		<!-- limited Rotors/Hinges -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -611,12 +593,11 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited LargeProduction-->
+		<!-- limited LargeProduction -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
-				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="Refinery/Blast*"/>
@@ -630,7 +611,7 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Weapons Tech-->
+		<!-- limited Weapons Tech -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -653,8 +634,6 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/AutoCannonTurret</Id> <!--Disabled-->
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/AutoCannonTurret</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallGatlingGun/SmallBlockAutocannon</Id>
-				<!--Interior-->
-				<Id Mlt="1" Mlt2="1" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
 				<!--Flaks-->
 				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/LargeBlockMediumCalibreTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
@@ -710,7 +689,7 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited SRBM -->
+		<!-- limited SRBM -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -727,7 +706,23 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Warheads-->
+		<!-- limited Interior Turrets -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<!-- Mult=Balance Mult2=Tech CustomValue=Relic -->
+				<!--Interior-->
+				<Id Mlt="1" Mlt2="1" CustomValue="0">InteriorTurret/LargeInteriorTurret</Id>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Block_InteriorTurret" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!-- limited Warheads -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -742,7 +737,7 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Safezone Generator-->
+		<!-- limited Safezone Generator -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -756,7 +751,7 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!--limited Drill Blocker-->
+		<!-- limited Drill Blocker -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -770,6 +765,39 @@
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
+		<!-- limited Upgrade Blocks -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="0" Mlt2="1" Matcher="Decoy/NPC_CombatMobility"/> <!-- Mobility -->
+				<Id Mlt="0" Mlt2="1" Matcher="Decoy/NPC_Engineering"/> <!-- Power -->
+				<Id Mlt="0" Mlt2="1" Matcher="Decoy/NPC_Production"/> <!-- Mining -->
+				<Id Mlt="1" Mlt2="1" Matcher="Decoy/NPC_Resistance"/> <!-- Resistance -->
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Points_Utility" Amount="10" UseMlts="false"/>
+				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
+				<Point PointId="Block_ShipUpgrade" Amount="1" UseMlts="false"/>
+				<Point PointId="Block_Welders" Amount="10" UseMlts="true"/> <!-- Resist upgrade costs all the welder points -->
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!-- limited Terminal Blocks -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="TerminalBlock/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Block_Terminal" Amount="1" UseMlts="false"/>
+				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
 	</LimitedBlocks>
 	<NoSpecCoreSettings>
 		<LargeStatic/>
@@ -781,205 +809,5 @@
 	</NoSpecCoreSettings>
 	<!-- WARNING Upgrade NIds cannot be changed without causing errors for pre-existing spec cores -->
 	<Upgrades>
-		<Upgrade NId="1" Name="Upgrade_Fortress" DisplayName="Fortress">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Fortress" Value="1"/> 
-						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Mobility" Mlt="0" SumStaticAfter="12"/>
-						<Modificator PointId="Points_Utility" SumStaticBefore="80"/>
-						<Modificator PointId="Points_Fortress" Mlt="0"/>
-						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
-						<Modificator PointId="Internal_MaxBlocks" SumStaticBefore="2000"/>
-						<Modificator PointId="Block_SRBM" SumStaticBefore="1"/>
-						<Modificator PointId="Block_DrillBlocker" SumStaticBefore="1"/>
-						<Modificator PointId="Block_SafezoneGen" SumStaticBefore="1"/>
-						<Modificator PointId="Property_ThrusterBoost" SumStaticBefore="1"/>
-						<Modificator PointId="Block_Limited" SumStaticBefore="2000"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>		
-		<Upgrade NId="2" Name="Upgrade_DrillBoost" DisplayName="Drill Boost">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="10"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-10"/>
-						<Modificator PointId="Property_DrillBoost" SumBefore="2"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="20"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-20"/>
-						<Modificator PointId="Property_DrillBoost" SumBefore="4"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>
-		<Upgrade NId="3" Name="Upgrade_GeneratorBoost" DisplayName="H2/O2 Gen Boost"> <!-- This is the rate of ice consumption, NOT the rate of O2/H2 output -->
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="10"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-10"/>
-						<Modificator PointId="Property_GeneratorBoost" SumBefore="0.5"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="20"/> 
-					</Costs>
-					<Modificators> 
-						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-20"/>
-						<Modificator PointId="Property_GeneratorBoost" SumBefore="0.25"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>
-		<Upgrade NId="4" Name="Upgrade_DamageReduction" DisplayName="Damage Reduction">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="10"/> 
-					</Costs>
-					<Modificators> 
-						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Block_Welders" Mlt="0"/>
-						<Modificator PointId="Points_Utility" SumBefore="-10"/>
-						<Modificator PointId="Property_DamageReduction" SumBefore="0.90" />
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="20"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Block_Welders" Mlt="0"/>
-						<Modificator PointId="Points_Utility" SumBefore="-20"/>
-						<Modificator PointId="Property_DamageReduction" SumBefore="0.80" />
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="30"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-30"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Block_Welders" Mlt="0"/>
-						<Modificator PointId="Points_Utility" SumBefore="-30"/>
-						<Modificator PointId="Property_DamageReduction" SumBefore="0.70" />
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>
-		<Upgrade NId="5" Name="Upgrade_ThrusterBoost" DisplayName="Thruster Boost">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="10" />
-						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-10"/>
-						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
-						<Modificator PointId="Property_ThrusterBoost" SumBefore="1.5"/>
-						<Modificator PointId="Points_Fortress" SumBefore="-1"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="20"/>
-						<Cost PointId="Points_FortressOrThrusterBoost" Value="1"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-20"/>
-						<Modificator PointId="Points_FortressOrThrusterBoost" Mlt="0"/>
-						<Modificator PointId="Property_ThrusterBoost" SumBefore="2"/>
-						<Modificator PointId="Points_Fortress" SumBefore="-1"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>
-		<Upgrade NId="6" Name="Upgrade_PowerBoost" DisplayName="Power Boost">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="10"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-10"/>
-						<Modificator PointId="Property_PowerBoost" SumBefore="2"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="20"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!-- must equal the same value as Points_Utility -->
-						<Modificator PointId="Points_Utility" SumBefore="-20"/>
-						<Modificator PointId="Property_PowerBoost" SumBefore="4"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>
-		<!--<Upgrade NId="7" Name="Upgrade_WindSolar" DisplayName="Wind/Solar Max">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="10"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-10"/> <!{1}** must equal the same value as Points_Utility **{1}>
-						<Modificator PointId="Points_Utility" SumBefore="-10"/>
-						<Modificator PointId="Block_WindSolar" SumBefore="10"/>
-					</Modificators>
-				</Level>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Upgrade" Value="20"/>
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Upgrade" SumBefore="-20"/> <!{1}** must equal the same value as Points_Utility **{1}>
-						<Modificator PointId="Points_Utility" SumBefore="-20"/>
-						<Modificator PointId="Block_WindSolar" SumBefore="20"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade>-->
-		<!-- <Upgrade NId="7" Name="Upgrade_Capital" DisplayName="Capital">
-			<Levels>
-				<Level>
-					<Costs>
-						<Cost PointId="Points_Fortress" Value="1"/> 
-					</Costs>
-					<Modificators>
-						<Modificator PointId="Points_Utility" SumBefore="40"/>
-						<Modificator PointId="Points_Fortress" Mlt="0"/>
-						<Modificator PointId="Block_WeaponSlots" Mlt="0.5"/>
-						<Modificator PointId="Internal_MaxBlocks" SumBefore="1000"/>
-					</Modificators>
-				</Level>
-			</Levels>
-		</Upgrade> -->
 	</Upgrades>
 </SpecCoreSettings>

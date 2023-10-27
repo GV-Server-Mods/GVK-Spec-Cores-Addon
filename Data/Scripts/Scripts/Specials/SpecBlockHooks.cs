@@ -136,7 +136,7 @@ namespace Scripts.Specials.ShipClass
 
             ModConnection.SetValue("MIG.SpecCores.OnSpecBlockChanged", onSpecBlockChanged);
 			
-			MyAPIGateway.Session.DamageSystem.RegisterBeforeDamageHandler(10, HandleDamage);
+			//MyAPIGateway.Session.DamageSystem.RegisterBeforeDamageHandler(10, HandleDamage);
         }
 
         public static void Close()
@@ -246,7 +246,7 @@ namespace Scripts.Specials.ShipClass
             return getGridBlocksById?.Invoke(grid) ?? null;
         }
     
-		public static void HandleDamage(object target, ref MyDamageInformation damage)
+		/*public static void HandleDamage(object target, ref MyDamageInformation damage)
 		{ //Paralell			
 			try
 			{
@@ -267,7 +267,7 @@ namespace Scripts.Specials.ShipClass
 			{
 				
 			}			
-		}
+		}*/
 	
 	}
 }
