@@ -135,8 +135,9 @@
 		<Point PointId="Block_Terminal" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="7" DisplayOrder="13" Behavior="SumLessOrEqual" Name="Control Panels"/>
 		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="14" Behavior="SumLessOrEqual" Name="Warheads"/>
 		<Point PointId="Block_InteriorTurret" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Interior Turrets"/>
-		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="16" Behavior="SumLessOrEqual" Name="Upgrades"/>
-		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Limited Block"/>
+		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
+		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Upgrades"/>
+		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Limited Block"/>
 
 		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" Visible="false"/>
@@ -507,6 +508,19 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!-- Limited Gas Generators because they are CPU destroying monsters -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="OxygenGenerator/*"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Block_GasGenerator" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Drills -->
