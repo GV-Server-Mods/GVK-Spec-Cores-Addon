@@ -237,17 +237,17 @@
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
 				<!-- When is working -->
 			</Behaviors>
-			<DefaultStaticAndDynamic>
+			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="6000"/>
 				<Point PointId="Points_Mobility" Amount="0"/>
 				<Point PointId="Points_Utility" Amount="120"/>
 				<Point PointId="Block_InteriorTurret" Amount="8"/>
 				<Point PointId="Block_Limited" Amount="6000"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
-				<Point PointId="Block_DrillBlocker" SumStaticBefore="1"/>
-				<Point PointId="Block_SafezoneGen" SumStaticBefore="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_ShipUpgrade" Amount="2"/>
-			</DefaultStaticAndDynamic>
+			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<!-- Pipeline Hub -->
