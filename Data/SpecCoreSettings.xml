@@ -551,7 +551,7 @@
 				<Point PointId="Block_Welders" Amount="1"/>
 				<Point PointId="Points_Utility" Amount="2"/> 
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
-				<Point PointId="Block_ShipUpgrade" Amount="1"/>
+				<!--<Point PointId="Block_ShipUpgrade" Amount="1"/>-->
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Grinders -->
