@@ -691,7 +691,7 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/ReceptorTurret</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">ConveyorSorter/ReceptorCoilGun</Id>
 				<!--AMS-->
-				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/MA_PDT</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/MA_PDT</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/MA_PDT_sm</Id>
 				<!--Plasma-->
 				<Id Mlt="1" Mlt2="12" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
