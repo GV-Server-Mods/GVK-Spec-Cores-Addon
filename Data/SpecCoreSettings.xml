@@ -695,6 +695,10 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/MA_PDT_sm</Id>
 				<!--Plasma-->
 				<Id Mlt="1" Mlt2="12" CustomValue="1">LargeMissileTurret/lokiCannon1</Id>
+				<!--Flares-->
+				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeFlareLauncher</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/SmallFlareLauncher</Id>
+				
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false"/> <!-- this counts towards weapons limit -->
