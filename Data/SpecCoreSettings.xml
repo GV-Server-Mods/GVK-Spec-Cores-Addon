@@ -134,7 +134,7 @@
 		<Point PointId="Block_DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="12" Behavior="SumLessOrEqual" Name="Drill Blocker"/>
 		<Point PointId="Block_Terminal" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="7" DisplayOrder="13" Behavior="SumLessOrEqual" Name="Control Panels"/>
 		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="14" Behavior="SumLessOrEqual" Name="Warheads"/>
-		<Point PointId="Block_InteriorTurret" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Interior Turrets"/>
+		<Point PointId="Block_InteriorTurret" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Interior Turrets"/>
 		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
 		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Upgrades"/>
 		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Limited Block"/>
@@ -188,13 +188,23 @@
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
 				<!-- When is working -->
 			</Behaviors>
-			<DefaultStaticAndDynamic>
+			<DefaultDynamic>
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
+				<Point PointId="Block_Limited" Amount="0"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="750"/>
+				<Point PointId="Points_Mobility" Amount="80"/>
+				<Point PointId="Points_Utility" Amount="40"/>
+				<Point PointId="Block_InteriorTurret" Amount="2"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
+				<Point PointId="Block_SRBM" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="750"/>
-			</DefaultStaticAndDynamic>
+			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_MediumCore">
@@ -204,13 +214,23 @@
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
 				<!-- When is working -->
 			</Behaviors>
-			<DefaultStaticAndDynamic>
+			<DefaultDynamic>
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
-			</DefaultStaticAndDynamic>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
+				<Point PointId="Points_Mobility" Amount="140"/>
+				<Point PointId="Points_Utility" Amount="60"/>
+				<Point PointId="Block_InteriorTurret" Amount="4"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
+				<Point PointId="Block_SRBM" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="Block_Limited" Amount="2000"/>
+			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_HeavyCore">
@@ -220,13 +240,23 @@
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
 				<!-- When is working -->
 			</Behaviors>
-			<DefaultStaticAndDynamic>
+			<DefaultDynamic>
 				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
 				<Point PointId="Points_Mobility" Amount="200"/>
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="Block_Limited" Amount="4000"/>
-			</DefaultStaticAndDynamic>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
+				<Point PointId="Points_Mobility" Amount="200"/>
+				<Point PointId="Points_Utility" Amount="80"/>
+				<Point PointId="Block_InteriorTurret" Amount="6"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
+				<Point PointId="Block_SRBM" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="Block_Limited" Amount="4000"/>
+			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
 		<!-- Fortress Beacon -->
@@ -242,10 +272,10 @@
 				<Point PointId="Points_Mobility" Amount="0"/>
 				<Point PointId="Points_Utility" Amount="120"/>
 				<Point PointId="Block_InteriorTurret" Amount="8"/>
-				<Point PointId="Block_Limited" Amount="6000"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
-				<Point PointId="Block_SafezoneGen" Amount="1"/>
+				<Point PointId="Block_Limited" Amount="6000"/>
 				<Point PointId="Block_ShipUpgrade" Amount="2"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
@@ -269,9 +299,6 @@
 				<Point PointId="Block_WeaponSlots" Amount="0"/>
 				<Point PointId="Block_InteriorTurret" Amount="1"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
-				<Point PointId="Block_SafezoneGen" Amount="0"/>
-				<Point PointId="Block_SRBM" Amount="0"/>
-				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="50"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
@@ -682,7 +709,7 @@
 				<Id Mlt="1" Mlt2="10" CustomValue="1">ConveyorSorter/Missile_Torpedo_Large</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/Missile_Torpedo_Small</Id>
 				<!--Drones-->
-				<Id Mlt="1" Mlt2="10" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="1">ConveyorSorter/ARYX_Small_Sidekick_Hangar</Id>
 				<!--Lasers-->
 				<Id Mlt="1" Mlt2="12" CustomValue="0">LargeMissileTurret/ARYXSpartanTurret</Id>
 				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/MA_T2PDX</Id>
