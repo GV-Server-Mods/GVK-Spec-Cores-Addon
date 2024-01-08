@@ -200,7 +200,6 @@
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
-				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="750"/>
@@ -226,7 +225,6 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
-				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
@@ -252,7 +250,6 @@
 				<Point PointId="Points_Mobility" Amount="200"/>
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
-				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="4000"/>
@@ -272,7 +269,6 @@
 				<Point PointId="Points_Mobility" Amount="0"/>
 				<Point PointId="Points_Utility" Amount="120"/>
 				<Point PointId="Block_InteriorTurret" Amount="8"/>
-				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="6000"/>
@@ -302,6 +298,32 @@
 				<Point PointId="Block_Warheads" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="50"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>		
+		<!-- Shield Gen Beacon -->
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_ShieldCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="50"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="10"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_Limited" Amount="50"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>		
@@ -849,7 +871,8 @@
 		</LimitedBlockInfo>
 	</LimitedBlocks>
 	<NoSpecCoreSettings>
-		<LargeStatic/>
+		<LargeStatic>
+		</LargeStatic>
 		<LargeDynamic/>
 		<SmallStatic/>
 		<SmallDynamic/>
