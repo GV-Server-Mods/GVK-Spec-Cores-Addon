@@ -537,7 +537,7 @@
 				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="3" Mlt2="1" Matcher="MotorSuspension/*"/>
+				<Id Mlt="10" Mlt2="1" Matcher="MotorSuspension/*"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallThrust"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeThrust"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallThrust"/>
