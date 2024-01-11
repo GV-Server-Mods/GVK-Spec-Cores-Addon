@@ -264,6 +264,26 @@
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
 				<!-- When is working -->
 			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="0"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_Limited" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="0"/>
+			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="6000"/>
 				<Point PointId="Points_Mobility" Amount="0"/>
@@ -282,6 +302,26 @@
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
 				<!-- When is working -->
 			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="0"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_Limited" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="0"/>
+			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="50"/>
 				<Point PointId="Points_Mobility" Amount="0"/>
@@ -307,10 +347,31 @@
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
 				<!-- When is working -->
 			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="0"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_Limited" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="0"/>
+			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="50"/>
 				<Point PointId="Points_Mobility" Amount="0"/>
 				<Point PointId="Points_Utility" Amount="10"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
 				<Point PointId="Block_Drills" Amount="0"/>
 				<Point PointId="Block_Welders" Amount="0"/>
 				<Point PointId="Block_Grinders" Amount="0"/>
@@ -324,6 +385,7 @@
 				<Point PointId="Block_Limited" Amount="50"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 				<Point PointId="Block_SafezoneGen" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>		
