@@ -371,7 +371,7 @@
 				<Point PointId="Internal_MaxBlocks" Amount="50"/>
 				<Point PointId="Points_Mobility" Amount="0"/>
 				<Point PointId="Points_Utility" Amount="10"/>
-				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="10"/>
 				<Point PointId="Block_Drills" Amount="0"/>
 				<Point PointId="Block_Welders" Amount="0"/>
 				<Point PointId="Block_Grinders" Amount="0"/>
