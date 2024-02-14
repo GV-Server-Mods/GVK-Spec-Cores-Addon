@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-16"?>
+<AirFrictionSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ConnectionType="Electrical">
+	<Planets/>
+	<AnyPlanet>
+		<Item>
+			<Altitude Alt="1000" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1100" SmallStart="0" SmallEnd="10" MixedStart="0" MixedEnd="10" LargeStart="0" LargeEnd="10" CharacterStart="100" CharacterEnd="210"/>
+			<Altitude Alt="1200" SmallStart="0" SmallEnd="20" MixedStart="0" MixedEnd="20" LargeStart="0" LargeEnd="20" CharacterStart="100" CharacterEnd="220"/>
+			<Altitude Alt="1300" SmallStart="0" SmallEnd="30" MixedStart="0" MixedEnd="30" LargeStart="0" LargeEnd="30" CharacterStart="100" CharacterEnd="230"/>
+			<Altitude Alt="1400" SmallStart="0" SmallEnd="40" MixedStart="0" MixedEnd="40" LargeStart="0" LargeEnd="40" CharacterStart="100" CharacterEnd="240"/>
+			<Altitude Alt="1500" SmallStart="0" SmallEnd="50" MixedStart="0" MixedEnd="50" LargeStart="0" LargeEnd="50" CharacterStart="100" CharacterEnd="250"/>
+			<Altitude Alt="1600" SmallStart="0" SmallEnd="60" MixedStart="0" MixedEnd="60" LargeStart="0" LargeEnd="60" CharacterStart="100" CharacterEnd="260"/>
+			<Altitude Alt="1700" SmallStart="0" SmallEnd="70" MixedStart="0" MixedEnd="70" LargeStart="0" LargeEnd="70" CharacterStart="100" CharacterEnd="270"/>
+			<Altitude Alt="1800" SmallStart="0" SmallEnd="80" MixedStart="0" MixedEnd="80" LargeStart="0" LargeEnd="80" CharacterStart="100" CharacterEnd="280"/>
+			<Altitude Alt="1900" SmallStart="0" SmallEnd="90" MixedStart="0" MixedEnd="90" LargeStart="0" LargeEnd="90" CharacterStart="100" CharacterEnd="290"/>
+			<Altitude Alt="5000" SmallStart="0" SmallEnd="100" MixedStart="0" MixedEnd="100" LargeStart="0" LargeEnd="100" CharacterStart="100" CharacterEnd="300"/>
+		</Item>
+		<Friction>
+			<FrictionPow>8</FrictionPow>
+			<FrictionPowMlt>0.9</FrictionPowMlt>
+			<FrictionPow2>1.5</FrictionPow2>
+			<FrictionPow2Mlt>0.25</FrictionPow2Mlt>
+			<FrictionConst>0.015</FrictionConst>
+			<MaxAcceleration>400</MaxAcceleration>
+			<MinFriction>0</MinFriction>
+			<MaxFriction>1</MaxFriction>
+			<FrictionPowCharacter>8</FrictionPowCharacter>
+			<FrictionPowMltCharacter>0.9</FrictionPowMltCharacter>
+			<FrictionPow2Character>1.5</FrictionPow2Character>
+			<FrictionPow2MltCharacter>0.25</FrictionPow2MltCharacter>
+			<FrictionConstCharacter>0.015</FrictionConstCharacter>
+			<MaxAccelerationCharacter>60</MaxAccelerationCharacter>
+			<MinFrictionCharacter>0</MinFrictionCharacter>
+			<MaxFrictionCharacter>1</MaxFrictionCharacter>
+		</Friction>
+	</AnyPlanet>
+	<Space Alt="0" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="150" CharacterEnd="200">
+		<Friction>
+			<FrictionPow>8</FrictionPow>
+			<FrictionPowMlt>0.9</FrictionPowMlt>
+			<FrictionPow2>1.5</FrictionPow2>
+			<FrictionPow2Mlt>0.25</FrictionPow2Mlt>
+			<FrictionConst>0.015</FrictionConst>
+			<MaxAcceleration>400</MaxAcceleration>
+			<MinFriction>0</MinFriction>
+			<MaxFriction>1</MaxFriction>
+			<FrictionPowCharacter>8</FrictionPowCharacter>
+			<FrictionPowMltCharacter>0.9</FrictionPowMltCharacter>
+			<FrictionPow2Character>1.5</FrictionPow2Character>
+			<FrictionPow2MltCharacter>0.25</FrictionPow2MltCharacter>
+			<FrictionConstCharacter>0.015</FrictionConstCharacter>
+			<MaxAccelerationCharacter>60</MaxAccelerationCharacter>
+			<MinFrictionCharacter>0</MinFrictionCharacter>
+			<MaxFrictionCharacter>1</MaxFrictionCharacter>
+		</Friction>
+	</Space>
+	<SpecCore NoCoreExtraStart="100" NoCoreExtraElevation="10000" NoCoreExtraEnd="200" CoreExtraStartId="-34" CoreExtraEndId="-35" CoreExtraElevationId="-36"/>
+	<ApplyForceToCharacters>true</ApplyForceToCharacters>
+</AirFrictionSettings>
