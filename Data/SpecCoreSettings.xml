@@ -1030,20 +1030,21 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="0" Mlt2="1" Matcher="Decoy/GVUpgrade_CombatMobility"/> <!-- Mobility -->
-				<Id Mlt="0" Mlt2="1" Matcher="Decoy/GVUpgrade_Engineering"/> <!-- Power -->
-				<Id Mlt="0" Mlt2="1" Matcher="Decoy/GVUpgrade_Production"/> <!-- Mining -->
-				<Id Mlt="1" Mlt2="1" Matcher="Decoy/GVUpgrade_Resistance"/> <!-- Resistance -->
-				<Id Mlt="0" Mlt2="1" Matcher="Decoy/GVUpgrade_CombatMobility_Small"/> <!-- Mobility -->
-				<Id Mlt="0" Mlt2="1" Matcher="Decoy/GVUpgrade_Engineering_Small"/> <!-- Power -->
-				<Id Mlt="0" Mlt2="1" Matcher="Decoy/GVUpgrade_Production_Small"/> <!-- Mining -->
-				<Id Mlt="1" Mlt2="1" Matcher="Decoy/GVUpgrade_Resistance_Small"/> <!-- Resistance -->
+				<Id Mlt="0" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_CombatMobility"/> <!-- Mobility -->
+				<Id Mlt="0" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_Engineering"/> <!-- Power -->
+				<Id Mlt="0" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_Production"/> <!-- Mining -->
+				<!-- <Id Mlt="1" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_Resistance"/> Resistance -->
+				<Id Mlt="0" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_CombatMobility_Small"/> <!-- Mobility -->
+				<Id Mlt="0" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_Engineering_Small"/> <!-- Power -->
+				<Id Mlt="0" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_Production_Small"/> <!-- Mining -->
+				<!-- <Id Mlt="1" Mlt2="1" CustomValue="1" Matcher="Decoy/GVUpgrade_Resistance_Small"/> Resistance -->
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Points_Utility" Amount="10" UseMlts="false"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
 				<Point PointId="Block_ShipUpgrade" Amount="1" UseMlts="false"/>
 				<Point PointId="Block_Welders" Amount="10" UseMlts="true"/> <!-- Resist upgrade costs all the welder points -->
+				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Terminal Blocks -->
