@@ -190,6 +190,7 @@
 		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="AFExtraElevation"/>
 		<!-- Values from -1 to -100 are reserved! -->
 	</Points>
+	<!-- Only need to add points into SpecBlocks that are different than the Defaults set in Points above -->
 	<SpecBlocks>
 		<!-- Player Blocks -->		
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon">
@@ -250,7 +251,6 @@
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
-				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="750"/>
 				<Point PointId="AFExtraStart" Amount="70"/>
@@ -279,7 +279,6 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
-				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
 				<Point PointId="AFExtraStart" Amount="60"/>
@@ -308,7 +307,6 @@
 				<Point PointId="Points_Mobility" Amount="200"/>
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
-				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="4000"/>
 				<Point PointId="AFExtraStart" Amount="50"/>
@@ -873,9 +871,9 @@
 			<BlockIds>
 				<!-- Mult=Balance Mult2=Tech CustomValue=Relic -->
 				<!--Gatlings-->
-				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeGatlingTurret/</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeGatlingTurret/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
@@ -892,6 +890,7 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
 				<!--Cannons-->
+				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/GVK_CycloneCannonTurret</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/LargeCalibreTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/OKI122mmVT</Id>
@@ -913,8 +912,9 @@
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
 				<!--Missiles-->
-				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
-				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
+				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/GVK_GriffinMissileTurret</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
 				<!--Heavy Missiles-->
 				<Id Mlt="1" Mlt2="10" CustomValue="0">ConveyorSorter/missileBattery01</Id>
 				<!--Torpedoes-->
@@ -937,11 +937,10 @@
 				<!--Flares-->
 				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeFlareLauncher</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncher/SmallFlareLauncher</Id>
-				
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false"/> <!-- this counts towards weapons limit -->
-				<Point PointId="Block_RelicSlots" Amount="1" UseCustomValue="true"/>
+				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false" UseCustomValue="false"/> <!-- this counts towards weapons limit -->
+				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
@@ -954,6 +953,7 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="14" CustomValue="1">ConveyorSorter/ARYXMissileBattery</Id>
+				<Id Mlt="1" Mlt2="16" CustomValue="1">LargeMissileTurret/odin</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false" UseCustomValue="false"/>
