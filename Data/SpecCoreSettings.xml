@@ -206,8 +206,8 @@
 				<Point PointId="Points_Utility" Amount="30"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="750"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="100"/>
+				<Point PointId="AFExtraEnd" Amount="110"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -224,8 +224,8 @@
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -243,8 +243,8 @@
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
 				<Point PointId="Block_Limited" Amount="750"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
@@ -253,8 +253,8 @@
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="750"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -271,8 +271,8 @@
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="60"/>
-				<Point PointId="AFExtraEnd" Amount="70"/>
+				<Point PointId="AFExtraStart" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
@@ -281,8 +281,8 @@
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="60"/>
-				<Point PointId="AFExtraEnd" Amount="70"/>
+				<Point PointId="AFExtraStart" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -299,8 +299,8 @@
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="Block_Limited" Amount="4000"/>
-				<Point PointId="AFExtraStart" Amount="50"/>
-				<Point PointId="AFExtraEnd" Amount="60"/>
+				<Point PointId="AFExtraStart" Amount="70"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
@@ -309,8 +309,8 @@
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="4000"/>
-				<Point PointId="AFExtraStart" Amount="50"/>
-				<Point PointId="AFExtraEnd" Amount="60"/>
+				<Point PointId="AFExtraStart" Amount="70"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -502,8 +502,8 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -532,8 +532,8 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -592,8 +592,8 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>

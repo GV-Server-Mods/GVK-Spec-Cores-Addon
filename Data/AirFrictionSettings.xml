@@ -4,16 +4,16 @@
 	<AnyPlanet>
 		<Item>
 			<Altitude Alt="1000" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="100" CharacterEnd="200"/>
-			<Altitude Alt="1100" SmallStart="0" SmallEnd="10" MixedStart="0" MixedEnd="10" LargeStart="0" LargeEnd="10" CharacterStart="100" CharacterEnd="210"/>
-			<Altitude Alt="1200" SmallStart="0" SmallEnd="20" MixedStart="0" MixedEnd="20" LargeStart="0" LargeEnd="20" CharacterStart="100" CharacterEnd="220"/>
-			<Altitude Alt="1300" SmallStart="0" SmallEnd="30" MixedStart="0" MixedEnd="30" LargeStart="0" LargeEnd="30" CharacterStart="100" CharacterEnd="230"/>
-			<Altitude Alt="1400" SmallStart="0" SmallEnd="40" MixedStart="0" MixedEnd="40" LargeStart="0" LargeEnd="40" CharacterStart="100" CharacterEnd="240"/>
-			<Altitude Alt="1500" SmallStart="0" SmallEnd="50" MixedStart="0" MixedEnd="50" LargeStart="0" LargeEnd="50" CharacterStart="100" CharacterEnd="250"/>
-			<Altitude Alt="1600" SmallStart="0" SmallEnd="60" MixedStart="0" MixedEnd="60" LargeStart="0" LargeEnd="60" CharacterStart="100" CharacterEnd="260"/>
-			<Altitude Alt="1700" SmallStart="0" SmallEnd="70" MixedStart="0" MixedEnd="70" LargeStart="0" LargeEnd="70" CharacterStart="100" CharacterEnd="270"/>
-			<Altitude Alt="1800" SmallStart="0" SmallEnd="80" MixedStart="0" MixedEnd="80" LargeStart="0" LargeEnd="80" CharacterStart="100" CharacterEnd="280"/>
-			<Altitude Alt="1900" SmallStart="0" SmallEnd="90" MixedStart="0" MixedEnd="90" LargeStart="0" LargeEnd="90" CharacterStart="100" CharacterEnd="290"/>
-			<Altitude Alt="5000" SmallStart="0" SmallEnd="100" MixedStart="0" MixedEnd="100" LargeStart="0" LargeEnd="100" CharacterStart="100" CharacterEnd="300"/>
+			<Altitude Alt="1100" SmallStart="0" SmallEnd="10" MixedStart="0" MixedEnd="5" LargeStart="0" LargeEnd="5" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1200" SmallStart="0" SmallEnd="20" MixedStart="0" MixedEnd="10" LargeStart="0" LargeEnd="10" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1300" SmallStart="0" SmallEnd="30" MixedStart="0" MixedEnd="15" LargeStart="0" LargeEnd="15" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1400" SmallStart="0" SmallEnd="40" MixedStart="0" MixedEnd="20" LargeStart="0" LargeEnd="20" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1500" SmallStart="0" SmallEnd="50" MixedStart="0" MixedEnd="25" LargeStart="0" LargeEnd="25" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1600" SmallStart="0" SmallEnd="60" MixedStart="0" MixedEnd="30" LargeStart="0" LargeEnd="30" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1700" SmallStart="0" SmallEnd="70" MixedStart="0" MixedEnd="35" LargeStart="0" LargeEnd="35" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1800" SmallStart="0" SmallEnd="80" MixedStart="0" MixedEnd="40" LargeStart="0" LargeEnd="40" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1900" SmallStart="0" SmallEnd="90" MixedStart="0" MixedEnd="45" LargeStart="0" LargeEnd="45" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="5000" SmallStart="0" SmallEnd="100" MixedStart="0" MixedEnd="50" LargeStart="0" LargeEnd="50" CharacterStart="100" CharacterEnd="200"/>
 		</Item>
 		<Friction>
 			<FrictionPow>8</FrictionPow>
