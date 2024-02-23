@@ -206,8 +206,8 @@
 				<Point PointId="Points_Utility" Amount="30"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="750"/>
-				<Point PointId="AFExtraStart" Amount="100"/>
-				<Point PointId="AFExtraEnd" Amount="110"/>
+				<Point PointId="AFExtraStart" Amount="150"/>
+				<Point PointId="AFExtraEnd" Amount="180"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -224,8 +224,8 @@
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="120"/>
+				<Point PointId="AFExtraEnd" Amount="150"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>

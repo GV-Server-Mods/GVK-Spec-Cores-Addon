@@ -16,12 +16,12 @@
 			<Altitude Alt="5000" SmallStart="0" SmallEnd="100" MixedStart="0" MixedEnd="50" LargeStart="0" LargeEnd="50" CharacterStart="100" CharacterEnd="200"/>
 		</Item>
 		<Friction>
-			<FrictionPow>8</FrictionPow>
-			<FrictionPowMlt>0.9</FrictionPowMlt>
+			<FrictionPow>3</FrictionPow>
+			<FrictionPowMlt>0.5</FrictionPowMlt>
 			<FrictionPow2>1.5</FrictionPow2>
 			<FrictionPow2Mlt>0.25</FrictionPow2Mlt>
 			<FrictionConst>0.015</FrictionConst>
-			<MaxAcceleration>400</MaxAcceleration>
+			<MaxAcceleration>50</MaxAcceleration>
 			<MinFriction>0</MinFriction>
 			<MaxFriction>1</MaxFriction>
 			<FrictionPowCharacter>8</FrictionPowCharacter>
