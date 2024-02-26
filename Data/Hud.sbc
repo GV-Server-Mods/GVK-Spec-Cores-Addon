@@ -455,7 +455,7 @@
 							<X>130</X>
 							<Y>130</Y>
 						</SizePx>
-						<NumberOfSegments>2</NumberOfSegments>
+						<NumberOfSegments>4</NumberOfSegments>
 						<SegmentTexture>Speed</SegmentTexture>
 						<SegmentSizePx>
 							<X>23</X>
