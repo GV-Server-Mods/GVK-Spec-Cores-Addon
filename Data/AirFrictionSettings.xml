@@ -23,7 +23,7 @@
 			<FrictionConst>0.015</FrictionConst>
 			<MaxAcceleration>50</MaxAcceleration>
 			<MinFriction>0</MinFriction>
-			<MaxFriction>1</MaxFriction>
+			<MaxFriction>10</MaxFriction>
 			<FrictionPowCharacter>8</FrictionPowCharacter>
 			<FrictionPowMltCharacter>0.9</FrictionPowMltCharacter>
 			<FrictionPow2Character>1.5</FrictionPow2Character>
