@@ -180,6 +180,7 @@
 		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
 		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Upgrades"/>
 		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Limited Block"/>
+		<Point PointId="Block_NPC" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="19" Behavior="SumLessOrEqual" Name="NPC Block"/>
 		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_SmallGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_SmallGrids" Name="" Visible="false"/>
@@ -471,7 +472,7 @@
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
-				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
 				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultStaticAndDynamic>
@@ -501,9 +502,69 @@
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
-				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
 				<Point PointId="AFExtraEnd" Amount="90"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/DisposableNpcBeaconLarge">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Points_Mobility" Amount="999999999"/>
+				<Point PointId="Points_Utility" Amount="999999999"/>
+				<Point PointId="Internal_MaxBlocks" Amount="999999999"/>
+				<Point PointId="Block_WindSolar" Amount="999999999"/>
+				<Point PointId="Block_Drills" Amount="999999999"/>
+				<Point PointId="Block_Welders" Amount="999999999"/>
+				<Point PointId="Block_Grinders" Amount="999999999"/>
+				<Point PointId="Block_Pistons" Amount="999999999"/>
+				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
+				<Point PointId="Block_Production" Amount="999999999"/>
+				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
+				<Point PointId="Block_InteriorTurret" Amount="999999999"/>
+				<Point PointId="Block_RelicSlots" Amount="999999999"/>
+				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
+				<Point PointId="Block_SRBM" Amount="999999999"/>
+				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
+				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_Limited" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
+				<Point PointId="AFExtraStart" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/DisposableNpcBeaconSmall">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Points_Mobility" Amount="999999999"/>
+				<Point PointId="Points_Utility" Amount="999999999"/>
+				<Point PointId="Internal_MaxBlocks" Amount="999999999"/>
+				<Point PointId="Block_WindSolar" Amount="999999999"/>
+				<Point PointId="Block_Drills" Amount="999999999"/>
+				<Point PointId="Block_Welders" Amount="999999999"/>
+				<Point PointId="Block_Grinders" Amount="999999999"/>
+				<Point PointId="Block_Pistons" Amount="999999999"/>
+				<Point PointId="Block_RotorsHinges" Amount="999999999"/>
+				<Point PointId="Block_Production" Amount="999999999"/>
+				<Point PointId="Block_WeaponSlots" Amount="999999999"/>
+				<Point PointId="Block_InteriorTurret" Amount="999999999"/>
+				<Point PointId="Block_RelicSlots" Amount="999999999"/>
+				<Point PointId="Block_SafezoneGen" Amount="999999999"/>
+				<Point PointId="Block_SRBM" Amount="999999999"/>
+				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
+				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_Limited" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
+				<Point PointId="AFExtraStart" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -531,7 +592,7 @@
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
-				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
 				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
@@ -561,7 +622,7 @@
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
-				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
 				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultStaticAndDynamic>
@@ -591,7 +652,7 @@
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
-				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
 				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
@@ -621,7 +682,7 @@
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
-				<Point PointId="Block_ShipUpgrade" Amount="999999999"/>
+				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
 				<Point PointId="AFExtraEnd" Amount="100"/>
 			</DefaultStaticAndDynamic>
@@ -633,7 +694,7 @@
 	 
 		LimitedBlockInfo
 			ConsumesLimitIf can be: Placed, Functional, Enabled, Working
-			DisableBehavior can be: OnOff, DamageToFunctional, Destroy
+			DisableBehavior can be: SetEnabled, GrindToFunctional, Destroy
 			CanWorkWithoutSpecCore - can work if there is no matching spec cores on grid group.
 			CanWorkOnSubGrids - won't work, if cockpit that gaining access to control grid is located on other grid. Also require attached pilot to that cockpit
 			CustomLogicId = "Drills" - creating new custom behavior. You must connect with Hooks via mod code! Ignores `ConsumesLimitIf`, `DisableBehavior`
@@ -1058,6 +1119,20 @@
 			<UsedPoints>
 				<Point PointId="Block_Terminal" Amount="1" UseMlts="false"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!-- NPC-only blocks -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" Matcher="*/*_NPC"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Block_NPC" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 	</LimitedBlocks>
