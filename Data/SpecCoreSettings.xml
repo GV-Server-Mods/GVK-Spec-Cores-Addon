@@ -84,31 +84,31 @@
 		VisibleIfInfinity="false" /> -->
   
 	<PointFormat Id="DefaultLessOrEqual"
-		Format="{PointName}:{Current}/{Max}"  
-		FormatOverlimiting="{PointName}:{Current}/{Max} OVER LIMIT" 
-		FormatPossibleOverlimiting="{PointName}:{Current}/{Max} Over Limit"
+		Format="[Color=#FFFFFFFF]{PointName}:{Current}/{Max}[/Color]"  
+		FormatOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} OVER LIMIT[/Color]" 
+		FormatPossibleOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} Over Limit[/Color]"
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false"  />
 	<PointFormat Id="DefaultSumLessOrEqual" 
-		Format="{PointName}:{Current}/{Max}" 
-		FormatOverlimiting="{PointName}:{Current}/{Max} OVER LIMIT" 
-		FormatPossibleOverlimiting="{PointName}:{Current}/{Max} Over Limit"
+		Format="[Color=#FFFFFFFF]{PointName}:{Current}/{Max}[/Color]" 
+		FormatOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} OVER LIMIT[/Color]" 
+		FormatPossibleOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} Over Limit[/Color]"
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultMoreOrEqual" 
-		Format="{PointName}:{Current}/{Max}" 
-		FormatOverlimiting="{PointName}:{Current}/{Min} UNDER LIMIT" 
-		FormatPossibleOverlimiting="{PointName}:{Current}/{Max} Under Minimum"
+		Format="[Color=#FFFFFFFF]{PointName}:{Current}/{Max}[/Color]" 
+		FormatOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Min} UNDER LIMIT[/Color]" 
+		FormatPossibleOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} Under Minimum[/Color]"
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultProperty" 
-		Format="{PointName}:{Max}" 
+		Format="[Color=#FFFFFFFF]{PointName}:{Max}[/Color]" 
 		FormatOverlimiting="" 
 		FormatPossibleOverlimiting="" 
 		NumberFormat="{0:G3}" 
@@ -116,7 +116,7 @@
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultUpgradePoint" 
-		Format="{PointName}:{Max}" 
+		Format="[Color=#FFFFFFFF]{PointName}:{Max}[/Color]" 
 		FormatOverlimiting="" 
 		FormatPossibleOverlimiting="" 
 		NumberFormat="{0:G29}" 
@@ -1047,12 +1047,12 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1">Warhead/SmallWarhead</Id>
+				<Id Mlt="0.5" Mlt2="1">Warhead/SmallWarhead</Id>
 				<Id Mlt="1" Mlt2="1">Warhead/LargeWarhead</Id>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_Warheads" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
+				<Point PointId="Block_Warheads" Amount="1" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
+				<Point PointId="Block_Limited" Amount="1" UseMlts="true" RoundLimits="true" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Safezone Generator -->
