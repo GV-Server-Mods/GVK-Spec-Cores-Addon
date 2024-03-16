@@ -28,87 +28,33 @@
 	<DefaultTier>1</DefaultTier>
 
 	<PointsFormats>
-		<!--
-		Id - id of PointFormat
-		OverlimitWarning - text that would be added if overlimiting some of point
-		OverlimitWarningAddLineAfter="true" - should add new line if overlimiting some of point
-		OverlimitWarningAddLineBefore="true" - should add new line if overlimiting some of point
-		Format="{0}/{1} ({2})" - format of text. {0} - current points, {1} - max / min points, {2} - on grid
-		NumberFormat="{0:G29}"  - format of number
-		WarningSign="!!!" - text that shows, when {2} more/less {1}
-		Visible="true" - show in detailed info
-		VisibleIfAllZero="false" - show if "0/0 (0)"
-		VisibleIfInfinity="true" - show if "?/Infinity (?)"
-		Color format is #AARRGGBB
-		-->
-	<!-- Old text using color that kept refreshing -->
-	<!-- <PointFormat Id="DefaultLessOrEqual"
-		Format="[Color=#FF6FFF72]{PointName}:{Current}/{Max}[/Color]"  
-		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Current}/{Max} OVER LIMIT[/Color]" 
-		FormatPossibleOverlimiting="[Color=#FFFF9100]{PointName}:{Current}/{Max} Over Limit[/Color]"
-		NumberFormat="{0:G29}" 
-		Visible="true"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false"  />
-	<PointFormat Id="DefaultSumLessOrEqual" 
-		Format="[Color=#FF6FFF72]{PointName}:{Current}/{Max}[/Color]" 
-		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Current}/{Max} OVER LIMIT[/Color]" 
-		FormatPossibleOverlimiting="[Color=#FFFF9100]{PointName}:{Current}/{Max} Over Limit[/Color]"
-		NumberFormat="{0:G29}" 
-		Visible="true"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false" />	
-	<PointFormat Id="DefaultMoreOrEqual" 
-		Format="[Color=#FF6FFF72]{PointName}:{Current}/{Max}[/Color]" 
-		FormatOverlimiting="[Color=#FFFF0000]{PointName}:{Current}/{Min} UNDER LIMIT[/Color]" 
-		FormatPossibleOverlimiting="[Color=#FFFF9100]{PointName}:{Current}/{Max} Under Minimum[/Color]"
-		NumberFormat="{0:G29}" 
-		Visible="true"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false" />	
-	<PointFormat Id="DefaultProperty" 
-		Format="[Color=#FFCD57FF]{PointName}:{Max}[/Color]" 
-		FormatOverlimiting="" 
-		FormatPossibleOverlimiting="" 
-		NumberFormat="{0:G3}" 
-		Visible="true"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false" />	
-	<PointFormat Id="DefaultUpgradePoint" 
-		Format="[Color=#FF54AAFF]{PointName}:{Max}[/Color]" 
-		FormatOverlimiting="" 
-		FormatPossibleOverlimiting="" 
-		NumberFormat="{0:G29}" 
-		Visible="true"
-		VisibleIfAllZero="false"
-		VisibleIfInfinity="false" /> -->
-  
+
 	<PointFormat Id="DefaultLessOrEqual"
-		Format="[Color=#FFFFFFFF]{PointName}:{Current}/{Max}[/Color]"  
-		FormatOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} OVER LIMIT[/Color]" 
-		FormatPossibleOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} Over Limit[/Color]"
+		Format="{PointName}:{Current}/{Max}"  
+		FormatOverlimiting="{PointName}:{Current}/{Max}" 
+		FormatPossibleOverlimiting="{PointName}:{Current}/{Max}"
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false"  />
 	<PointFormat Id="DefaultSumLessOrEqual" 
-		Format="[Color=#FFFFFFFF]{PointName}:{Current}/{Max}[/Color]" 
-		FormatOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} OVER LIMIT[/Color]" 
-		FormatPossibleOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} Over Limit[/Color]"
+		Format="{PointName}:{Current}/{Max}" 
+		FormatOverlimiting="{PointName}:{Current}/{Max}" 
+		FormatPossibleOverlimiting="{PointName}:{Current}/{Max}"
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultMoreOrEqual" 
-		Format="[Color=#FFFFFFFF]{PointName}:{Current}/{Max}[/Color]" 
-		FormatOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Min} UNDER LIMIT[/Color]" 
-		FormatPossibleOverlimiting="[Color=#FFFFFFFF]{PointName}:{Current}/{Max} Under Minimum[/Color]"
+		Format="{PointName}:{Current}/{Max}" 
+		FormatOverlimiting="{PointName}:{Current}/{Min} UNDER LIMIT" 
+		FormatPossibleOverlimiting="{PointName}:{Current}/{Max} Under Minimum"
 		NumberFormat="{0:G29}" 
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultProperty" 
-		Format="[Color=#FFFFFFFF]{PointName}:{Max}[/Color]" 
+		Format="{PointName}:{Max}" 
 		FormatOverlimiting="" 
 		FormatPossibleOverlimiting="" 
 		NumberFormat="{0:G3}" 
@@ -116,7 +62,7 @@
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />	
 	<PointFormat Id="DefaultUpgradePoint" 
-		Format="[Color=#FFFFFFFF]{PointName}:{Max}[/Color]" 
+		Format="{PointName}:{Max}" 
 		FormatOverlimiting="" 
 		FormatPossibleOverlimiting="" 
 		NumberFormat="{0:G29}" 
