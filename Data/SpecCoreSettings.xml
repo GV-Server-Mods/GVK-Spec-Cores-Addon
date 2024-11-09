@@ -123,10 +123,13 @@
 		<Point PointId="Block_Terminal" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="7" DisplayOrder="13" Behavior="SumLessOrEqual" Name="Control Panels"/>
 		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="14" Behavior="SumLessOrEqual" Name="Warheads"/>
 		<Point PointId="Block_InteriorTurret" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Interior Turrets"/>
-		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
-		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Upgrades"/>
-		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Limited Block"/>
-		<Point PointId="Block_NPC" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="19" Behavior="SumLessOrEqual" Name="NPC Block"/>
+		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
+		<Point PointId="Block_HydrogenEngine" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="51" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Hydrogen Engines"/>
+		<Point PointId="Block_HugeGasGenerator" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="52" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Mega O2/H2 Generator"/>
+		<Point PointId="Block_HugeHydrogenEngine" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="53" DisplayOrder="19" Behavior="SumLessOrEqual" Name="Mega Hydrogen Engine"/>
+		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="20" Behavior="SumLessOrEqual" Name="Upgrades"/>
+		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="21" Behavior="SumLessOrEqual" Name="Limited Block"/>
+		<Point PointId="Block_NPC" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="22" Behavior="SumLessOrEqual" Name="NPC Block"/>
 		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_SmallGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_SmallGrids" Name="" Visible="false"/>
@@ -297,6 +300,8 @@
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="6000"/>
 				<Point PointId="Block_ShipUpgrade" Amount="2"/>
+				<Point PointId="Block_HugeGasGenerator" Amount="1"/>
+				<Point PointId="Block_HugeHydrogenEngine" Amount="1"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -417,6 +422,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -447,6 +454,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -477,6 +486,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -507,6 +518,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -537,6 +550,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -567,6 +582,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -597,6 +614,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -627,6 +646,8 @@
 				<Point PointId="Block_SRBM" Amount="999999999"/>
 				<Point PointId="Block_DrillBlocker" Amount="999999999"/>
 				<Point PointId="Block_Warheads" Amount="999999999"/>
+				<Point PointId="Block_GasGenerator" Amount="999999999"/>
+				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -670,18 +691,6 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="10" Mlt2="1" CustomValue="1" Matcher="MotorSuspension/*"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallThrust"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeThrust"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallThrust"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeThrust"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallThrustSciFi"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeThrustSciFi"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallThrustSciFi"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeThrustSciFi"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallModularThruster"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeModularThruster"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallModularThruster"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeModularThruster"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeHydrogenThrust"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallHydrogenThrust"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeHydrogenThrust"/>
@@ -690,10 +699,6 @@
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallHydrogenThrustIndustrial"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeHydrogenThrustIndustrial"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallHydrogenThrustIndustrial"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeFlatAtmosphericThrust"/>
-				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeFlatAtmosphericThrustDShape"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallFlatAtmosphericThrust"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallFlatAtmosphericThrustDShape"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrust"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrustDShape"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallFlatAtmosphericThrust"/>
@@ -748,7 +753,6 @@
 				<Id Mlt="1" Mlt2="1" Matcher="BatteryBlock/*"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Reactor/*"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Gyro/*"/>
-				<Id Mlt="1" Mlt2="1" Matcher="OxygenGenerator/*"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
@@ -761,10 +765,31 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="OxygenGenerator/*"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="OxygenGenerator/*"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="OxygenGenerator/OxygenGeneratorSmall"/>
+				<Id Mlt="10" Mlt2="1" CustomValue="1" Matcher="OxygenGenerator/OxygenGenerator3"/>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_GasGenerator" Amount="1" UseMlts="false" UseCustomValue="false"/>
+				<Point PointId="Block_GasGenerator" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Block_HugeGasGenerator" Amount="1" UseMlts="false" UseCustomValue="true"/>
+				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>
+		<!-- Limited Hydrogen Engines because they are also CPU destroying monsters -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" CustomValue="1" Matcher="HydrogenEngine/LargeHydrogenEngine"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="1" Matcher="HydrogenEngine/SmallHydrogenEngine"/>
+				<Id Mlt="10" Mlt2="1" CustomValue="1" Matcher="HydrogenEngine/HugeHydrogenEngine3"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Block_HydrogenEngine" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Block_HugeHydrogenEngine" Amount="1" UseMlts="false" UseCustomValue="true"/>
+				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Drills -->
@@ -774,11 +799,13 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="Drill/*"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Drill/SmallBlockDrill"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Drill/LargeBlockDrill"/>
+				<Id Mlt="3" Mlt2="1" Matcher="Drill/LargeBlockPrototechDrill"/>
 			</BlockIds>
 			<UsedPoints>
-				<Point PointId="Block_Drills" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Points_Utility" Amount="2" UseCustomValue="false"/>
+				<Point PointId="Block_Drills" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Points_Utility" Amount="2" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
@@ -862,6 +889,9 @@
 				<Id Mlt="1" Mlt2="1" Matcher="Assembler/BasicAssembler"/>
 				<Id Mlt="1" Mlt2="2" Matcher="Refinery/LargeRefinery*"/>
 				<Id Mlt="1" Mlt2="2" Matcher="Assembler/LargeAssembler*"/>
+				<Id Mlt="1" Mlt2="2" Matcher="Refinery/LargePrototechRefinery"/>
+				<Id Mlt="1" Mlt2="2" Matcher="Refinery/SmallPrototechRefinery"/>
+				<Id Mlt="1" Mlt2="2" Matcher="Assembler/LargePrototechAssembler"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Production" Amount="1" UseMlts="false" UseCustomValue="false"/>
@@ -1076,6 +1106,7 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="*/*_NPC"/>
+				<Id Mlt="1" Mlt2="1" Matcher="*/NPC*"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_NPC" Amount="1" UseMlts="false" UseCustomValue="false"/>
