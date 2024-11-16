@@ -849,6 +849,8 @@
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/LargePistonBase"/>
 				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/SmallPistonBase"/>
+				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/LargePistonBaseReskin"/>
+				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/SmallPistonBaseReskin"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Pistons" Amount="1" UseCustomValue="false"/>
@@ -951,6 +953,7 @@
 				<!--Missiles-->
 				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/GVK_GriffinMissileTurret</Id>
 				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/HWK_FixedMissileLauncher</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
 				<!--Heavy Missiles-->
 				<Id Mlt="1" Mlt2="10" CustomValue="0">ConveyorSorter/missileBattery01</Id>
