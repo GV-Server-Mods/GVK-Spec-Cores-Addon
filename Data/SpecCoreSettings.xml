@@ -125,8 +125,7 @@
 		<Point PointId="Block_InteriorTurret" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="46" DisplayOrder="15" Behavior="SumLessOrEqual" Name="Interior Turrets"/>
 		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
 		<Point PointId="Block_HydrogenEngine" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="51" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Hydrogen Engines"/>
-		<Point PointId="Block_HugeGasGenerator" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="52" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Mega O2/H2 Generator"/>
-		<Point PointId="Block_HugeHydrogenEngine" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="53" DisplayOrder="19" Behavior="SumLessOrEqual" Name="Mega Hydrogen Engine"/>
+		<Point PointId="Block_FortressOnly" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="52" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Fortress"/>
 		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="20" Behavior="SumLessOrEqual" Name="Upgrades"/>
 		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="21" Behavior="SumLessOrEqual" Name="Limited Block"/>
 		<Point PointId="Block_NPC" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="22" Behavior="SumLessOrEqual" Name="NPC Block"/>
@@ -300,8 +299,7 @@
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="Block_Limited" Amount="6000"/>
 				<Point PointId="Block_ShipUpgrade" Amount="2"/>
-				<Point PointId="Block_HugeGasGenerator" Amount="1"/>
-				<Point PointId="Block_HugeHydrogenEngine" Amount="1"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -424,6 +422,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -456,6 +455,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -488,6 +488,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -520,6 +521,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -552,6 +554,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -584,6 +587,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -616,6 +620,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
@@ -648,6 +653,7 @@
 				<Point PointId="Block_Warheads" Amount="999999999"/>
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
@@ -771,7 +777,7 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_GasGenerator" Amount="1" UseMlts="true" UseCustomValue="false"/>
-				<Point PointId="Block_HugeGasGenerator" Amount="1" UseMlts="false" UseCustomValue="true"/>
+				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
@@ -788,7 +794,7 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_HydrogenEngine" Amount="1" UseMlts="true" UseCustomValue="false"/>
-				<Point PointId="Block_HugeHydrogenEngine" Amount="1" UseMlts="false" UseCustomValue="true"/>
+				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
@@ -887,17 +893,18 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="Refinery/Blast*"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Assembler/BasicAssembler"/>
-				<Id Mlt="1" Mlt2="2" Matcher="Refinery/LargeRefinery*"/>
-				<Id Mlt="1" Mlt2="2" Matcher="Assembler/LargeAssembler*"/>
-				<Id Mlt="1" Mlt2="2" Matcher="Refinery/LargePrototechRefinery"/>
-				<Id Mlt="1" Mlt2="2" Matcher="Refinery/SmallPrototechRefinery"/>
-				<Id Mlt="1" Mlt2="2" Matcher="Assembler/LargePrototechAssembler"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0"  Matcher="Refinery/Blast*"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0"  Matcher="Assembler/BasicAssembler"/>
+				<Id Mlt="2" Mlt2="1" CustomValue="0"  Matcher="Refinery/LargeRefinery*"/>
+				<Id Mlt="2" Mlt2="1" CustomValue="0"  Matcher="Assembler/LargeAssembler*"/>
+				<Id Mlt="5" Mlt2="1" CustomValue="1"  Matcher="Refinery/LargePrototechRefinery"/>
+				<Id Mlt="5" Mlt2="1" CustomValue="0"  Matcher="Refinery/SmallPrototechRefinery"/>
+				<Id Mlt="5" Mlt2="1" CustomValue="1"  Matcher="Assembler/LargePrototechAssembler"/>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Production" Amount="1" UseMlts="false" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
+				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
