@@ -917,7 +917,7 @@
 			<BlockIds>
 				<!-- Mult=Balance Mult2=Tech CustomValue=Relic -->
 				<!--Gatlings-->
-				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/ARYXVulcanTurret</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/GVK_AvengerGatlingTurret</Id>
 				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
 				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeGatlingTurret/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
@@ -959,8 +959,7 @@
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
 				<!--Missiles-->
 				<Id Mlt="1" Mlt2="8" CustomValue="0">ConveyorSorter/GVK_GriffinMissileTurret</Id>
-				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/MXA_ArcherPods</Id>
-				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/HWK_FixedMissileLauncher</Id>
+				<Id Mlt="1" Mlt2="6" CustomValue="0">ConveyorSorter/GVK_GriffinMissileLauncher</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallRocketLauncherReload</Id>
 				<!--Heavy Missiles-->
 				<Id Mlt="1" Mlt2="10" CustomValue="0">ConveyorSorter/missileBattery01</Id>
