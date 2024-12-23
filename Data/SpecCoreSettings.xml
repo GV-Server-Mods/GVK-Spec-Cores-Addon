@@ -142,12 +142,10 @@
 	<!-- Only need to add points into SpecBlocks that are different than the Defaults set in Points above -->
 	<SpecBlocks>
 		<!-- Player Blocks -->		
-		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon">
+		<!-- <SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
-				<!-- When is working -->
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
-				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
@@ -163,9 +161,25 @@
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_MediumCore">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
-				<!-- When is working -->
 				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
-				<!-- When is working -->
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
+				<Point PointId="Points_Mobility" Amount="140"/>
+				<Point PointId="Points_Utility" Amount="40"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_Limited" Amount="2000"/>
+				<Point PointId="AFExtraStart" Amount="120"/>
+				<Point PointId="AFExtraEnd" Amount="150"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo> -->
+		<!-- No Heavy Cores for Small Grid -->
+		<!-- Unified smalls under 1 medium equivalent -->
+		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
 			</Behaviors>
 			<DefaultStaticAndDynamic>
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
@@ -178,7 +192,6 @@
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
-		<!-- No Heavy Cores for Small Grid -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
