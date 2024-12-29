@@ -933,7 +933,9 @@
 				<Id Mlt="1" Mlt2="6" CustomValue="0">LargeMissileTurret/GVK_AvengerGatlingTurret</Id>
 				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeMissileTurret/SentinelTurret</Id>
 				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeGatlingTurret/</Id>
+				<Id Mlt="1" Mlt2="3" CustomValue="0">LargeGatlingTurret/LargeGatlingTurretReskin</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingTurretReskin</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeGatlingTurret/SmallGatlingGun_Gimbal</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallGatlingGun/SmallGatlingGunWarfare2</Id>
@@ -966,7 +968,9 @@
 				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/LargeRailgun</Id>
 				<!--Rockets-->
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/</Id>
+				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/LargeMissileTurretReskin</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
+				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallMissileTurretReskin</Id>
 				<Id Mlt="1" Mlt2="3" CustomValue="0">SmallMissileLauncher/LargeMissileLauncher</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/</Id>
 				<Id Mlt="1" Mlt2="1" CustomValue="0">SmallMissileLauncher/SmallMissileLauncherWarfare2</Id>
