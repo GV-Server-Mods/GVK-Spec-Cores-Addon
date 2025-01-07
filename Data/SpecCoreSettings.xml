@@ -104,7 +104,7 @@
         TYPE_MIN_BLOCKS = -19
 		Warhead
 	-->
-		<Point PointId="Internal_MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="500" NId="-9" DisplayOrder="-3" Behavior="LessOrEqual" ActivationError="Over Maximum Blocks Limit!" Name="Max Blocks"/>
+		<Point PointId="Internal_MaxBlocks" DefaultSpecCoreValue="500" DefaultNoSpecCoreValue="100" NId="-9" DisplayOrder="-3" Behavior="LessOrEqual" ActivationError="Over Maximum Blocks Limit!" Name="Max Blocks"/>
 		<Point PointId="Points_Mobility" DefaultSpecCoreValue="40" DefaultNoSpecCoreValue="10" NId="103" DisplayOrder="-2" Behavior="SumLessOrEqual" Name="Mobility Points"/>
 		<Point PointId="Points_Utility" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="104" DisplayOrder="-1" Behavior="SumLessOrEqual" Name="Utility Points"/>
 
@@ -126,17 +126,18 @@
 		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
 		<Point PointId="Block_HydrogenEngine" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="51" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Hydrogen Engines"/>
 		<Point PointId="Block_FortressOnly" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="52" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Fortress"/>
-		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="1" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="20" Behavior="SumLessOrEqual" Name="Upgrades"/>
-		<Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="21" Behavior="SumLessOrEqual" Name="Limited Block"/>
+		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="20" Behavior="SumLessOrEqual" Name="Upgrades" Visible="false"/>
+		<!-- removed limited blocks because it only worked in very specific situations, so it wasn't worth having -->
+		<!-- <Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="21" Behavior="SumLessOrEqual" Name="Limited Block" Visible="false"/> -->
 		<Point PointId="Block_NPC" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="22" Behavior="SumLessOrEqual" Name="NPC Block"/>
 		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="Internal_SmallGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_SmallGrids" Name="" Visible="false"/>
 		<Point PointId="Internal_LargeGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_LargeGrids" Name="" Visible="false"/>
-		<Point PointId="Internal_MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="Over PCU Limit!" Name=""/>
-		<Point PointId="AFExtraStart" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="Cruise Speed"/>
-		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="100" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="Boost Speed"/>
-		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="AFExtraElevation"/>
+		<Point PointId="Internal_MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="" Name="" Visible="false"/>
+		<Point PointId="AFExtraStart" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-34" DisplayOrder="105" Behavior="Property" Name="" Visible="false"/>
+		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-35" DisplayOrder="105" Behavior="Property" Name="" Visible="false"/>
+		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-36" DisplayOrder="105" Behavior="Property" Name="" Visible="false"/>
 		<!-- Values from -1 to -100 are reserved! -->
 	</Points>
 	<!-- Only need to add points into SpecBlocks that are different than the Defaults set in Points above -->
@@ -186,9 +187,8 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
-				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="120"/>
-				<Point PointId="AFExtraEnd" Amount="150"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -204,9 +204,8 @@
 				<Point PointId="Points_Mobility" Amount="80"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
-				<Point PointId="Block_Limited" Amount="750"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
@@ -214,9 +213,8 @@
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="750"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -232,9 +230,8 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
-				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
@@ -242,9 +239,8 @@
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="2000"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -260,9 +256,8 @@
 				<Point PointId="Points_Mobility" Amount="200"/>
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
-				<Point PointId="Block_Limited" Amount="4000"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
@@ -270,9 +265,8 @@
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="4000"/>
-				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -299,7 +293,6 @@
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
-				<Point PointId="Block_Limited" Amount="0"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 				<Point PointId="Block_DrillBlocker" Amount="0"/>
 			</DefaultDynamic>
@@ -310,8 +303,7 @@
 				<Point PointId="Block_InteriorTurret" Amount="8"/>
 				<Point PointId="Block_SRBM" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="6000"/>
-				<Point PointId="Block_ShipUpgrade" Amount="2"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
@@ -337,7 +329,6 @@
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
-				<Point PointId="Block_Limited" Amount="0"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 				<Point PointId="Block_SafezoneGen" Amount="0"/>
 				<Point PointId="Block_DrillBlocker" Amount="0"/>
@@ -356,7 +347,6 @@
 				<Point PointId="Block_InteriorTurret" Amount="1"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
-				<Point PointId="Block_Limited" Amount="50"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
@@ -382,7 +372,6 @@
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
-				<Point PointId="Block_Limited" Amount="0"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 				<Point PointId="Block_SafezoneGen" Amount="0"/>
 				<Point PointId="Block_DrillBlocker" Amount="0"/>
@@ -402,7 +391,6 @@
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="Block_RelicSlots" Amount="0"/>
 				<Point PointId="Block_Warheads" Amount="0"/>
-				<Point PointId="Block_Limited" Amount="50"/>
 				<Point PointId="Block_ShipUpgrade" Amount="0"/>
 				<Point PointId="Block_SafezoneGen" Amount="1"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
@@ -436,10 +424,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -469,10 +456,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -502,10 +488,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -535,10 +520,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -568,10 +552,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -601,10 +584,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -634,10 +616,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -667,10 +648,9 @@
 				<Point PointId="Block_GasGenerator" Amount="999999999"/>
 				<Point PointId="Block_HydrogenEngine" Amount="999999999"/>
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
-				<Point PointId="Block_Limited" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
-				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -742,8 +722,6 @@
 			<UsedPoints>
 				<!--<Point PointId="Block_ThrustersHovers" Amount="1" UseCustomValue="false"/>-->
 				<Point PointId="Points_Mobility" Amount="1" UseMlts="true" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
-				<Point PointId="AFExtraStart" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited WindSolar -->
@@ -759,10 +737,9 @@
 			<UsedPoints>
 				<Point PointId="Block_WindSolar" Amount="1" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!-- Nonspecific limited blocks for power off punishment -->
+		<!-- Nonspecific limited blocks for power off punishment
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="SetEnabled" Reverse="true"/>
@@ -776,7 +753,7 @@
 			<UsedPoints>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
-		</LimitedBlockInfo>
+		</LimitedBlockInfo> -->
 		<!-- Limited Gas Generators because they are CPU destroying monsters -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
 			<Behaviors>
@@ -791,7 +768,6 @@
 			<UsedPoints>
 				<Point PointId="Block_GasGenerator" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- Limited Hydrogen Engines because they are also CPU destroying monsters -->
@@ -808,7 +784,6 @@
 			<UsedPoints>
 				<Point PointId="Block_HydrogenEngine" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Drills -->
@@ -825,7 +800,6 @@
 			<UsedPoints>
 				<Point PointId="Block_Drills" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="2" UseMlts="true" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Welders -->
@@ -840,7 +814,6 @@
 			<UsedPoints>
 				<Point PointId="Block_Welders" Amount="1"/>
 				<Point PointId="Points_Utility" Amount="2"/> 
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
 				<!--<Point PointId="Block_ShipUpgrade" Amount="1"/>-->
 			</UsedPoints>
 		</LimitedBlockInfo>
@@ -856,7 +829,6 @@
 			<UsedPoints>
 				<Point PointId="Block_Grinders" Amount="1" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="1" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Pistons -->
@@ -874,7 +846,6 @@
 			<UsedPoints>
 				<Point PointId="Block_Pistons" Amount="1" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="2" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Rotors/Hinges -->
@@ -896,7 +867,6 @@
 			<UsedPoints>
 				<Point PointId="Block_RotorsHinges" Amount="1" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="2" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited LargeProduction -->
@@ -918,7 +888,6 @@
 				<Point PointId="Block_Production" Amount="1" UseMlts="false" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Weapons Tech -->
@@ -1005,7 +974,6 @@
 				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false" UseCustomValue="false"/> <!-- this counts towards weapons limit -->
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited SRBM -->
@@ -1023,7 +991,6 @@
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Block_SRBM" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Interior Turrets -->
@@ -1039,7 +1006,6 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_InteriorTurret" Amount="1" UseMlts="true" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Warheads -->
@@ -1054,7 +1020,6 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Warheads" Amount="1" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="true" RoundLimits="true" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Safezone Generator -->
@@ -1068,7 +1033,6 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_SafezoneGen" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Drill Blocker -->
@@ -1082,7 +1046,6 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- limited Upgrade Blocks -->
@@ -1103,7 +1066,6 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Points_Utility" Amount="10" UseMlts="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
 				<Point PointId="Block_ShipUpgrade" Amount="1" UseMlts="false"/>
 				<Point PointId="Block_Welders" Amount="10" UseMlts="true"/> <!-- Resist upgrade costs all the welder points -->
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
@@ -1120,7 +1082,6 @@
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Terminal" Amount="1" UseMlts="false"/>
-				<Point PointId="Block_Limited" Amount="1" UseMlts="false"/>
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- NPC-only blocks -->
