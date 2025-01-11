@@ -192,7 +192,48 @@
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeaconReskin">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+			</Behaviors>
+			<DefaultStaticAndDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
+				<Point PointId="Points_Mobility" Amount="140"/>
+				<Point PointId="Points_Utility" Amount="40"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultStaticAndDynamic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="750"/>
+				<Point PointId="Points_Mobility" Amount="80"/>
+				<Point PointId="Points_Utility" Amount="40"/>
+				<Point PointId="Block_InteriorTurret" Amount="2"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="750"/>
+				<Point PointId="Points_Mobility" Amount="80"/>
+				<Point PointId="Points_Utility" Amount="40"/>
+				<Point PointId="Block_InteriorTurret" Amount="2"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeaconReskin">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
 				<!-- When is working -->
@@ -244,7 +285,59 @@
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeaconReskin_MediumCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
+				<Point PointId="Points_Mobility" Amount="140"/>
+				<Point PointId="Points_Utility" Amount="60"/>
+				<Point PointId="Block_InteriorTurret" Amount="4"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
+				<Point PointId="Points_Mobility" Amount="140"/>
+				<Point PointId="Points_Utility" Amount="60"/>
+				<Point PointId="Block_InteriorTurret" Amount="4"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_HeavyCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
+				<Point PointId="Points_Mobility" Amount="200"/>
+				<Point PointId="Points_Utility" Amount="80"/>
+				<Point PointId="Block_InteriorTurret" Amount="6"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
+				<Point PointId="Points_Mobility" Amount="200"/>
+				<Point PointId="Points_Utility" Amount="80"/>
+				<Point PointId="Block_InteriorTurret" Amount="6"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="AFExtraStart" Amount="999999999"/>
+				<Point PointId="AFExtraEnd" Amount="999999999"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeaconReskin_HeavyCore">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
 				<!-- When is working -->
@@ -272,6 +365,43 @@
 		</SpecBlockInfo>
 		<!-- Fortress Beacon -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_Fortress">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+				<Behavior ProvideBehavior="IsOwnedBy" TextValue="" TextValue2="144115188075855896" Reverse="true" ProvideLimitsError="Cannot be owned by SPRT"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="0"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="0"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="6000"/>
+				<Point PointId="Points_Mobility" Amount="200"/>
+				<Point PointId="Points_Utility" Amount="120"/>
+				<Point PointId="Block_InteriorTurret" Amount="8"/>
+				<Point PointId="Block_SRBM" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_FortressOnly" Amount="999999999"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeaconReskin_Fortress">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
 				<!-- When is working -->
@@ -351,8 +481,95 @@
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>		
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeaconReskin_Pipeline">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="0"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="0"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="50"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="10"/>
+				<Point PointId="Block_Drills" Amount="2"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="4"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="1"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>		
 		<!-- Shield Gen Beacon -->
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_ShieldCore">
+			<Behaviors>
+				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- When is working -->
+			</Behaviors>
+			<DefaultDynamic>
+				<Point PointId="Internal_MaxBlocks" Amount="0"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="0"/>
+				<Point PointId="Block_WindSolar" Amount="0"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="0"/>
+				<Point PointId="Block_DrillBlocker" Amount="0"/>
+			</DefaultDynamic>
+			<DefaultStatic>
+				<Point PointId="Internal_MaxBlocks" Amount="50"/>
+				<Point PointId="Points_Mobility" Amount="0"/>
+				<Point PointId="Points_Utility" Amount="10"/>
+				<Point PointId="Block_WindSolar" Amount="10"/>
+				<Point PointId="Block_Drills" Amount="0"/>
+				<Point PointId="Block_Welders" Amount="0"/>
+				<Point PointId="Block_Grinders" Amount="0"/>
+				<Point PointId="Block_Pistons" Amount="0"/>
+				<Point PointId="Block_RotorsHinges" Amount="0"/>
+				<Point PointId="Block_Production" Amount="0"/>
+				<Point PointId="Block_WeaponSlots" Amount="0"/>
+				<Point PointId="Block_InteriorTurret" Amount="0"/>
+				<Point PointId="Block_RelicSlots" Amount="0"/>
+				<Point PointId="Block_Warheads" Amount="0"/>
+				<Point PointId="Block_ShipUpgrade" Amount="0"/>
+				<Point PointId="Block_SafezoneGen" Amount="1"/>
+				<Point PointId="Block_DrillBlocker" Amount="1"/>
+			</DefaultStatic>
+			<PossibleUpgrades></PossibleUpgrades>
+		</SpecBlockInfo>		
+		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeaconReskin_ShieldCore">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
 				<!-- When is working -->
