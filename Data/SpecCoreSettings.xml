@@ -118,7 +118,7 @@
 		<Point PointId="Block_WeaponSlots" DefaultSpecCoreValue="50" DefaultNoSpecCoreValue="0" NId="40" DisplayOrder="8" Behavior="SumLessOrEqual" Name="Weapon Slots"/>
 		<Point PointId="Block_RelicSlots" DefaultSpecCoreValue="2" DefaultNoSpecCoreValue="0" NId="44" DisplayOrder="9" Behavior="SumLessOrEqual" Name="Relic Slots"/>
 		<Point PointId="Block_SafezoneGen" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="4" DisplayOrder="10" Behavior="SumLessOrEqual" Name="Safezone Gen"/>
-		<Point PointId="Block_SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="11" Behavior="SumLessOrEqual" Name="SRBM"/>
+		<Point PointId="Block_SRBM" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="5" DisplayOrder="11" Behavior="SumLessOrEqual" Name="Fortress Weapons"/>
 		<Point PointId="Block_DrillBlocker" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="6" DisplayOrder="12" Behavior="SumLessOrEqual" Name="Drill Blocker"/>
 		<Point PointId="Block_Terminal" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="7" DisplayOrder="13" Behavior="SumLessOrEqual" Name="Control Panels"/>
 		<Point PointId="Block_Warheads" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="10" NId="45" DisplayOrder="14" Behavior="SumLessOrEqual" Name="Warheads"/>
@@ -1193,7 +1193,7 @@
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!-- limited SRBM -->
+		<!-- limited Fortress Weapons -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
