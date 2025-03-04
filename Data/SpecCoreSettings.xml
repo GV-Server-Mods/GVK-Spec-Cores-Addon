@@ -1193,8 +1193,8 @@
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
 			</UsedPoints>
 		</LimitedBlockInfo>
-		<!-- limited SRBM -->
-		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+		<!-- limited fortress weapons -->
+		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="false">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
