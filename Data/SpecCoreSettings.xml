@@ -950,6 +950,7 @@
 				<Point PointId="Block_WindSolar" Amount="1" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="1" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- Nonspecific limited blocks for power off punishment
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -965,6 +966,7 @@
 			<UsedPoints>
 				<Point PointId="Block_Limited" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo> -->
 		<!-- Limited Gas Generators because they are CPU destroying monsters -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -981,6 +983,7 @@
 				<Point PointId="Block_GasGenerator" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- Limited Hydrogen Engines because they are also CPU destroying monsters -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -997,6 +1000,7 @@
 				<Point PointId="Block_HydrogenEngine" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Drills -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1013,6 +1017,7 @@
 				<Point PointId="Block_Drills" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="2" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Welders -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1028,6 +1033,7 @@
 				<Point PointId="Points_Utility" Amount="2"/> 
 				<!--<Point PointId="Block_ShipUpgrade" Amount="1"/>-->
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Grinders -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1042,6 +1048,7 @@
 				<Point PointId="Block_Grinders" Amount="1" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="1" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Pistons -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1059,6 +1066,7 @@
 				<Point PointId="Block_Pistons" Amount="1" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="2" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Rotors/Hinges -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1080,6 +1088,7 @@
 				<Point PointId="Block_RotorsHinges" Amount="1" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
 				<Point PointId="Points_Utility" Amount="2" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited LargeProduction -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1101,6 +1110,7 @@
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
 				<Point PointId="Block_FortressOnly" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Weapons Tech -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1187,6 +1197,7 @@
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/> <!-- this counts towards UPs limit -->
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Fortress Weapons -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1204,6 +1215,7 @@
 				<Point PointId="Block_SRBM" Amount="1" UseMlts="false" UseCustomValue="true"/>
 				<Point PointId="Points_Utility" Amount="1" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Interior Turrets -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
@@ -1219,6 +1231,7 @@
 			<UsedPoints>
 				<Point PointId="Block_InteriorTurret" Amount="1" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Warheads -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -1233,6 +1246,7 @@
 			<UsedPoints>
 				<Point PointId="Block_Warheads" Amount="1" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Safezone Generator -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -1246,6 +1260,7 @@
 			<UsedPoints>
 				<Point PointId="Block_SafezoneGen" Amount="1"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Drill Blocker -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -1259,6 +1274,7 @@
 			<UsedPoints>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Upgrade Blocks -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -1282,6 +1298,7 @@
 				<Point PointId="Block_Welders" Amount="10" UseMlts="true"/> <!-- Resist upgrade costs all the welder points -->
 				<Point PointId="Block_RelicSlots" Amount="1" UseMlts="false" UseCustomValue="true"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited Terminal Blocks -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -1295,6 +1312,7 @@
 			<UsedPoints>
 				<Point PointId="Block_Terminal" Amount="1" UseMlts="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- NPC-only blocks -->
 		<!-- RAI blocks to require NPC Beacon -->
@@ -1326,6 +1344,7 @@
 			<UsedPoints>
 				<Point PointId="Block_NPC" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 	</LimitedBlocks>
 	<NoSpecCoreSettings>
