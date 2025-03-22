@@ -871,11 +871,11 @@
 		<!--
 	 
 		LimitedBlockInfo
-			ConsumesLimitIf can be: Placed, Functional, Enabled, Working
+			ConsumeBehavior can be: Placed, Functional, Enabled, Working
 			DisableBehavior can be: SetEnabled, GrindToFunctional, Destroy
 			CanWorkWithoutSpecCore - can work if there is no matching spec cores on grid group.
-			CanWorkOnSubGrids - won't work, if cockpit that gaining access to control grid is located on other grid. Also require attached pilot to that cockpit
-			CustomLogicId = "Drills" - creating new custom behavior. You must connect with Hooks via mod code! Ignores `ConsumesLimitIf`, `DisableBehavior`
+			CanWorkOnSubGrids - If false, on the local grid with a piloted cockpit. Only good to use with SetEnabled if CanWorkOnSubGrids is false.
+			CustomLogicId = "Drills" - creating new custom behavior. You must connect with Hooks via mod code! Ignores `ConsumeBehavior`, `DisableBehavior`
 			
 			BlockIds: 
 				Mlt (float) (default=1) 
@@ -1297,6 +1297,20 @@
 			</UsedPoints>
 		</LimitedBlockInfo>
 		<!-- NPC-only blocks -->
+		<!-- RAI blocks to require NPC Beacon -->
+		<!--<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
+			<Behaviors>
+				<Behavior DisableBehavior="Destroy"/>
+				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
+			</Behaviors>
+			<BlockIds>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="RemoteControl/RivalAIRemoteControlSmall"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="RemoteControl/RivalAIRemoteControlLarge"/>
+			</BlockIds>
+			<UsedPoints>
+				<Point PointId="Block_NPC" Amount="1" UseMlts="false" UseCustomValue="false"/>
+			</UsedPoints>
+		</LimitedBlockInfo>-->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
 				<Behavior DisableBehavior="GrindToFunctional"/>
@@ -1304,6 +1318,8 @@
 				<!--<Behavior EnableBehavior="SetEnabled"  Reverse="false"/> -->
 			</Behaviors>
 			<BlockIds>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="RemoteControl/RivalAIRemoteControlSmall"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="RemoteControl/RivalAIRemoteControlLarge"/>
 				<Id Mlt="1" Mlt2="1" Matcher="*/*_NPC"/>
 				<Id Mlt="1" Mlt2="1" Matcher="*/NPC*"/>
 			</BlockIds>
