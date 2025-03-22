@@ -5,9 +5,6 @@
 	<EnableLogs>false</EnableLogs>
 	<DebugMode>false</DebugMode>
 	<RandomPunishment>false</RandomPunishment>
-	<HudNoSpecCoreText>No Spec. Core</HudNoSpecCoreText>
-	<HudSpecCoreOverlimitText>Blocks overlimit</HudSpecCoreOverlimitText>
-	<HudSpecCoreActiveText>Active Core {0}</HudSpecCoreActiveText>
 	<!-- 
 		You can set up just `All`, but this may slowdown your gui
 		Example of multioption: `Basic EnergyAndProduction RotorsAndPistons ShipControl Tools Weapons Other`
@@ -22,7 +19,7 @@
 		Other: IMySafeZoneBlock,IMyMedicalRoom
 		GUIClasses.Strange: IMyGravityGenerator,IMyGravityGeneratorSphere,IMySpaceBall,IMyReflectorLight,IMyInteriorLight,IMySoundBlock,IMyTimerBlock,IMyButtonPanel,IMyControlPanel,IMyShipConnector,IMyAdvancedDoor,IMyAirtightHangarDoor,IMyAirtightSlideDoor,IMyStoreBlock,IMyTargetDummyBlock,IMyTextPanel,IMyLightingBlock,IMyOreDetector,IMySensorBlock,IMyDoor
     -->
-	<LimitedBlocksCanBe></LimitedBlocksCanBe> <!-- Removed Basic EnergyAndProduction RotorsAndPistons Tools Weapons Other for now -->
+	<LimitedBlocksCanBe>All</LimitedBlocksCanBe> <!-- Removed Basic EnergyAndProduction RotorsAndPistons Tools Weapons Other for now -->
 	<SpecBlocksCanBe>ShipControl</SpecBlocksCanBe>
 	<ConnectionType>Mechanical</ConnectionType>
 	<DefaultTier>1</DefaultTier>
@@ -872,7 +869,9 @@
 	 
 		LimitedBlockInfo
 			ConsumeBehavior can be: Placed, Functional, Enabled, Working
-			DisableBehavior can be: SetEnabled, GrindToFunctional, Destroy
+			DisableBehavior can be: OnOff, DamageToFunctional, Destroy
+			EnableBehavior can be: SetEnabled, WeldTo
+				<Behavior EnableBehavior="WeldTo" Value1="1" Value2="1"/>
 			CanWorkWithoutSpecCore - can work if there is no matching spec cores on grid group.
 			CanWorkOnSubGrids - If false, on the local grid with a piloted cockpit. Only good to use with SetEnabled if CanWorkOnSubGrids is false.
 			CustomLogicId = "Drills" - creating new custom behavior. You must connect with Hooks via mod code! Ignores `ConsumeBehavior`, `DisableBehavior`
@@ -891,7 +890,7 @@
 				MinValue  (default:"NaN") - final value can't be less than that value
 				
 			Tip: use Mlt for Volume of block, use Mlt2 for LargeGridToSmallGridMlt: (2.5m*2.5m*2.5m) / (0.5m*0.5m*0.5m) = 125;
-	
+			Tip: Multiple LimitedBlocks can be included <Id Mlt="1" Mlt2="1">Drill/S3x3x6_Drill_T01,Drill/S3x3x6_Drill_T02,</Id> when separated by a comma.
 		-->
 		<!-- limited Mobility -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
@@ -935,6 +934,7 @@
 				<!--<Point PointId="Block_ThrustersHovers" Amount="1" UseCustomValue="false"/>-->
 				<Point PointId="Points_Mobility" Amount="1" UseMlts="true" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<!-- limited WindSolar -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="true" CanWorkOnSubGrids="true">
