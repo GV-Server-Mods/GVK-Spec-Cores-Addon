@@ -133,7 +133,7 @@
 		<Point PointId="Internal_LargeGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_LargeGrids" Name="" Visible="false"/>
 		<Point PointId="Internal_MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="" Name="" Visible="false"/>
 		<Point PointId="AFExtraStart" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="Cruise Speed"/>
-		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="100" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="Boost Speed"/>
+		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="" Visible="false"/>
 		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="AFExtraElevation"/>
 		<!-- Values from -1 to -100 are reserved! -->
 	</Points>
@@ -185,7 +185,7 @@
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
 				<Point PointId="AFExtraStart" Amount="100"/>
-				<Point PointId="AFExtraEnd" Amount="110"/>
+				<Point PointId="AFExtraEnd" Amount="100"/>
 				</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -202,7 +202,7 @@
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="750"/>
@@ -211,7 +211,7 @@
 				<Point PointId="Block_InteriorTurret" Amount="2"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -228,7 +228,7 @@
 				<Point PointId="Points_Utility" Amount="60"/>
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="2000"/>
@@ -237,7 +237,7 @@
 				<Point PointId="Block_InteriorTurret" Amount="4"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -254,7 +254,7 @@
 				<Point PointId="Points_Utility" Amount="80"/>
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="70"/>
 			</DefaultDynamic>
 			<DefaultStatic>
 				<Point PointId="Internal_MaxBlocks" Amount="4000"/>
@@ -263,7 +263,7 @@
 				<Point PointId="Block_InteriorTurret" Amount="6"/>
 				<Point PointId="Block_DrillBlocker" Amount="1"/>
 				<Point PointId="AFExtraStart" Amount="70"/>
-				<Point PointId="AFExtraEnd" Amount="80"/>
+				<Point PointId="AFExtraEnd" Amount="70"/>
 			</DefaultStatic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>

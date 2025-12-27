@@ -4,7 +4,7 @@
 	<!-- note that world max speed is set in Environment.sbc -->
 	<AnyPlanet>
 		<Item>
-			<Altitude Alt="1000" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="1000" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="150" CharacterEnd="150"/>
 			<!--<Altitude Alt="1100" SmallStart="0" SmallEnd="10" MixedStart="0" MixedEnd="5" LargeStart="0" LargeEnd="5" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1200" SmallStart="0" SmallEnd="20" MixedStart="0" MixedEnd="10" LargeStart="0" LargeEnd="10" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1300" SmallStart="0" SmallEnd="30" MixedStart="0" MixedEnd="15" LargeStart="0" LargeEnd="15" CharacterStart="100" CharacterEnd="200"/>
@@ -35,7 +35,7 @@
 			<MaxFrictionCharacter>1</MaxFrictionCharacter>
 		</Friction>
 	</AnyPlanet>
-	<Space Alt="0" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="150" CharacterEnd="200">
+	<Space Alt="0" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="150" CharacterEnd="150">
 		<Friction>
 			<FrictionPow>8</FrictionPow>
 			<FrictionPowMlt>0.9</FrictionPowMlt>
@@ -55,6 +55,6 @@
 			<MaxFrictionCharacter>1</MaxFrictionCharacter>
 		</Friction>
 	</Space>
-	<SpecCore NoCoreExtraStart="150" NoCoreExtraElevation="1000" NoCoreExtraEnd="200" CoreExtraStartId="-34" CoreExtraEndId="-35" CoreExtraElevationId="-36"/>
+	<SpecCore NoCoreExtraStart="150" NoCoreExtraElevation="1000" NoCoreExtraEnd="150" CoreExtraStartId="-34" CoreExtraEndId="-35" CoreExtraElevationId="-36"/>
 	<ApplyForceToCharacters>true</ApplyForceToCharacters>
 </AirFrictionSettings>
