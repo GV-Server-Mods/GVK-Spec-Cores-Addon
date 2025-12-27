@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-16"?>
 <AirFrictionSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ConnectionType="Electrical">
 	<Planets/>
+	<!-- note that world max speed is set in Environment.sbc -->
 	<AnyPlanet>
 		<Item>
 			<Altitude Alt="1000" SmallStart="0" SmallEnd="0" MixedStart="0" MixedEnd="0" LargeStart="0" LargeEnd="0" CharacterStart="100" CharacterEnd="200"/>
-			<Altitude Alt="1100" SmallStart="0" SmallEnd="10" MixedStart="0" MixedEnd="5" LargeStart="0" LargeEnd="5" CharacterStart="100" CharacterEnd="200"/>
+			<!--<Altitude Alt="1100" SmallStart="0" SmallEnd="10" MixedStart="0" MixedEnd="5" LargeStart="0" LargeEnd="5" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1200" SmallStart="0" SmallEnd="20" MixedStart="0" MixedEnd="10" LargeStart="0" LargeEnd="10" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1300" SmallStart="0" SmallEnd="30" MixedStart="0" MixedEnd="15" LargeStart="0" LargeEnd="15" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1400" SmallStart="0" SmallEnd="40" MixedStart="0" MixedEnd="20" LargeStart="0" LargeEnd="20" CharacterStart="100" CharacterEnd="200"/>
@@ -13,7 +14,7 @@
 			<Altitude Alt="1700" SmallStart="0" SmallEnd="70" MixedStart="0" MixedEnd="35" LargeStart="0" LargeEnd="35" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1800" SmallStart="0" SmallEnd="80" MixedStart="0" MixedEnd="40" LargeStart="0" LargeEnd="40" CharacterStart="100" CharacterEnd="200"/>
 			<Altitude Alt="1900" SmallStart="0" SmallEnd="90" MixedStart="0" MixedEnd="45" LargeStart="0" LargeEnd="45" CharacterStart="100" CharacterEnd="200"/>
-			<Altitude Alt="5000" SmallStart="0" SmallEnd="100" MixedStart="0" MixedEnd="50" LargeStart="0" LargeEnd="50" CharacterStart="100" CharacterEnd="200"/>
+			<Altitude Alt="5000" SmallStart="0" SmallEnd="100" MixedStart="0" MixedEnd="50" LargeStart="0" LargeEnd="50" CharacterStart="100" CharacterEnd="200"/>-->
 		</Item>
 		<Friction>
 			<FrictionPow>3</FrictionPow>
@@ -54,6 +55,6 @@
 			<MaxFrictionCharacter>1</MaxFrictionCharacter>
 		</Friction>
 	</Space>
-	<SpecCore NoCoreExtraStart="100" NoCoreExtraElevation="10000" NoCoreExtraEnd="200" CoreExtraStartId="-34" CoreExtraEndId="-35" CoreExtraElevationId="-36"/>
+	<SpecCore NoCoreExtraStart="150" NoCoreExtraElevation="1000" NoCoreExtraEnd="200" CoreExtraStartId="-34" CoreExtraEndId="-35" CoreExtraElevationId="-36"/>
 	<ApplyForceToCharacters>true</ApplyForceToCharacters>
 </AirFrictionSettings>
