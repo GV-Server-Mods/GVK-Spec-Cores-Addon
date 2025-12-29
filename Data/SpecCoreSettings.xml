@@ -66,8 +66,16 @@
 		Visible="true"
 		VisibleIfAllZero="false"
 		VisibleIfInfinity="false" />
-	</PointsFormats>
-	<Points>
+    <PointFormat Id="Hidden" 
+        Format="" 
+        FormatOverlimiting="" 
+        FormatPossibleOverlimiting="" 
+        NumberFormat="" 
+        Visible="false"
+        VisibleIfAllZero="false"
+        VisibleIfInfinity="false" />    
+    </PointsFormats>
+    <Points>
 		<!-- 
 		int Id;
 		string FormatId - id of PointsFormats. When it is npot found, used default.
@@ -123,18 +131,18 @@
 		<Point PointId="Block_GasGenerator" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="49" DisplayOrder="16" Behavior="SumLessOrEqual" Name="O2/H2 Generators"/>
 		<Point PointId="Block_HydrogenEngine" DefaultSpecCoreValue="10" DefaultNoSpecCoreValue="2" NId="51" DisplayOrder="17" Behavior="SumLessOrEqual" Name="Hydrogen Engines"/>
 		<Point PointId="Block_FortressOnly" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="52" DisplayOrder="18" Behavior="SumLessOrEqual" Name="Fortress"/>
-		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="20" Behavior="SumLessOrEqual" Name="Upgrades" Visible="false"/>
+		<Point PointId="Block_ShipUpgrade" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="47" DisplayOrder="20" Behavior="SumLessOrEqual" Name="Upgrades" FormatId="Hidden"/>
 		<!-- removed limited blocks because it only worked in very specific situations, so it wasn't worth having -->
 		<!-- <Point PointId="Block_Limited" DefaultSpecCoreValue="20" DefaultNoSpecCoreValue="20" NId="48" DisplayOrder="21" Behavior="SumLessOrEqual" Name="Limited Block" Visible="false"/> -->
 		<Point PointId="Block_NPC" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="50" DisplayOrder="22" Behavior="SumLessOrEqual" Name="NPC Block"/>
-		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" Visible="false"/>
-		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" Visible="false"/>
-		<Point PointId="Internal_SmallGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_SmallGrids" Name="" Visible="false"/>
-		<Point PointId="Internal_LargeGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_LargeGrids" Name="" Visible="false"/>
-		<Point PointId="Internal_MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="" Name="" Visible="false"/>
-		<Point PointId="AFExtraStart" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="Cruise Speed"/>
-		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="" Visible="false"/>
-		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="AFExtraElevation"/>
+		<Point PointId="Internal_Priority" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-1" DisplayOrder="100" Behavior="Property" Name="" FormatId="Hidden"/>
+		<Point PointId="Internal_BroadcastRadius" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-32" DisplayOrder="101" Behavior="Property" Name="" FormatId="Hidden"/>
+		<Point PointId="Internal_SmallGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-5" DisplayOrder="102" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_SmallGrids" Name="" FormatId="Hidden"/>
+		<Point PointId="Internal_LargeGrids" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-6" DisplayOrder="103" Behavior="LessOrEqual" ActivationError="SpecCores_ActivationStatus_ErrorInternal_LargeGrids" Name="" FormatId="Hidden"/>
+		<Point PointId="Internal_MaxPCU" DefaultSpecCoreValue="999999999" DefaultNoSpecCoreValue="999999999" NId="-8" DisplayOrder="104" Behavior="LessOrEqual" ActivationError="" Name="" FormatId="Hidden"/>
+		<Point PointId="AFExtraStart" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-34" DisplayOrder="105" Behavior="Property" Name="Cruise Speed" FormatId="Hidden"/>
+		<Point PointId="AFExtraEnd" DefaultSpecCoreValue="90" DefaultNoSpecCoreValue="0" NId="-35" DisplayOrder="105" Behavior="Property" Name="Boost Speed" FormatId="Hidden"/>
+		<Point PointId="AFExtraElevation" DefaultSpecCoreValue="0" DefaultNoSpecCoreValue="0" NId="-36" DisplayOrder="105" Behavior="Property" Name="AFExtraElevation" FormatId="Hidden"/>
 		<!-- Values from -1 to -100 are reserved! -->
 	</Points>
 	<!-- Only need to add points into SpecBlocks that are different than the Defaults set in Points above -->
@@ -184,8 +192,8 @@
 				<Point PointId="Points_Mobility" Amount="140"/>
 				<Point PointId="Points_Utility" Amount="40"/>
 				<Point PointId="Block_InteriorTurret" Amount="0"/>
-				<Point PointId="AFExtraStart" Amount="100"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraStart" Amount="120"/>
+				<Point PointId="AFExtraEnd" Amount="120"/>
 				</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -482,7 +490,7 @@
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -514,7 +522,7 @@
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -546,7 +554,7 @@
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -578,7 +586,7 @@
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -610,7 +618,7 @@
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="80"/>
-				<Point PointId="AFExtraEnd" Amount="90"/>
+				<Point PointId="AFExtraEnd" Amount="80"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -642,7 +650,7 @@
 				<Point PointId="Block_FortressOnly" Amount="999999999"/>
 				<Point PointId="Block_NPC" Amount="999999999"/>
 				<Point PointId="AFExtraStart" Amount="90"/>
-				<Point PointId="AFExtraEnd" Amount="100"/>
+				<Point PointId="AFExtraEnd" Amount="90"/>
 			</DefaultStaticAndDynamic>
 			<PossibleUpgrades></PossibleUpgrades>
 		</SpecBlockInfo>
@@ -793,8 +801,7 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
-				<Id Mlt="1" Mlt2="1" Matcher="Drill/SmallBlockDrill"/>
-				<Id Mlt="1" Mlt2="1" Matcher="Drill/LargeBlockDrill"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Drill/*"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Drill/LargeBlockPrototechDrill"/>
 			</BlockIds>
 			<UsedPoints>
