@@ -497,6 +497,7 @@
 		<SpecBlockInfo BlockIds="Beacon/DisposableNpcBeaconSmall">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- consider switching ProvideBehavior to IsWorking -->
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
@@ -529,6 +530,7 @@
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_NPC">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- consider switching ProvideBehavior to IsWorking -->
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
@@ -561,6 +563,7 @@
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_NPC">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- consider switching ProvideBehavior to IsWorking -->
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
@@ -593,6 +596,7 @@
 		<SpecBlockInfo BlockIds="Beacon/LargeBlockBeacon_NPCNoConceal">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- consider switching ProvideBehavior to IsWorking -->
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
@@ -625,6 +629,7 @@
 		<SpecBlockInfo BlockIds="Beacon/SmallBlockBeacon_NPCNoConceal">
 			<Behaviors>
 				<Behavior ProvideBehavior="IsFunctional" Reverse="false" ProvideLimitsError="Not working"/>
+				<!-- consider switching ProvideBehavior to IsWorking -->
 				<!-- When is working -->
 			</Behaviors>
 			<DefaultStaticAndDynamic>
