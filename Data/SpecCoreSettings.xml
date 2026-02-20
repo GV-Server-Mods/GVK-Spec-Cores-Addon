@@ -661,12 +661,47 @@
 		</SpecBlockInfo>
 	</SpecBlocks>
 	<LimitedBlocks>
-		<!--
-	 
-		LimitedBlockInfo
-			ConsumeBehavior can be: Placed, Functional, Enabled, Working
-			DisableBehavior can be: OnOff, DamageToFunctional, Destroy
-			EnableBehavior can be: SetEnabled, WeldTo
+		<!-- LimitedBlockInfo
+			
+			ConsumeBehavior can be:
+				None,
+				Always,
+				IsPlaced,
+				IsFunctional,
+				Integrity,
+				IsEnabled,
+				IsWorking,
+				IsSinkingResource,
+				IsProducingResource,
+				IsArmed,
+				DrillHarvestMlt,
+				InventoryExternalMass,
+				ThrustMlt,
+				ThrustPowerConsumptionMlt,
+				ReactorPowerOutputMlt,
+				IsBuiltBy,
+				IsOwnedBy,
+				CustomLogic
+
+			EnableDisableBehavior can be:
+				None,
+				SetEnabled,
+				WeldToFunctional,
+				WeldBy,
+				WeldTo,
+				SetArmed,
+				SetInventoryMass,
+				SetThrustMlt,
+				SetThrustPowerConsumptionMlt,
+				SetReactorPowerOutputMlt,
+				SetGasGeneratorMlt,
+				Destroy,
+				SetDrillHarvestMlt,
+				GrindToFunctional,
+				GrindBy,
+				GrindTo,
+				CustomLogic
+
 				<Behavior EnableBehavior="WeldTo" Value1="1" Value2="1"/>
 			CanWorkWithoutSpecCore - can work if there is no matching spec cores on grid group.
 			CanWorkOnSubGrids - If false, on the local grid with a piloted cockpit. Only good to use with SetEnabled if CanWorkOnSubGrids is false.
@@ -1114,7 +1149,7 @@
 		<!-- RAI blocks to require NPC Beacon -->
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
-				<Behavior DisableBehavior="GrindToFunctional"/>
+				<Behavior DisableBehavior="Destroy"/>
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
@@ -1124,6 +1159,7 @@
 			<UsedPoints>
 				<Point PointId="Block_NPC" Amount="1" UseMlts="false" UseCustomValue="false"/>
 			</UsedPoints>
+			<DefaultBlockSettings AutoEnable="false" SmartTurnOn="false" AutoEnableShowGUI="false" SmartTurnOnShowGUI="false" />
 		</LimitedBlockInfo>
 		<LimitedBlockInfo CanWorkWithoutSpecCore="false" CanWorkOnSubGrids="true">
 			<Behaviors>
