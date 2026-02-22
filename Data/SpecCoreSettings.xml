@@ -744,6 +744,10 @@
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrustDShape"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallFlatAtmosphericThrust"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallFlatAtmosphericThrustDShape"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallAtmosphericThrust"/>
+				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeAtmosphericThrust"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallAtmosphericThrustSciFi"/>
+				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeAtmosphericThrustSciFi"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_SmallBlock"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeAtmosphericHoverEngine_SmallBlock"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallAtmosphericHoverEngine_LargeBlock"/>
