@@ -740,6 +740,10 @@
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallHydrogenThrustIndustrial"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeHydrogenThrustIndustrial"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallHydrogenThrustIndustrial"/>
+				<Id Mlt="3" Mlt2="1" Matcher="Thrust/LargeBlockLargeHydrogenThrustReskin"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/LargeBlockSmallHydrogenThrustReskin"/>
+				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeHydrogenThrustReskin"/>
+				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallHydrogenThrustReskin"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrust"/>
 				<Id Mlt="3" Mlt2="1" Matcher="Thrust/SmallBlockLargeFlatAtmosphericThrustDShape"/>
 				<Id Mlt="1" Mlt2="1" Matcher="Thrust/SmallBlockSmallFlatAtmosphericThrust"/>
@@ -829,6 +833,8 @@
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="HydrogenEngine/LargeHydrogenEngine"/>
 				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="HydrogenEngine/SmallHydrogenEngine"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="HydrogenEngine/LargeHydrogenEngineReskin"/>
+				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="HydrogenEngine/SmallHydrogenEngineReskin"/>
 				<Id Mlt="10" Mlt2="1" CustomValue="1" Matcher="HydrogenEngine/HugeHydrogenEngine3"/>
 				<Id Mlt="10" Mlt2="1" CustomValue="1" Matcher="HydrogenEngine/LargePrototechReactor"/>
 			</BlockIds>
