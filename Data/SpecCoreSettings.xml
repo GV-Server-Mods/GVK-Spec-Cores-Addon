@@ -983,6 +983,7 @@
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/SmallBlockMediumCalibreTurret</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">SmallMissileLauncherReload/SmallBlockMediumCalibreGun</Id>
 				<!--Cannons-->
+				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/ARYXCycloneCannon</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/GVK_CycloneCannonTurret</Id>
 				<Id Mlt="1" Mlt2="8" CustomValue="0">LargeMissileTurret/LargeCalibreTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">SmallMissileLauncher/LargeBlockLargeCalibreGun</Id>
@@ -999,6 +1000,7 @@
 				<Id Mlt="1" Mlt2="12" CustomValue="1">SmallMissileLauncherReload/LargeRailgun</Id> <!--Disabled-->
 				<Id Mlt="1" Mlt2="12" CustomValue="1">ConveyorSorter/LargeRailgun</Id>
 				<!--Rockets-->
+				<Id Mlt="1" Mlt2="4" CustomValue="0">ConveyorSorter/ARYXHydraTurret</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/</Id>
 				<Id Mlt="1" Mlt2="4" CustomValue="0">LargeMissileTurret/LargeMissileTurretReskin</Id>
 				<Id Mlt="1" Mlt2="2" CustomValue="0">LargeMissileTurret/SmallMissileTurret</Id>
