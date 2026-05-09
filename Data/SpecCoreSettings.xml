@@ -898,6 +898,7 @@
 				<Behavior ConsumeBehavior="IsFunctional" Reverse="false"/>
 			</Behaviors>
 			<BlockIds>
+				<!-- ExtendedPistonBase only is permitted. Regular PistonBase should be banned -->
 				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/LargePistonBase"/>
 				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/SmallPistonBase"/>
 				<Id Mlt="1" Mlt2="1" Matcher="ExtendedPistonBase/LargePistonBaseReskin"/>
@@ -1050,7 +1051,7 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="14" CustomValue="1">ConveyorSorter/ARYXMissileBattery</Id>
-				<Id Mlt="1" Mlt2="16" CustomValue="1">LargeMissileTurret/odin</Id>
+				<Id Mlt="1" Mlt2="14" CustomValue="1">LargeMissileTurret/odin</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_WeaponSlots" Amount="1" UseMlts="false" UseCustomValue="false"/>
@@ -1085,6 +1086,8 @@
 			<BlockIds>
 				<Id Mlt="0.5" Mlt2="1">Warhead/SmallWarhead</Id>
 				<Id Mlt="1" Mlt2="1">Warhead/LargeWarhead</Id>
+				<Id Mlt="0.5" Mlt2="1">Warhead/SmallExplosiveBarrel</Id>
+				<Id Mlt="1" Mlt2="1">Warhead/LargeExplosiveBarrel</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_Warheads" Amount="1" UseMlts="true" RoundLimits="false" UseCustomValue="false"/>
@@ -1099,6 +1102,7 @@
 			</Behaviors>
 			<BlockIds>
 				<Id Mlt="1" Mlt2="1">SafeZoneBlock/SafeZoneBlock</Id>
+				<Id Mlt="1" Mlt2="1">SafeZoneBlock/SafeZoneBlockReskin</Id>
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_SafezoneGen" Amount="1"/>
