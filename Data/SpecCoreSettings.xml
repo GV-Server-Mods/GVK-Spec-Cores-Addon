@@ -1187,6 +1187,7 @@
 				<Id Mlt="1" Mlt2="1" CustomValue="0" Matcher="RemoteControl/RivalAIRemoteControlLarge"/> -->
 				<Id Mlt="1" Mlt2="1" Matcher="*/*_NPC"/>
 				<Id Mlt="1" Mlt2="1" Matcher="*/NPC*"/>
+				<Id Mlt="1" Mlt2="1">SafeZoneBlock/SafeZoneBlockNPC</Id> <!-- no _NPC suffix, so the matchers miss it -->
 			</BlockIds>
 			<UsedPoints>
 				<Point PointId="Block_NPC" Amount="1" UseMlts="false" UseCustomValue="false"/>
